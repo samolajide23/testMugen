@@ -26,6 +26,18 @@ test('Pikachu specials are Luau-only, hypers blocked, and missing reports never 
   assert.ok(guide.find(c=>c.name==='RockSquad').routes[0].blockers.some(b=>b.includes('p2stateno')));
   assert.equal(commandGuide(character).find(c=>c.name==='b').status,'Not validated / not exported');
 });
+test('move-only guide hides unused commands and direction modifiers but keeps real move alternatives', async () => {
+  const [character, report] = await load('coiny');
+  const guide = commandGuide(character, report);
+  assert.deepEqual([...new Set(guide.map(command => command.name))],
+    ['Hyper1', 'Hyper2', 'Special1', 'Special2', 'FF', 'BB', 'x', 'y', 'z', 's']);
+  assert.equal(guide.filter(command => command.name === 'Special1').length, 3);
+  assert.equal(guide.filter(command => command.name === 'Special2').length, 3);
+  assert.equal(guide.find(command => command.name === 'x').routes.length, 3);
+  assert.ok(guide.find(command => command.name === 'x').routes.some(route =>
+    route.conditions.includes('triggerall: command = "holddown"')));
+  assert.ok(guide.every(command => command.routes.length > 0));
+});
 function fakeDocument() {
   return {createElement(tag) { return {tag,textContent:'',childNodes:[],append(...nodes){this.childNodes.push(...nodes);},replaceChildren(...nodes){this.childNodes=nodes;}}; }};
 }

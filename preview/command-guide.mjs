@@ -17,8 +17,14 @@ export function commandGuide(character, report) {
   return (character.commands ?? []).filter(command => !/^(?:ai(?:_|\d|$)|cpu)/i.test(command.name)).map(command => {
     const matches = routes.filter(controller => controller.type?.toLowerCase() === 'changestate' && controller.entries?.some(entry =>
       entry.key.startsWith('trigger') && [...entry.value.matchAll(/command\s*(?:=|!=)\s*"([^"]+)"/gi)].some(match => match[1] === command.name)));
-    const positive = matches.filter(controller => controller.entries.some(entry => entry.key.startsWith('trigger') &&
-      [...entry.value.matchAll(/command\s*=\s*"([^"]+)"/gi)].some(match => match[1] === command.name)));
+    const positive = matches.filter(controller => {
+      const names = controller.entries.filter(entry => entry.key.startsWith('trigger'))
+        .flatMap(entry => [...entry.value.matchAll(/command\s*=\s*"([^"]+)"/gi)].map(match => match[1]));
+      // A held direction is a move condition, not a separate attack binding.
+      const directionModifier = String(command.command).startsWith('/') &&
+        !/[a-z]/.test(String(command.command)) && names.some(name => name !== command.name);
+      return names.includes(command.name) && !directionModifier;
+    });
     const routeInfo = positive.map(controller => {
       const state = controller.entries.find(entry => entry.key === 'value')?.value ?? '?';
       const discovered = report?.routes?.find(route => route.source === controller.source && route.line === controller.line);
@@ -33,12 +39,12 @@ export function commandGuide(character, report) {
       status: supported ? (character.id === 'coiny' ? 'Available in source combat' : 'Luau only · not playable here')
         : routeInfo.some(route => route.status === 'blocked') ? 'Blocked by engine gaps'
         : routeInfo.length ? 'Not validated / not exported' : 'Input definition · no direct move route'};
-  });
+  }).filter(command => command.routes.length > 0);
 }
 export function renderCommandGuide(container, character, report, doc = document) {
   const element = (tag, text) => { const node = doc.createElement(tag); if (text != null) node.textContent = text; return node; };
   if (!character) { container.replaceChildren(element('p','Select a character to see its imported commands.')); return; }
-  const intro = element('p', `${character.name} · imported command guide. Only Coiny is playable in browser source combat; other entries describe source inputs, not enabled browser attacks.`);
+  const intro = element('p', `${character.name} · move keybinds only. Unused inputs and standalone direction modifiers are hidden. Only Coiny is playable in browser source combat; other characters retain support labels.`);
   const bindings = element('p', COMBAT_KEYS.map((mapping,index) => `P${index+1}: ${Object.entries(mapping).map(([code,button]) => `${keyLabel(code)} = ${button}`).join(' · ')}`).join(' | '));
   const legend = element('p','Read left to right: → means next input; + means together. Forward/back follow fighter facing (P1 starts facing right, P2 left). ~ = release, ~number = hold that many ticks then release, / = hold, $ = direction with diagonals allowed, > = strict sequence. Timings are 60 Hz ticks. Source trigger conditions determine standing/crouching, power and cancel requirements.');
   const list = element('div'); list.className = 'command-list';
@@ -52,6 +58,6 @@ export function renderCommandGuide(container, character, report, doc = document)
     }
     list.append(item);
   }
-  if (!list.childNodes.length) list.append(element('p','No human command definitions found in this import.'));
+  if (!list.childNodes.length) list.append(element('p','No directly command-triggered moves found in this import.'));
   container.replaceChildren(intro,bindings,legend,list);
 }
