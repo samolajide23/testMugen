@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rift Arena · Character Lab</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <header><div class="logo">R<span>／</span>A</div><div><p class="eyebrow">RIFT ARENA / ENGINE DEVELOPMENT</p><h1>Character Lab<span class="badge">LOCAL · v0.1</span></h1></div></header>
+  <main>
+    <section class="workspace" aria-label="Character animation preview">
+      <section id="drop-zone" class="upload-zone" aria-labelledby="upload-title" aria-busy="false">
+        <div><h2 id="upload-title">Drop a character ZIP here</h2><p>Extract, save locally, and import into the preview. One character · ZIP up to 50 MiB · existing folders never overwritten.</p><p class="muted">Only upload assets you have permission to use. Files stay on this PC.</p></div>
+        <button id="choose-zip" type="button">Choose ZIP</button>
+        <input id="zip-file" type="file" accept=".zip,application/zip" hidden>
+        <progress id="upload-progress" max="100" value="0" hidden aria-label="ZIP upload progress"></progress>
+        <p id="upload-status" role="status" aria-live="polite">Ready to add a character.</p>
+      </section>
+      <div class="toolbar"><label>Mode<select id="mode" disabled><option value="animation">Animation inspector</option><option value="luau">Luau movement</option><option value="source-combat" disabled>Source combat (Coiny)</option></select></label><label>Character<select id="character" disabled><option>Loading library…</option></select></label><label>Animation<select id="animation" disabled><option>Select a character</option></select></label><label>View zoom<select id="zoom"><option value="1" selected>1×</option><option value="2">2×</option><option value="3">3×</option><option value="4">4×</option></select></label></div>
+      <div class="stage"><canvas id="stage" width="960" height="540" tabindex="0" aria-label="Character canvas. Focus here. Inspector and Luau: A/D or arrows move. Coiny combat: P1 WASD, J/K/L, U/I/O, T taunt; P2 arrows, Numpad 1/2/3, 4/5/6, 0 taunt. Space pauses."></canvas><div class="stage-label">ANIMATION SANDBOX <span>60 TICKS / SECOND</span></div></div>
+      <div class="transport"><button id="pause" disabled>Pause</button><button id="step" disabled>Step tick</button><button id="reset" disabled>Reset</button><button id="flip" disabled>Flip facing</button><label class="check"><input type="checkbox" id="boxes" checked>Collision boxes</label><label class="check"><input type="checkbox" id="origin" checked>Sprite origin</label></div>
+      <div class="readout" id="readout" aria-live="off">Waiting for character data.</div>
+      <section id="combat-panel" hidden aria-label="Coiny combat status"><p id="combat-health" role="status">Waiting for combat snapshot.</p><p id="combat-result" role="status" hidden></p><p id="victory-quote" role="status" hidden></p><p>P1: WASD · J/K/L = x/y/z · U/I/O = a/b/c · T = taunt (s). P2: arrows · Numpad 1/2/3 = x/y/z · 4/5/6 = a/b/c · 0 = taunt.</p><p>Facing-relative motions: down → down + forward → forward + J/K/L rolls (P2: 1/2/3); the same motion + U/I/O tosses (P2: 4/5/6). J + K: hyper 1; U + I: hyper 2 (P2: 1 + 2 / 4 + 5). Double-tap forward or backward to dash. Hyper moves require source-defined power.</p><p id="visual-status" role="status">Authored Coiny hyper portraits/backgrounds and AngleDraw use imported AIR/sprites. Missing common fightfx hit/guard sparks, SuperPause flashes and F40 finish backgrounds use procedural geometric placeholders, not original MUGEN artwork. The common100 SuperPause flash is procedural, not Coiny's self AIR100 run animation; placement and age use runtime activation metadata. Contact spark positions approximate target origin plus source sparkxy because exact collision points are unavailable. No audio.</p><details><summary>Recent source combat events</summary><pre id="combat-events">No combat events yet.</pre></details></section>
+      <section class="panel command-panel" aria-labelledby="command-guide-title"><h2 id="command-guide-title">Character keybinds &amp; combos</h2><div id="command-guide"><p>Select a character to see its imported commands.</p></div></section>
+      <p id="movement-status" role="status">Animation inspector: fixed-speed preview movement.</p>
+      <details id="movement-notices" hidden><summary>Local bridge notices</summary><ul id="movement-warnings"></ul></details>
+      <p class="hint">Focus the stage: <kbd>A</kbd> <kbd>D</kbd> or ← → move · <kbd>Space</kbd> pause. Luau mode: <kbd>S</kbd> / ↓ crouch · <kbd>W</kbd> / ↑ jump. Inspector only: <kbd>F</kbd> flip. Coiny source combat: P1 <kbd>WASD</kbd> + <kbd>J/K/L</kbd> + <kbd>U/I/O</kbd>, <kbd>T</kbd> taunt; P2 arrows + <kbd>Numpad 1/2/3</kbd> + <kbd>4/5/6</kbd>, <kbd>0</kbd> taunt. Source combat uses authored states through the local bridge. Blur pauses combat and clears inputs.</p>
+    </section>
+    <aside>
+      <section class="panel"><p class="eyebrow">IMPORT STATUS</p><h2 id="name">No character loaded</h2><p id="status" role="status">Loading local library…</p><dl id="stats"></dl></section>
+      <section class="panel"><h2>Compatibility</h2><p class="notice">Inspector previews AIR animations; Luau movement runs the prototype local core. <strong>Coiny source combat</strong> runs supported authored commands, states and HitDefs locally for two Coiny fighters. It is a compatibility checkpoint, not full MUGEN emulation. No sound playback, multiplayer, or Roblox integration yet.</p><div class="legend"><span class="hurt">■ Hurt box</span><span class="attack">■ Attack box</span></div><details><summary id="warning-title">Import warnings</summary><ul id="warnings"></ul></details><details><summary>Imported state controller types</summary><p id="controllers" class="mono">—</p></details></section>
+      <section class="panel"><h2>Local-first workflow</h2><p>Drop a permitted character ZIP above to save and import it automatically. Or place a folder under <code>chars</code> and run <code>npm run import:chars</code>. No files are sent to an external service.</p><p class="muted">Existing art-direction templates remain unchanged.</p></section>
+    </aside>
+  </main>
+</body>
+</html>

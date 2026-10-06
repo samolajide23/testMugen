@@ -1,0 +1,30 @@
+
+[Info]
+name = "Coiny"        ;Name of character
+displayname = "Coiny" ;Name of character to display
+;versiondate =    ;Version date of character
+mugenversion = 1.0  ;Version of M.U.G.E.N character works on
+author = "Camren Springer"      ;Character author name
+pal.defaults = 1,2  ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = player.cmd   ;Command set
+cns     = player.cns   ;Constants
+st      = player.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = player.sff   ;Sprite
+anim    = player.air   ;Animation
+sound  = player.snd   ;Sound
+pal1   = Pal1.act   ;Palettes (can have up to 12)
+pal2   = Pal2.act
+pal3   = Pal3.act
+pal4   = Pal4.act
+pal5   = Pal5.act
+pal6   = Pal6.act
+pal7   = Pal7.act
+pal8   = Pal8.act
+;pal9   =
+;pal10  =
+;pal11  =
+;pal12  =

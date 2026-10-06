@@ -1,0 +1,18 @@
+{
+  "name": "rift-arena-character-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local MUGEN import and animation compatibility lab",
+  "scripts": {
+    "import:chars": "node tools/mugen-import.mjs",
+    "dev": "node tools/preview-server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "setup:luau": "powershell -NoProfile -File tools\\install-luau.ps1",
+    "audit:compatibility": "node tools/audit-compatibility.mjs",
+    "audit:coiny": "node tools/audit-coiny-moves.mjs",
+    "export:movement": "node tools/export-movement.mjs",
+    "export:mugen-checkpoint": "node tools/export-mugen-checkpoint.mjs",
+    "test:luau": "node tools/run-luau-tests.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Character Lab: preview server",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tools\\preview-server.mjs"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

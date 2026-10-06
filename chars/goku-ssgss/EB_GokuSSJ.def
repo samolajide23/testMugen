@@ -1,0 +1,38 @@
+; Definition file for player
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Son Goku"        ;Name of character
+displayname = "SSJB Goku" ;Name of character to display
+versiondate =    ;Version date of character
+mugenversion = 1.0  ;Version of M.U.G.E.N character works on
+author = "boryema"      ;Character author name
+pal.defaults = 11,1,2,5,3,6,7,10,8,4,9,12  ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = Goku.cmd   ;Command set
+cns     = Goku.cns   ;Constants
+st      = states/system.st 
+st1   = states/normal.st
+st2    = states/specials.st
+st3   = states/supers.st
+st4   = states/helpers.st
+st5   = states/custom.st
+stcommon = common1.cns ;Common states
+sprite  = ssjGoku.sff   ;Sprite
+anim    = Goku.air   ;Animation
+sound  = goku.snd   ;Sound
+pal1   = pals/gokuSSGSS.act   ;Palettes (can have up to 12)
+pal2   = pals/Goku1.act
+pal3   = pals/Piccolo1.act
+pal4   = pals/Goku2.act
+pal5   = pals/Mvegeta.act;Vegeta2.act
+pal6   = pals/Ugohan.act
+pal7   = pals/Gogeta.act
+pal8   = pals/Vegito.act
+pal9   = pals/GogetaGT.act
+pal10  = Pals/Broly2.act
+pal11  = pals/Vegeta1.act
+pal12  = pals/gokuGT2.act

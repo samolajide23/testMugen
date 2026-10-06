@@ -1,0 +1,30 @@
+{
+  "characters": [
+    {
+      "id": "coiny",
+      "name": "Coiny",
+      "url": "coiny/character.json"
+    },
+    {
+      "id": "pikachu",
+      "name": "Pikachu",
+      "url": "pikachu/character.json"
+    },
+    {
+      "id": "sylveon",
+      "name": "Sylveon",
+      "url": "sylveon/character.json"
+    },
+    {
+      "id": "tyrone",
+      "name": "Tyrone",
+      "url": "tyrone/character.json"
+    },
+    {
+      "id": "goku-ssgss",
+      "name": "SSJB Goku",
+      "url": "goku-ssgss/character.json"
+    }
+  ],
+  "generatedAt": "2026-10-06T09:05:07.173Z"
+}

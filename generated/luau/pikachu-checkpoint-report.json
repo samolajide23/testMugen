@@ -1,0 +1,6679 @@
+{
+  "schemaVersion": 3,
+  "character": "Pikachu",
+  "selectedDef": "Pikachu.def",
+  "ticksPerSecond": 60,
+  "combat": {
+    "life": 900,
+    "attack": 80,
+    "defence": 90,
+    "xscale": 1,
+    "yscale": 1,
+    "localcoord": [
+      320,
+      240
+    ],
+    "name": "Pikachu",
+    "victoryQuotes": {},
+    "guardState": 150,
+    "hitState": 5000,
+    "guardAnim": 150,
+    "hitAnims": {
+      "High": {
+        "Light": 5000,
+        "Medium": 5001,
+        "Hard": 5002
+      },
+      "Low": {
+        "Light": 5010,
+        "Medium": 5011,
+        "Hard": 5012
+      }
+    },
+    "common": {
+      "animations": {
+        "idle": 0,
+        "walkForward": 20,
+        "walkBack": 21,
+        "runForward": 100,
+        "runBack": 105,
+        "runBackLanding": 106,
+        "crouchDown": 10,
+        "crouch": 11,
+        "crouchUp": 12,
+        "jumpStart": 40,
+        "jumpNeutral": 41,
+        "jumpForward": 42,
+        "jumpBack": 43,
+        "landing": 47,
+        "guardStand": 150,
+        "guardCrouch": 151,
+        "guardAir": 152,
+        "hitStandLight": 5000,
+        "hitStandMedium": 5001,
+        "hitStandHard": 5002,
+        "hitLowLight": 5010,
+        "hitLowMedium": 5011,
+        "hitLowHard": 5012,
+        "hitCrouch": 5020,
+        "hitAir": 5030,
+        "fall": 5050,
+        "down": 5110,
+        "getUp": 5120,
+        "ko": 5150
+      },
+      "movement": {
+        "runForward": 4.6,
+        "runBackX": -4.5,
+        "runBackY": -3.8,
+        "walkForward": 4.5,
+        "walkBack": -4.5,
+        "jump": {
+          "x": 0,
+          "y": -9.5
+        },
+        "jumpBack": -2.55,
+        "jumpForward": 2.5,
+        "airJump": {
+          "x": 0,
+          "y": -8
+        },
+        "airJumpBack": -2.55,
+        "airJumpForward": 2.5,
+        "airJumpNum": 1,
+        "airJumpHeight": 35,
+        "gravity": 0.44,
+        "standFriction": 0.85,
+        "crouchFriction": 0.82
+      },
+      "size": {
+        "groundBack": 15,
+        "groundFront": 16,
+        "height": 55
+      },
+      "reactions": {
+        "liedownTime": 60
+      },
+      "recoveryCommand": "recovery"
+    }
+  },
+  "animationFallbacks": [
+    {
+      "id": 106,
+      "fallback": 0,
+      "reason": "Missing standard AIR action; idle frames provide explicit presentation/collision fallback."
+    }
+  ],
+  "limitations": [
+    "Capability-based human source routes and reachable states; not full MUGEN compatibility or browser integration.",
+    "Original common states are replaced by shared host movement and reactions. AI-dependent routes are excluded.",
+    "Unsupported gameplay blocks the complete route; audio and unsupported visual controllers are explicitly omitted and reported.",
+    "First-occurrence duplicate parameter policy; conflicting controller types still reject. Original files are unchanged.",
+    "Normal helpers run independent source state machines and collisions; nested/key-controlled helpers, helper-versus-helper contact and custom opponent states remain unsupported.",
+    "HitDef palette/fall-animation hints remain unrendered metadata. No body pushing or projectile clashes."
+  ],
+  "dependencies": [
+    {
+      "key": "def",
+      "reference": "Pikachu.def",
+      "source": "Pikachu.def",
+      "status": "loaded",
+      "sha256": "eafd3f5fa781c7351c44c271feb7cd5cabcacd091d1d7b11c1167da371507dd5"
+    },
+    {
+      "key": "cmd",
+      "reference": "pikachu.cmd",
+      "source": "pikachu.cmd",
+      "status": "loaded",
+      "sha256": "059856dd504ab78101a983a47235d0ac2e2179917d067c95557e88890971fa9f"
+    },
+    {
+      "key": "cns",
+      "reference": "pikachu.cns",
+      "source": "pikachu.cns",
+      "status": "loaded",
+      "sha256": "1dc5bda532df931676f87163bc0b53341501fff08b945bdf89e6a3c724a5ec5c"
+    },
+    {
+      "key": "stcommon",
+      "reference": "common1.cns",
+      "source": "common1.cns",
+      "status": "loaded",
+      "sha256": "be5ab64f22ebbae7e758d0dfbecde8f11838c6a50afb097b2e1dabf85fac7ea6"
+    },
+    {
+      "key": "st",
+      "reference": "pikachu.cns",
+      "source": "pikachu.cns",
+      "status": "loaded",
+      "sha256": "1dc5bda532df931676f87163bc0b53341501fff08b945bdf89e6a3c724a5ec5c"
+    },
+    {
+      "key": "anim",
+      "reference": "pikachu.air",
+      "source": "pikachu.air",
+      "status": "loaded",
+      "sha256": "afc8fc11e9da26f1c4e4698109ac8bfdcb95d9b451824ac7f2356b9bfeb1e6cf"
+    }
+  ],
+  "parseWarnings": [
+    "AIR line 1114: Duplicate action 1001",
+    "AIR line 2882: Duplicate action 34688",
+    "AIR: Frame blending/scale/rotation retained but not implemented (70 occurrences; sample lines: 704, 705, 706, 946, 947; sample values: S | A | A1)"
+  ],
+  "selectedCommands": [
+    {
+      "name": "FF",
+      "source": "pikachu.cmd",
+      "line": 120
+    },
+    {
+      "name": "BB",
+      "source": "pikachu.cmd",
+      "line": 125
+    },
+    {
+      "name": "recovery",
+      "source": "pikachu.cmd",
+      "line": 131
+    },
+    {
+      "name": "a",
+      "source": "pikachu.cmd",
+      "line": 148
+    },
+    {
+      "name": "b",
+      "source": "pikachu.cmd",
+      "line": 153
+    },
+    {
+      "name": "x",
+      "source": "pikachu.cmd",
+      "line": 163
+    },
+    {
+      "name": "y",
+      "source": "pikachu.cmd",
+      "line": 168
+    },
+    {
+      "name": "holddown",
+      "source": "pikachu.cmd",
+      "line": 199
+    }
+  ],
+  "selectedStates": [
+    {
+      "id": 0,
+      "source": "<host:checkpoint-idle>"
+    },
+    {
+      "id": -1,
+      "source": "pikachu.cmd"
+    },
+    {
+      "id": 200,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 210,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 220,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 230,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 240,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 250,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 400,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 410,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 420,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 600,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 610,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 1000,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 1001,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 1002,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 1010,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 1011,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 1020,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 1021,
+      "source": "pikachu.cns"
+    },
+    {
+      "id": 10,
+      "source": "<host:checkpoint-crouchDown>"
+    },
+    {
+      "id": 11,
+      "source": "<host:checkpoint-crouch>"
+    },
+    {
+      "id": 12,
+      "source": "<host:checkpoint-crouchUp>"
+    },
+    {
+      "id": 100,
+      "source": "<host:checkpoint-runForward>"
+    },
+    {
+      "id": 105,
+      "source": "<host:checkpoint-runBack>"
+    },
+    {
+      "id": 106,
+      "source": "<host:checkpoint-runBackLanding>"
+    },
+    {
+      "id": 20,
+      "source": "<host:checkpoint-walkForward>"
+    },
+    {
+      "id": 40,
+      "source": "<host:checkpoint-jumpStart>"
+    },
+    {
+      "id": 50,
+      "source": "<host:checkpoint-jumpNeutral>"
+    },
+    {
+      "id": 52,
+      "source": "<host:checkpoint-landing>"
+    },
+    {
+      "id": 120,
+      "source": "<host:checkpoint-guardStand>"
+    },
+    {
+      "id": 130,
+      "source": "<host:checkpoint-guardStand>"
+    },
+    {
+      "id": 131,
+      "source": "<host:checkpoint-guardCrouch>"
+    },
+    {
+      "id": 132,
+      "source": "<host:checkpoint-guardAir>"
+    },
+    {
+      "id": 150,
+      "source": "<host:checkpoint-guard>"
+    },
+    {
+      "id": 151,
+      "source": "<host:checkpoint-guardCrouch>"
+    },
+    {
+      "id": 152,
+      "source": "<host:checkpoint-guardAir>"
+    },
+    {
+      "id": 5000,
+      "source": "<host:checkpoint-hit>"
+    },
+    {
+      "id": 5010,
+      "source": "<host:checkpoint-hitLowLight>"
+    },
+    {
+      "id": 5020,
+      "source": "<host:checkpoint-hitCrouch>"
+    },
+    {
+      "id": 5030,
+      "source": "<host:checkpoint-hitAir>"
+    },
+    {
+      "id": 5050,
+      "source": "<host:checkpoint-fall>"
+    },
+    {
+      "id": 5100,
+      "source": "<host:checkpoint-down>"
+    },
+    {
+      "id": 5110,
+      "source": "<host:checkpoint-down>"
+    },
+    {
+      "id": 5120,
+      "source": "<host:checkpoint-getUp>"
+    },
+    {
+      "id": 5150,
+      "source": "<host:checkpoint-ko>"
+    }
+  ],
+  "parameterPolicy": "first-occurrence",
+  "duplicateParameters": [
+    {
+      "state": 200,
+      "source": "pikachu.cns",
+      "controllerLine": 446,
+      "parameter": "ground.slidetime",
+      "retained": "3",
+      "ignored": "1",
+      "line": 466
+    },
+    {
+      "state": 200,
+      "source": "pikachu.cns",
+      "controllerLine": 446,
+      "parameter": "ground.hittime",
+      "retained": "10",
+      "ignored": "6",
+      "line": 467
+    },
+    {
+      "state": 200,
+      "source": "pikachu.cns",
+      "controllerLine": 446,
+      "parameter": "ground.velocity",
+      "retained": "-3",
+      "ignored": "-1,-1",
+      "line": 468
+    },
+    {
+      "state": 210,
+      "source": "pikachu.cns",
+      "controllerLine": 553,
+      "parameter": "ground.slidetime",
+      "retained": "3",
+      "ignored": "1",
+      "line": 573
+    },
+    {
+      "state": 210,
+      "source": "pikachu.cns",
+      "controllerLine": 553,
+      "parameter": "ground.hittime",
+      "retained": "10",
+      "ignored": "6",
+      "line": 574
+    },
+    {
+      "state": 210,
+      "source": "pikachu.cns",
+      "controllerLine": 553,
+      "parameter": "ground.velocity",
+      "retained": "-3",
+      "ignored": "-1,-1",
+      "line": 575
+    },
+    {
+      "state": 220,
+      "source": "pikachu.cns",
+      "controllerLine": 717,
+      "parameter": "ground.slidetime",
+      "retained": "5",
+      "ignored": "6",
+      "line": 738
+    },
+    {
+      "state": 220,
+      "source": "pikachu.cns",
+      "controllerLine": 717,
+      "parameter": "ground.hittime",
+      "retained": "10",
+      "ignored": "6",
+      "line": 739
+    },
+    {
+      "state": 230,
+      "source": "pikachu.cns",
+      "controllerLine": 796,
+      "parameter": "ground.slidetime",
+      "retained": "2",
+      "ignored": "1",
+      "line": 816
+    },
+    {
+      "state": 230,
+      "source": "pikachu.cns",
+      "controllerLine": 796,
+      "parameter": "ground.hittime",
+      "retained": "10",
+      "ignored": "6",
+      "line": 817
+    },
+    {
+      "state": 230,
+      "source": "pikachu.cns",
+      "controllerLine": 796,
+      "parameter": "ground.velocity",
+      "retained": "-2",
+      "ignored": "-1,-3",
+      "line": 818
+    },
+    {
+      "state": 240,
+      "source": "pikachu.cns",
+      "controllerLine": 858,
+      "parameter": "ground.slidetime",
+      "retained": "2",
+      "ignored": "1",
+      "line": 878
+    },
+    {
+      "state": 240,
+      "source": "pikachu.cns",
+      "controllerLine": 858,
+      "parameter": "ground.hittime",
+      "retained": "10",
+      "ignored": "6",
+      "line": 879
+    },
+    {
+      "state": 240,
+      "source": "pikachu.cns",
+      "controllerLine": 858,
+      "parameter": "ground.velocity",
+      "retained": "-2",
+      "ignored": "-1,-3",
+      "line": 880
+    },
+    {
+      "state": 250,
+      "source": "pikachu.cns",
+      "controllerLine": 933,
+      "parameter": "ground.slidetime",
+      "retained": "2",
+      "ignored": "1",
+      "line": 953
+    },
+    {
+      "state": 250,
+      "source": "pikachu.cns",
+      "controllerLine": 933,
+      "parameter": "ground.hittime",
+      "retained": "10",
+      "ignored": "6",
+      "line": 954
+    },
+    {
+      "state": 400,
+      "source": "pikachu.cns",
+      "controllerLine": 1020,
+      "parameter": "ground.slidetime",
+      "retained": "3",
+      "ignored": "1",
+      "line": 1040
+    },
+    {
+      "state": 400,
+      "source": "pikachu.cns",
+      "controllerLine": 1020,
+      "parameter": "ground.hittime",
+      "retained": "10",
+      "ignored": "6",
+      "line": 1041
+    },
+    {
+      "state": 400,
+      "source": "pikachu.cns",
+      "controllerLine": 1020,
+      "parameter": "ground.velocity",
+      "retained": "-3",
+      "ignored": "-1,-1",
+      "line": 1042
+    },
+    {
+      "state": 410,
+      "source": "pikachu.cns",
+      "controllerLine": 1126,
+      "parameter": "ground.slidetime",
+      "retained": "3",
+      "ignored": "1",
+      "line": 1146
+    },
+    {
+      "state": 410,
+      "source": "pikachu.cns",
+      "controllerLine": 1126,
+      "parameter": "ground.hittime",
+      "retained": "10",
+      "ignored": "6",
+      "line": 1147
+    },
+    {
+      "state": 410,
+      "source": "pikachu.cns",
+      "controllerLine": 1126,
+      "parameter": "ground.velocity",
+      "retained": "-3",
+      "ignored": "-1,-1",
+      "line": 1148
+    },
+    {
+      "state": 1002,
+      "source": "pikachu.cns",
+      "controllerLine": 2036,
+      "parameter": "ground.slidetime",
+      "retained": "3",
+      "ignored": "1",
+      "line": 2056
+    },
+    {
+      "state": 1002,
+      "source": "pikachu.cns",
+      "controllerLine": 2036,
+      "parameter": "ground.hittime",
+      "retained": "10",
+      "ignored": "6",
+      "line": 2057
+    },
+    {
+      "state": 1002,
+      "source": "pikachu.cns",
+      "controllerLine": 2036,
+      "parameter": "ground.velocity",
+      "retained": "-3",
+      "ignored": "-1,-1",
+      "line": 2058
+    }
+  ],
+  "deferredPresentationParameters": [
+    {
+      "state": 200,
+      "source": "pikachu.cns",
+      "controllerLine": 446,
+      "parameter": "palfx.time",
+      "value": "15"
+    },
+    {
+      "state": 200,
+      "source": "pikachu.cns",
+      "controllerLine": 446,
+      "parameter": "palfx.mul",
+      "value": "256,256,256"
+    },
+    {
+      "state": 200,
+      "source": "pikachu.cns",
+      "controllerLine": 446,
+      "parameter": "palfx.add",
+      "value": "100,100,180"
+    },
+    {
+      "state": 200,
+      "source": "pikachu.cns",
+      "controllerLine": 446,
+      "parameter": "palfx.sinadd",
+      "value": "-80,-80,-80,6"
+    },
+    {
+      "state": 200,
+      "source": "pikachu.cns",
+      "controllerLine": 446,
+      "parameter": "palfx.color",
+      "value": "250"
+    },
+    {
+      "state": 210,
+      "source": "pikachu.cns",
+      "controllerLine": 553,
+      "parameter": "palfx.time",
+      "value": "15"
+    },
+    {
+      "state": 210,
+      "source": "pikachu.cns",
+      "controllerLine": 553,
+      "parameter": "palfx.mul",
+      "value": "256,256,256"
+    },
+    {
+      "state": 210,
+      "source": "pikachu.cns",
+      "controllerLine": 553,
+      "parameter": "palfx.add",
+      "value": "100,100,180"
+    },
+    {
+      "state": 210,
+      "source": "pikachu.cns",
+      "controllerLine": 553,
+      "parameter": "palfx.sinadd",
+      "value": "-80,-80,-80,6"
+    },
+    {
+      "state": 210,
+      "source": "pikachu.cns",
+      "controllerLine": 553,
+      "parameter": "palfx.color",
+      "value": "250"
+    },
+    {
+      "state": 220,
+      "source": "pikachu.cns",
+      "controllerLine": 717,
+      "parameter": "palfx.time",
+      "value": "15"
+    },
+    {
+      "state": 220,
+      "source": "pikachu.cns",
+      "controllerLine": 717,
+      "parameter": "palfx.mul",
+      "value": "256,256,256"
+    },
+    {
+      "state": 220,
+      "source": "pikachu.cns",
+      "controllerLine": 717,
+      "parameter": "palfx.add",
+      "value": "100,100,180"
+    },
+    {
+      "state": 220,
+      "source": "pikachu.cns",
+      "controllerLine": 717,
+      "parameter": "palfx.sinadd",
+      "value": "-80,-80,-80,6"
+    },
+    {
+      "state": 220,
+      "source": "pikachu.cns",
+      "controllerLine": 717,
+      "parameter": "palfx.color",
+      "value": "250"
+    },
+    {
+      "state": 250,
+      "source": "pikachu.cns",
+      "controllerLine": 933,
+      "parameter": "palfx.time",
+      "value": "20"
+    },
+    {
+      "state": 250,
+      "source": "pikachu.cns",
+      "controllerLine": 933,
+      "parameter": "palfx.mul",
+      "value": "256,256,256"
+    },
+    {
+      "state": 250,
+      "source": "pikachu.cns",
+      "controllerLine": 933,
+      "parameter": "palfx.add",
+      "value": "100,100,100"
+    },
+    {
+      "state": 250,
+      "source": "pikachu.cns",
+      "controllerLine": 933,
+      "parameter": "palfx.sinadd",
+      "value": "-80,-80,-80,15"
+    },
+    {
+      "state": 250,
+      "source": "pikachu.cns",
+      "controllerLine": 933,
+      "parameter": "palfx.color",
+      "value": "255"
+    },
+    {
+      "state": 400,
+      "source": "pikachu.cns",
+      "controllerLine": 1020,
+      "parameter": "palfx.time",
+      "value": "15"
+    },
+    {
+      "state": 400,
+      "source": "pikachu.cns",
+      "controllerLine": 1020,
+      "parameter": "palfx.mul",
+      "value": "256,256,256"
+    },
+    {
+      "state": 400,
+      "source": "pikachu.cns",
+      "controllerLine": 1020,
+      "parameter": "palfx.add",
+      "value": "100,100,180"
+    },
+    {
+      "state": 400,
+      "source": "pikachu.cns",
+      "controllerLine": 1020,
+      "parameter": "palfx.sinadd",
+      "value": "-80,-80,-80,6"
+    },
+    {
+      "state": 400,
+      "source": "pikachu.cns",
+      "controllerLine": 1020,
+      "parameter": "palfx.color",
+      "value": "250"
+    },
+    {
+      "state": 410,
+      "source": "pikachu.cns",
+      "controllerLine": 1126,
+      "parameter": "palfx.time",
+      "value": "15"
+    },
+    {
+      "state": 410,
+      "source": "pikachu.cns",
+      "controllerLine": 1126,
+      "parameter": "palfx.mul",
+      "value": "256,256,256"
+    },
+    {
+      "state": 410,
+      "source": "pikachu.cns",
+      "controllerLine": 1126,
+      "parameter": "palfx.add",
+      "value": "100,100,180"
+    },
+    {
+      "state": 410,
+      "source": "pikachu.cns",
+      "controllerLine": 1126,
+      "parameter": "palfx.sinadd",
+      "value": "-80,-80,-80,6"
+    },
+    {
+      "state": 410,
+      "source": "pikachu.cns",
+      "controllerLine": 1126,
+      "parameter": "palfx.color",
+      "value": "250"
+    },
+    {
+      "state": 420,
+      "source": "pikachu.cns",
+      "controllerLine": 1264,
+      "parameter": "fall.animtype",
+      "value": "Down"
+    },
+    {
+      "state": 600,
+      "source": "pikachu.cns",
+      "controllerLine": 1332,
+      "parameter": "palfx.time",
+      "value": "15"
+    },
+    {
+      "state": 600,
+      "source": "pikachu.cns",
+      "controllerLine": 1332,
+      "parameter": "palfx.mul",
+      "value": "256,256,256"
+    },
+    {
+      "state": 600,
+      "source": "pikachu.cns",
+      "controllerLine": 1332,
+      "parameter": "palfx.add",
+      "value": "100,100,180"
+    },
+    {
+      "state": 600,
+      "source": "pikachu.cns",
+      "controllerLine": 1332,
+      "parameter": "palfx.sinadd",
+      "value": "-80,-80,-80,6"
+    },
+    {
+      "state": 600,
+      "source": "pikachu.cns",
+      "controllerLine": 1332,
+      "parameter": "palfx.color",
+      "value": "250"
+    },
+    {
+      "state": 610,
+      "source": "pikachu.cns",
+      "controllerLine": 1432,
+      "parameter": "palfx.time",
+      "value": "20"
+    },
+    {
+      "state": 610,
+      "source": "pikachu.cns",
+      "controllerLine": 1432,
+      "parameter": "palfx.mul",
+      "value": "256,256,256"
+    },
+    {
+      "state": 610,
+      "source": "pikachu.cns",
+      "controllerLine": 1432,
+      "parameter": "palfx.add",
+      "value": "100,100,100"
+    },
+    {
+      "state": 610,
+      "source": "pikachu.cns",
+      "controllerLine": 1432,
+      "parameter": "palfx.sinadd",
+      "value": "-80,-80,-80,15"
+    },
+    {
+      "state": 610,
+      "source": "pikachu.cns",
+      "controllerLine": 1432,
+      "parameter": "palfx.color",
+      "value": "255"
+    },
+    {
+      "state": 1002,
+      "source": "pikachu.cns",
+      "controllerLine": 2036,
+      "parameter": "palfx.time",
+      "value": "15"
+    },
+    {
+      "state": 1002,
+      "source": "pikachu.cns",
+      "controllerLine": 2036,
+      "parameter": "palfx.mul",
+      "value": "256,256,256"
+    },
+    {
+      "state": 1002,
+      "source": "pikachu.cns",
+      "controllerLine": 2036,
+      "parameter": "palfx.add",
+      "value": "100,100,180"
+    },
+    {
+      "state": 1002,
+      "source": "pikachu.cns",
+      "controllerLine": 2036,
+      "parameter": "palfx.sinadd",
+      "value": "-80,-80,-80,6"
+    },
+    {
+      "state": 1002,
+      "source": "pikachu.cns",
+      "controllerLine": 2036,
+      "parameter": "palfx.color",
+      "value": "250"
+    }
+  ],
+  "selectedControllers": [
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 279
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 288
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 313
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 322
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 332
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 341
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 352
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 363
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 405
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 417
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 428
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 437
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 448
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 473
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 483
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 493
+    },
+    {
+      "state": 200,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 446
+    },
+    {
+      "state": 200,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 507
+    },
+    {
+      "state": 210,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 553
+    },
+    {
+      "state": 210,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 614
+    },
+    {
+      "state": 220,
+      "type": "Velset",
+      "source": "pikachu.cns",
+      "line": 658
+    },
+    {
+      "state": 220,
+      "type": "Velset",
+      "source": "pikachu.cns",
+      "line": 667
+    },
+    {
+      "state": 220,
+      "type": "Velset",
+      "source": "pikachu.cns",
+      "line": 676
+    },
+    {
+      "state": 220,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 717
+    },
+    {
+      "state": 220,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 773
+    },
+    {
+      "state": 230,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 796
+    },
+    {
+      "state": 230,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 834
+    },
+    {
+      "state": 240,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 858
+    },
+    {
+      "state": 240,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 896
+    },
+    {
+      "state": 250,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 933
+    },
+    {
+      "state": 250,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 976
+    },
+    {
+      "state": 400,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 1020
+    },
+    {
+      "state": 400,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 1081
+    },
+    {
+      "state": 410,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 1126
+    },
+    {
+      "state": 410,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 1187
+    },
+    {
+      "state": 420,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1220
+    },
+    {
+      "state": 420,
+      "type": "VelAdd",
+      "source": "pikachu.cns",
+      "line": 1242
+    },
+    {
+      "state": 420,
+      "type": "VelAdd",
+      "source": "pikachu.cns",
+      "line": 1249
+    },
+    {
+      "state": 420,
+      "type": "VelAdd",
+      "source": "pikachu.cns",
+      "line": 1256
+    },
+    {
+      "state": 420,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 1264
+    },
+    {
+      "state": 420,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 1289
+    },
+    {
+      "state": 600,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 1332
+    },
+    {
+      "state": 600,
+      "type": "CtrlSet",
+      "source": "pikachu.cns",
+      "line": 1386
+    },
+    {
+      "state": 610,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 1432
+    },
+    {
+      "state": 610,
+      "type": "CtrlSet",
+      "source": "pikachu.cns",
+      "line": 1469
+    },
+    {
+      "state": 1000,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 1898
+    },
+    {
+      "state": 1000,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 1905
+    },
+    {
+      "state": 1001,
+      "type": "Helper",
+      "source": "pikachu.cns",
+      "line": 1967
+    },
+    {
+      "state": 1001,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 1984
+    },
+    {
+      "state": 1002,
+      "type": "Gravity",
+      "source": "pikachu.cns",
+      "line": 2000
+    },
+    {
+      "state": 1002,
+      "type": "VelSet",
+      "source": "pikachu.cns",
+      "line": 2006
+    },
+    {
+      "state": 1002,
+      "type": "PosSet",
+      "source": "pikachu.cns",
+      "line": 2012
+    },
+    {
+      "state": 1002,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 2036
+    },
+    {
+      "state": 1002,
+      "type": "DestroySelf",
+      "source": "pikachu.cns",
+      "line": 2092
+    },
+    {
+      "state": 1010,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 2122
+    },
+    {
+      "state": 1010,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 2129
+    },
+    {
+      "state": 1011,
+      "type": "Helper",
+      "source": "pikachu.cns",
+      "line": 2186
+    },
+    {
+      "state": 1011,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 2203
+    },
+    {
+      "state": 1020,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 2219
+    },
+    {
+      "state": 1020,
+      "type": "CtrlSet",
+      "source": "pikachu.cns",
+      "line": 2226
+    },
+    {
+      "state": 1021,
+      "type": "Helper",
+      "source": "pikachu.cns",
+      "line": 2284
+    },
+    {
+      "state": 1021,
+      "type": "CtrlSet",
+      "source": "pikachu.cns",
+      "line": 2301
+    }
+  ],
+  "excludedCommands": [
+    {
+      "name": "CPU1",
+      "source": "pikachu.cmd",
+      "line": 1
+    },
+    {
+      "name": "CPU2",
+      "source": "pikachu.cmd",
+      "line": 6
+    },
+    {
+      "name": "CPU3",
+      "source": "pikachu.cmd",
+      "line": 11
+    },
+    {
+      "name": "CPU4",
+      "source": "pikachu.cmd",
+      "line": 16
+    },
+    {
+      "name": "CPU5",
+      "source": "pikachu.cmd",
+      "line": 21
+    },
+    {
+      "name": "CPU6",
+      "source": "pikachu.cmd",
+      "line": 26
+    },
+    {
+      "name": "CPU7",
+      "source": "pikachu.cmd",
+      "line": 31
+    },
+    {
+      "name": "CPU8",
+      "source": "pikachu.cmd",
+      "line": 36
+    },
+    {
+      "name": "CPU9",
+      "source": "pikachu.cmd",
+      "line": 41
+    },
+    {
+      "name": "CPU10",
+      "source": "pikachu.cmd",
+      "line": 46
+    },
+    {
+      "name": "CPU11",
+      "source": "pikachu.cmd",
+      "line": 51
+    },
+    {
+      "name": "CPU12",
+      "source": "pikachu.cmd",
+      "line": 56
+    },
+    {
+      "name": "CPU13",
+      "source": "pikachu.cmd",
+      "line": 61
+    },
+    {
+      "name": "CPU14",
+      "source": "pikachu.cmd",
+      "line": 66
+    },
+    {
+      "name": "CPU15",
+      "source": "pikachu.cmd",
+      "line": 71
+    },
+    {
+      "name": "BusterBlaster",
+      "source": "pikachu.cmd",
+      "line": 91
+    },
+    {
+      "name": "RockSquad",
+      "source": "pikachu.cmd",
+      "line": 96
+    },
+    {
+      "name": "down_a",
+      "source": "pikachu.cmd",
+      "line": 137
+    },
+    {
+      "name": "down_b",
+      "source": "pikachu.cmd",
+      "line": 142
+    },
+    {
+      "name": "c",
+      "source": "pikachu.cmd",
+      "line": 158
+    },
+    {
+      "name": "z",
+      "source": "pikachu.cmd",
+      "line": 173
+    },
+    {
+      "name": "start",
+      "source": "pikachu.cmd",
+      "line": 178
+    },
+    {
+      "name": "holdfwd",
+      "source": "pikachu.cmd",
+      "line": 184
+    },
+    {
+      "name": "holdback",
+      "source": "pikachu.cmd",
+      "line": 189
+    },
+    {
+      "name": "holdup",
+      "source": "pikachu.cmd",
+      "line": 194
+    }
+  ],
+  "excludedStates": [
+    {
+      "id": 45,
+      "source": "pikachu.cns",
+      "line": 58
+    },
+    {
+      "id": 170,
+      "source": "pikachu.cns",
+      "line": 123
+    },
+    {
+      "id": 180,
+      "source": "pikachu.cns",
+      "line": 144
+    },
+    {
+      "id": 181,
+      "source": "pikachu.cns",
+      "line": 154
+    },
+    {
+      "id": 190,
+      "source": "pikachu.cns",
+      "line": 193
+    },
+    {
+      "id": 191,
+      "source": "pikachu.cns",
+      "line": 204
+    },
+    {
+      "id": 192,
+      "source": "pikachu.cns",
+      "line": 328
+    },
+    {
+      "id": 195,
+      "source": "pikachu.cns",
+      "line": 368
+    },
+    {
+      "id": 620,
+      "source": "pikachu.cns",
+      "line": 1475
+    },
+    {
+      "id": 3000,
+      "source": "pikachu.cns",
+      "line": 2310
+    },
+    {
+      "id": 3010,
+      "source": "pikachu.cns",
+      "line": 2457
+    },
+    {
+      "id": 4000,
+      "source": "pikachu.cns",
+      "line": 2620
+    },
+    {
+      "id": 4010,
+      "source": "pikachu.cns",
+      "line": 2766
+    },
+    {
+      "id": 1025,
+      "source": "pikachu.cns",
+      "line": 2928
+    },
+    {
+      "id": 1026,
+      "source": "pikachu.cns",
+      "line": 2948
+    },
+    {
+      "id": 1027,
+      "source": "pikachu.cns",
+      "line": 2987
+    },
+    {
+      "id": 1028,
+      "source": "pikachu.cns",
+      "line": 3040
+    },
+    {
+      "id": 5051,
+      "source": "pikachu.cns",
+      "line": 3107
+    },
+    {
+      "id": 7600,
+      "source": "pikachu.cns",
+      "line": 3161
+    },
+    {
+      "id": 9999,
+      "source": "pikachu.cns",
+      "line": 3203
+    },
+    {
+      "id": -2,
+      "source": "pikachu.cns",
+      "line": 3269
+    },
+    {
+      "id": -3,
+      "source": "pikachu.cns",
+      "line": 3307
+    },
+    {
+      "id": 51,
+      "source": "common1.cns",
+      "line": 227
+    },
+    {
+      "id": 110,
+      "source": "common1.cns",
+      "line": 467
+    },
+    {
+      "id": 115,
+      "source": "common1.cns",
+      "line": 515
+    },
+    {
+      "id": 140,
+      "source": "common1.cns",
+      "line": 705
+    },
+    {
+      "id": 153,
+      "source": "common1.cns",
+      "line": 863
+    },
+    {
+      "id": 154,
+      "source": "common1.cns",
+      "line": 905
+    },
+    {
+      "id": 155,
+      "source": "common1.cns",
+      "line": 929
+    },
+    {
+      "id": 170,
+      "source": "common1.cns",
+      "line": 980
+    },
+    {
+      "id": 175,
+      "source": "common1.cns",
+      "line": 994
+    },
+    {
+      "id": 190,
+      "source": "common1.cns",
+      "line": 1018
+    },
+    {
+      "id": 191,
+      "source": "common1.cns",
+      "line": 1035
+    },
+    {
+      "id": 5001,
+      "source": "common1.cns",
+      "line": 1122
+    },
+    {
+      "id": 5011,
+      "source": "common1.cns",
+      "line": 1232
+    },
+    {
+      "id": 5035,
+      "source": "common1.cns",
+      "line": 1375
+    },
+    {
+      "id": 5040,
+      "source": "common1.cns",
+      "line": 1417
+    },
+    {
+      "id": 5070,
+      "source": "common1.cns",
+      "line": 1511
+    },
+    {
+      "id": 5071,
+      "source": "common1.cns",
+      "line": 1536
+    },
+    {
+      "id": 5080,
+      "source": "common1.cns",
+      "line": 1560
+    },
+    {
+      "id": 5081,
+      "source": "common1.cns",
+      "line": 1604
+    },
+    {
+      "id": 5101,
+      "source": "common1.cns",
+      "line": 1729
+    },
+    {
+      "id": 5200,
+      "source": "common1.cns",
+      "line": 2001
+    },
+    {
+      "id": 5201,
+      "source": "common1.cns",
+      "line": 2025
+    },
+    {
+      "id": 5210,
+      "source": "common1.cns",
+      "line": 2068
+    },
+    {
+      "id": 5500,
+      "source": "common1.cns",
+      "line": 2169
+    },
+    {
+      "id": 5900,
+      "source": "common1.cns",
+      "line": 2183
+    }
+  ],
+  "excludedControllers": [
+    {
+      "state": -1,
+      "type": "VarSet",
+      "source": "pikachu.cmd",
+      "line": 219
+    },
+    {
+      "state": -1,
+      "type": "DisplayToClipboard",
+      "source": "pikachu.cmd",
+      "line": 226
+    },
+    {
+      "state": -1,
+      "type": "VarSet",
+      "source": "pikachu.cmd",
+      "line": 238
+    },
+    {
+      "state": -1,
+      "type": "VarSet",
+      "source": "pikachu.cmd",
+      "line": 244
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 254
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 265
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 385
+    },
+    {
+      "state": -1,
+      "type": "ChangeState",
+      "source": "pikachu.cmd",
+      "line": 461
+    },
+    {
+      "state": 45,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 64
+    },
+    {
+      "state": 45,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 75
+    },
+    {
+      "state": 45,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 80
+    },
+    {
+      "state": 45,
+      "type": "VarSet",
+      "source": "pikachu.cns",
+      "line": 85
+    },
+    {
+      "state": 45,
+      "type": "VarSet",
+      "source": "pikachu.cns",
+      "line": 90
+    },
+    {
+      "state": 45,
+      "type": "VarSet",
+      "source": "pikachu.cns",
+      "line": 95
+    },
+    {
+      "state": 45,
+      "type": "VelSet",
+      "source": "pikachu.cns",
+      "line": 100
+    },
+    {
+      "state": 45,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 106
+    },
+    {
+      "state": 170,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 129
+    },
+    {
+      "state": 170,
+      "type": "NotHitBy",
+      "source": "pikachu.cns",
+      "line": 136
+    },
+    {
+      "state": 180,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 147
+    },
+    {
+      "state": 181,
+      "type": "NotHitBy",
+      "source": "pikachu.cns",
+      "line": 160
+    },
+    {
+      "state": 181,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 166
+    },
+    {
+      "state": 181,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 175
+    },
+    {
+      "state": 181,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 182
+    },
+    {
+      "state": 190,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 196
+    },
+    {
+      "state": 191,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 211
+    },
+    {
+      "state": 191,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 222
+    },
+    {
+      "state": 191,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 232
+    },
+    {
+      "state": 191,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 242
+    },
+    {
+      "state": 191,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 252
+    },
+    {
+      "state": 191,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 259
+    },
+    {
+      "state": 191,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 266
+    },
+    {
+      "state": 191,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 273
+    },
+    {
+      "state": 191,
+      "type": "EnvShake",
+      "source": "pikachu.cns",
+      "line": 280
+    },
+    {
+      "state": 191,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 286
+    },
+    {
+      "state": 191,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 292
+    },
+    {
+      "state": 191,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 306
+    },
+    {
+      "state": 191,
+      "type": "AssertSpecial",
+      "source": "pikachu.cns",
+      "line": 318
+    },
+    {
+      "state": 191,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 323
+    },
+    {
+      "state": 192,
+      "type": "NotHitBy",
+      "source": "pikachu.cns",
+      "line": 332
+    },
+    {
+      "state": 192,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 338
+    },
+    {
+      "state": 192,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 347
+    },
+    {
+      "state": 192,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 354
+    },
+    {
+      "state": 192,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 361
+    },
+    {
+      "state": 195,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 378
+    },
+    {
+      "state": 195,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 387
+    },
+    {
+      "state": 195,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 394
+    },
+    {
+      "state": 195,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 401
+    },
+    {
+      "state": 200,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 420
+    },
+    {
+      "state": 200,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 425
+    },
+    {
+      "state": 200,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 430
+    },
+    {
+      "state": 200,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 435
+    },
+    {
+      "state": 200,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 476
+    },
+    {
+      "state": 200,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 488
+    },
+    {
+      "state": 200,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 502
+    },
+    {
+      "state": 210,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 526
+    },
+    {
+      "state": 210,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 531
+    },
+    {
+      "state": 210,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 536
+    },
+    {
+      "state": 210,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 542
+    },
+    {
+      "state": 210,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 583
+    },
+    {
+      "state": 210,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 597
+    },
+    {
+      "state": 210,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 602
+    },
+    {
+      "state": 220,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 632
+    },
+    {
+      "state": 220,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 637
+    },
+    {
+      "state": 220,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 642
+    },
+    {
+      "state": 220,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 647
+    },
+    {
+      "state": 220,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 683
+    },
+    {
+      "state": 220,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 694
+    },
+    {
+      "state": 220,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 705
+    },
+    {
+      "state": 220,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 747
+    },
+    {
+      "state": 220,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 759
+    },
+    {
+      "state": 230,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 791
+    },
+    {
+      "state": 230,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 821
+    },
+    {
+      "state": 240,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 853
+    },
+    {
+      "state": 240,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 883
+    },
+    {
+      "state": 250,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 915
+    },
+    {
+      "state": 250,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 920
+    },
+    {
+      "state": 250,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 963
+    },
+    {
+      "state": 400,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 994
+    },
+    {
+      "state": 400,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 999
+    },
+    {
+      "state": 400,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1004
+    },
+    {
+      "state": 400,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1009
+    },
+    {
+      "state": 400,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1050
+    },
+    {
+      "state": 400,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1062
+    },
+    {
+      "state": 400,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1076
+    },
+    {
+      "state": 410,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1099
+    },
+    {
+      "state": 410,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1104
+    },
+    {
+      "state": 410,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1109
+    },
+    {
+      "state": 410,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1115
+    },
+    {
+      "state": 410,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1156
+    },
+    {
+      "state": 410,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1170
+    },
+    {
+      "state": 410,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1175
+    },
+    {
+      "state": 420,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1205
+    },
+    {
+      "state": 420,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1210
+    },
+    {
+      "state": 420,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1215
+    },
+    {
+      "state": 420,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 1231
+    },
+    {
+      "state": 600,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1306
+    },
+    {
+      "state": 600,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1311
+    },
+    {
+      "state": 600,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1316
+    },
+    {
+      "state": 600,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1321
+    },
+    {
+      "state": 600,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1355
+    },
+    {
+      "state": 600,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1367
+    },
+    {
+      "state": 600,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1381
+    },
+    {
+      "state": 610,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 1403
+    },
+    {
+      "state": 610,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1414
+    },
+    {
+      "state": 610,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1419
+    },
+    {
+      "state": 610,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1456
+    },
+    {
+      "state": 620,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1485
+    },
+    {
+      "state": 620,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1490
+    },
+    {
+      "state": 620,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1495
+    },
+    {
+      "state": 620,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 1500
+    },
+    {
+      "state": 620,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1511
+    },
+    {
+      "state": 620,
+      "type": "Velset",
+      "source": "pikachu.cns",
+      "line": 1521
+    },
+    {
+      "state": 620,
+      "type": "Velset",
+      "source": "pikachu.cns",
+      "line": 1528
+    },
+    {
+      "state": 620,
+      "type": "Velset",
+      "source": "pikachu.cns",
+      "line": 1537
+    },
+    {
+      "state": 620,
+      "type": "Velset",
+      "source": "pikachu.cns",
+      "line": 1543
+    },
+    {
+      "state": 620,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1550
+    },
+    {
+      "state": 620,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 1561
+    },
+    {
+      "state": 620,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1591
+    },
+    {
+      "state": 620,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1603
+    },
+    {
+      "state": 620,
+      "type": "CtrlSet",
+      "source": "pikachu.cns",
+      "line": 1617
+    },
+    {
+      "state": 620,
+      "type": "SelfState",
+      "source": "pikachu.cns",
+      "line": 1625
+    },
+    {
+      "state": 1001,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1923
+    },
+    {
+      "state": 1001,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1936
+    },
+    {
+      "state": 1001,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1944
+    },
+    {
+      "state": 1001,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1952
+    },
+    {
+      "state": 1002,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 2018
+    },
+    {
+      "state": 1002,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2029
+    },
+    {
+      "state": 1002,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2066
+    },
+    {
+      "state": 1002,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2078
+    },
+    {
+      "state": 1002,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2100
+    },
+    {
+      "state": 1011,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2146
+    },
+    {
+      "state": 1011,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2158
+    },
+    {
+      "state": 1011,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2166
+    },
+    {
+      "state": 1011,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2173
+    },
+    {
+      "state": 1021,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2241
+    },
+    {
+      "state": 1021,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2254
+    },
+    {
+      "state": 1021,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2268
+    },
+    {
+      "state": 1021,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2276
+    },
+    {
+      "state": 3000,
+      "type": "NotHitBy",
+      "source": "pikachu.cns",
+      "line": 2320
+    },
+    {
+      "state": 3000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2330
+    },
+    {
+      "state": 3000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2348
+    },
+    {
+      "state": 3000,
+      "type": "SuperPause",
+      "source": "pikachu.cns",
+      "line": 2366
+    },
+    {
+      "state": 3000,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2377
+    },
+    {
+      "state": 3000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2384
+    },
+    {
+      "state": 3000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2400
+    },
+    {
+      "state": 3000,
+      "type": "EnvColor",
+      "source": "pikachu.cns",
+      "line": 2415
+    },
+    {
+      "state": 3000,
+      "type": "BGPalFX",
+      "source": "pikachu.cns",
+      "line": 2424
+    },
+    {
+      "state": 3000,
+      "type": "Helper",
+      "source": "pikachu.cns",
+      "line": 2435
+    },
+    {
+      "state": 3000,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 2451
+    },
+    {
+      "state": 3010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2476
+    },
+    {
+      "state": 3010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2483
+    },
+    {
+      "state": 3010,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 2499
+    },
+    {
+      "state": 3010,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 2528
+    },
+    {
+      "state": 3010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2561
+    },
+    {
+      "state": 3010,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2568
+    },
+    {
+      "state": 3010,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2580
+    },
+    {
+      "state": 3010,
+      "type": "DestroySelf",
+      "source": "pikachu.cns",
+      "line": 2597
+    },
+    {
+      "state": 3010,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2604
+    },
+    {
+      "state": 4000,
+      "type": "NotHitBy",
+      "source": "pikachu.cns",
+      "line": 2630
+    },
+    {
+      "state": 4000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2639
+    },
+    {
+      "state": 4000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2657
+    },
+    {
+      "state": 4000,
+      "type": "SuperPause",
+      "source": "pikachu.cns",
+      "line": 2675
+    },
+    {
+      "state": 4000,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2686
+    },
+    {
+      "state": 4000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2693
+    },
+    {
+      "state": 4000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2709
+    },
+    {
+      "state": 4000,
+      "type": "EnvColor",
+      "source": "pikachu.cns",
+      "line": 2724
+    },
+    {
+      "state": 4000,
+      "type": "BGPalFX",
+      "source": "pikachu.cns",
+      "line": 2733
+    },
+    {
+      "state": 4000,
+      "type": "Helper",
+      "source": "pikachu.cns",
+      "line": 2744
+    },
+    {
+      "state": 4000,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 2760
+    },
+    {
+      "state": 4010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2785
+    },
+    {
+      "state": 4010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2792
+    },
+    {
+      "state": 4010,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 2808
+    },
+    {
+      "state": 4010,
+      "type": "HitDef",
+      "source": "pikachu.cns",
+      "line": 2837
+    },
+    {
+      "state": 4010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2870
+    },
+    {
+      "state": 4010,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2877
+    },
+    {
+      "state": 4010,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2889
+    },
+    {
+      "state": 4010,
+      "type": "DestroySelf",
+      "source": "pikachu.cns",
+      "line": 2906
+    },
+    {
+      "state": 4010,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2913
+    },
+    {
+      "state": 1025,
+      "type": "ChangeAnim2",
+      "source": "pikachu.cns",
+      "line": 2936
+    },
+    {
+      "state": 1025,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 2941
+    },
+    {
+      "state": 1026,
+      "type": "HitVelSet",
+      "source": "pikachu.cns",
+      "line": 2954
+    },
+    {
+      "state": 1026,
+      "type": "VelAdd",
+      "source": "pikachu.cns",
+      "line": 2960
+    },
+    {
+      "state": 1026,
+      "type": "ScreenBound",
+      "source": "pikachu.cns",
+      "line": 2965
+    },
+    {
+      "state": 1026,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 2973
+    },
+    {
+      "state": 1026,
+      "type": "SelfState",
+      "source": "pikachu.cns",
+      "line": 2980
+    },
+    {
+      "state": 1027,
+      "type": "Turn",
+      "source": "pikachu.cns",
+      "line": 2993
+    },
+    {
+      "state": 1027,
+      "type": "PosAdd",
+      "source": "pikachu.cns",
+      "line": 2997
+    },
+    {
+      "state": 1027,
+      "type": "PosFreeze",
+      "source": "pikachu.cns",
+      "line": 3002
+    },
+    {
+      "state": 1027,
+      "type": "ScreenBound",
+      "source": "pikachu.cns",
+      "line": 3008
+    },
+    {
+      "state": 1027,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 3014
+    },
+    {
+      "state": 1027,
+      "type": "ChangeAnim2",
+      "source": "pikachu.cns",
+      "line": 3023
+    },
+    {
+      "state": 1027,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 3028
+    },
+    {
+      "state": 1027,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 3033
+    },
+    {
+      "state": 1028,
+      "type": "NotHitBy",
+      "source": "pikachu.cns",
+      "line": 3046
+    },
+    {
+      "state": 1028,
+      "type": "VelSet",
+      "source": "pikachu.cns",
+      "line": 3051
+    },
+    {
+      "state": 1028,
+      "type": "VelSet",
+      "source": "pikachu.cns",
+      "line": 3056
+    },
+    {
+      "state": 1028,
+      "type": "Turn",
+      "source": "pikachu.cns",
+      "line": 3061
+    },
+    {
+      "state": 1028,
+      "type": "VelAdd",
+      "source": "pikachu.cns",
+      "line": 3065
+    },
+    {
+      "state": 1028,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 3070
+    },
+    {
+      "state": 1028,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 3076
+    },
+    {
+      "state": 1028,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 3082
+    },
+    {
+      "state": 1028,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 3090
+    },
+    {
+      "state": 1028,
+      "type": "SelfState",
+      "source": "pikachu.cns",
+      "line": 3098
+    },
+    {
+      "state": 5051,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 3113
+    },
+    {
+      "state": 5051,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 3123
+    },
+    {
+      "state": 5051,
+      "type": "VelAdd",
+      "source": "pikachu.cns",
+      "line": 3131
+    },
+    {
+      "state": 5051,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 3136
+    },
+    {
+      "state": 5051,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 3145
+    },
+    {
+      "state": 5051,
+      "type": "ChangeState",
+      "source": "pikachu.cns",
+      "line": 3153
+    },
+    {
+      "state": 7600,
+      "type": "ChangeAnim",
+      "source": "pikachu.cns",
+      "line": 3170
+    },
+    {
+      "state": 7600,
+      "type": "NotHitBy",
+      "source": "pikachu.cns",
+      "line": 3176
+    },
+    {
+      "state": 7600,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 3182
+    },
+    {
+      "state": 7600,
+      "type": "velset",
+      "source": "pikachu.cns",
+      "line": 3187
+    },
+    {
+      "state": 7600,
+      "type": "gravity",
+      "source": "pikachu.cns",
+      "line": 3193
+    },
+    {
+      "state": 7600,
+      "type": "Selfstate",
+      "source": "pikachu.cns",
+      "line": 3197
+    },
+    {
+      "state": 9999,
+      "type": "Turn",
+      "source": "pikachu.cns",
+      "line": 3208
+    },
+    {
+      "state": 9999,
+      "type": "Varset",
+      "source": "pikachu.cns",
+      "line": 3211
+    },
+    {
+      "state": 9999,
+      "type": "ParentVarSet",
+      "source": "pikachu.cns",
+      "line": 3216
+    },
+    {
+      "state": 9999,
+      "type": "ParentVarSet",
+      "source": "pikachu.cns",
+      "line": 3229
+    },
+    {
+      "state": 9999,
+      "type": "varset",
+      "source": "pikachu.cns",
+      "line": 3242
+    },
+    {
+      "state": 9999,
+      "type": "VarAdd",
+      "source": "pikachu.cns",
+      "line": 3248
+    },
+    {
+      "state": 9999,
+      "type": "Destroyself",
+      "source": "pikachu.cns",
+      "line": 3253
+    },
+    {
+      "state": -2,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 3271
+    },
+    {
+      "state": -3,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 3311
+    },
+    {
+      "state": 0,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 35
+    },
+    {
+      "state": 0,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 41
+    },
+    {
+      "state": 0,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 46
+    },
+    {
+      "state": 0,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 52
+    },
+    {
+      "state": 10,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 64
+    },
+    {
+      "state": 10,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 69
+    },
+    {
+      "state": 11,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 82
+    },
+    {
+      "state": 12,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 94
+    },
+    {
+      "state": 20,
+      "type": "MakeDust",
+      "source": "common1.cns",
+      "line": 106
+    },
+    {
+      "state": 20,
+      "type": "PlaySnd",
+      "source": "common1.cns",
+      "line": 115
+    },
+    {
+      "state": 20,
+      "type": "PlaySnd",
+      "source": "common1.cns",
+      "line": 121
+    },
+    {
+      "state": 20,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 127
+    },
+    {
+      "state": 20,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 132
+    },
+    {
+      "state": 20,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 137
+    },
+    {
+      "state": 20,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 144
+    },
+    {
+      "state": 40,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 160
+    },
+    {
+      "state": 40,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 165
+    },
+    {
+      "state": 40,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 170
+    },
+    {
+      "state": 40,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 175
+    },
+    {
+      "state": 40,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 181
+    },
+    {
+      "state": 40,
+      "type": "Explod",
+      "source": "common1.cns",
+      "line": 188
+    },
+    {
+      "state": 40,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 197
+    },
+    {
+      "state": 50,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 208
+    },
+    {
+      "state": 50,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 213
+    },
+    {
+      "state": 50,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 218
+    },
+    {
+      "state": 51,
+      "type": "Null",
+      "source": "common1.cns",
+      "line": 231
+    },
+    {
+      "state": 52,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 243
+    },
+    {
+      "state": 52,
+      "type": "PosSet",
+      "source": "common1.cns",
+      "line": 248
+    },
+    {
+      "state": 52,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 253
+    },
+    {
+      "state": 52,
+      "type": "Explod",
+      "source": "common1.cns",
+      "line": 258
+    },
+    {
+      "state": 52,
+      "type": "Explod",
+      "source": "common1.cns",
+      "line": 267
+    },
+    {
+      "state": 52,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 277
+    },
+    {
+      "state": 100,
+      "type": "AfterImage",
+      "source": "common1.cns",
+      "line": 292
+    },
+    {
+      "state": 100,
+      "type": "AssertSpecial",
+      "source": "common1.cns",
+      "line": 303
+    },
+    {
+      "state": 100,
+      "type": "PlaySnd",
+      "source": "common1.cns",
+      "line": 308
+    },
+    {
+      "state": 100,
+      "type": "PlaySnd",
+      "source": "common1.cns",
+      "line": 313
+    },
+    {
+      "state": 100,
+      "type": "AssertSpecial",
+      "source": "common1.cns",
+      "line": 320
+    },
+    {
+      "state": 100,
+      "type": "Explod",
+      "source": "common1.cns",
+      "line": 325
+    },
+    {
+      "state": 100,
+      "type": "Explod",
+      "source": "common1.cns",
+      "line": 339
+    },
+    {
+      "state": 100,
+      "type": "Explod",
+      "source": "common1.cns",
+      "line": 350
+    },
+    {
+      "state": 100,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 361
+    },
+    {
+      "state": 100,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 367
+    },
+    {
+      "state": 100,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 372
+    },
+    {
+      "state": 105,
+      "type": "Explod",
+      "source": "common1.cns",
+      "line": 386
+    },
+    {
+      "state": 105,
+      "type": "AfterImage",
+      "source": "common1.cns",
+      "line": 398
+    },
+    {
+      "state": 105,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 409
+    },
+    {
+      "state": 105,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 415
+    },
+    {
+      "state": 105,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 420
+    },
+    {
+      "state": 106,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 434
+    },
+    {
+      "state": 106,
+      "type": "PosSet",
+      "source": "common1.cns",
+      "line": 439
+    },
+    {
+      "state": 106,
+      "type": "Explod",
+      "source": "common1.cns",
+      "line": 444
+    },
+    {
+      "state": 106,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 459
+    },
+    {
+      "state": 110,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 471
+    },
+    {
+      "state": 110,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 476
+    },
+    {
+      "state": 110,
+      "type": "HitBy",
+      "source": "common1.cns",
+      "line": 481
+    },
+    {
+      "state": 110,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 487
+    },
+    {
+      "state": 110,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 493
+    },
+    {
+      "state": 110,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 498
+    },
+    {
+      "state": 110,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 503
+    },
+    {
+      "state": 110,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 508
+    },
+    {
+      "state": 115,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 519
+    },
+    {
+      "state": 115,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 524
+    },
+    {
+      "state": 115,
+      "type": "HitBy",
+      "source": "common1.cns",
+      "line": 529
+    },
+    {
+      "state": 115,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 535
+    },
+    {
+      "state": 115,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 541
+    },
+    {
+      "state": 115,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 546
+    },
+    {
+      "state": 115,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 551
+    },
+    {
+      "state": 115,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 556
+    },
+    {
+      "state": 120,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 567
+    },
+    {
+      "state": 120,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 572
+    },
+    {
+      "state": 120,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 577
+    },
+    {
+      "state": 120,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 582
+    },
+    {
+      "state": 120,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 587
+    },
+    {
+      "state": 120,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 593
+    },
+    {
+      "state": 120,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 599
+    },
+    {
+      "state": 120,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 604
+    },
+    {
+      "state": 130,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 616
+    },
+    {
+      "state": 130,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 621
+    },
+    {
+      "state": 130,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 626
+    },
+    {
+      "state": 131,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 638
+    },
+    {
+      "state": 131,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 643
+    },
+    {
+      "state": 131,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 648
+    },
+    {
+      "state": 132,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 660
+    },
+    {
+      "state": 132,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 665
+    },
+    {
+      "state": 132,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 670
+    },
+    {
+      "state": 132,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 675
+    },
+    {
+      "state": 132,
+      "type": "PosSet",
+      "source": "common1.cns",
+      "line": 680
+    },
+    {
+      "state": 132,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 685
+    },
+    {
+      "state": 132,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 692
+    },
+    {
+      "state": 132,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 697
+    },
+    {
+      "state": 140,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 710
+    },
+    {
+      "state": 140,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 715
+    },
+    {
+      "state": 140,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 720
+    },
+    {
+      "state": 140,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 725
+    },
+    {
+      "state": 140,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 730
+    },
+    {
+      "state": 140,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 736
+    },
+    {
+      "state": 150,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 755
+    },
+    {
+      "state": 150,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 760
+    },
+    {
+      "state": 150,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 765
+    },
+    {
+      "state": 150,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 771
+    },
+    {
+      "state": 150,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 777
+    },
+    {
+      "state": 151,
+      "type": "HitVelSet",
+      "source": "common1.cns",
+      "line": 791
+    },
+    {
+      "state": 151,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 796
+    },
+    {
+      "state": 151,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 802
+    },
+    {
+      "state": 151,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 807
+    },
+    {
+      "state": 151,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 813
+    },
+    {
+      "state": 151,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 819
+    },
+    {
+      "state": 152,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 833
+    },
+    {
+      "state": 152,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 838
+    },
+    {
+      "state": 152,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 843
+    },
+    {
+      "state": 152,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 849
+    },
+    {
+      "state": 152,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 855
+    },
+    {
+      "state": 153,
+      "type": "HitVelSet",
+      "source": "common1.cns",
+      "line": 869
+    },
+    {
+      "state": 153,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 874
+    },
+    {
+      "state": 153,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 880
+    },
+    {
+      "state": 153,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 885
+    },
+    {
+      "state": 153,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 891
+    },
+    {
+      "state": 153,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 897
+    },
+    {
+      "state": 154,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 911
+    },
+    {
+      "state": 154,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 916
+    },
+    {
+      "state": 154,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 921
+    },
+    {
+      "state": 155,
+      "type": "HitVelSet",
+      "source": "common1.cns",
+      "line": 935
+    },
+    {
+      "state": 155,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 941
+    },
+    {
+      "state": 155,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 946
+    },
+    {
+      "state": 155,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 951
+    },
+    {
+      "state": 155,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 956
+    },
+    {
+      "state": 155,
+      "type": "PosSet",
+      "source": "common1.cns",
+      "line": 961
+    },
+    {
+      "state": 155,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 966
+    },
+    {
+      "state": 155,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 973
+    },
+    {
+      "state": 170,
+      "type": "NotHitBy",
+      "source": "common1.cns",
+      "line": 986
+    },
+    {
+      "state": 175,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 999
+    },
+    {
+      "state": 175,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1005
+    },
+    {
+      "state": 175,
+      "type": "NotHitBy",
+      "source": "common1.cns",
+      "line": 1010
+    },
+    {
+      "state": 190,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1023
+    },
+    {
+      "state": 190,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1028
+    },
+    {
+      "state": 191,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1039
+    },
+    {
+      "state": 5000,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1052
+    },
+    {
+      "state": 5000,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1058
+    },
+    {
+      "state": 5000,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1064
+    },
+    {
+      "state": 5000,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1070
+    },
+    {
+      "state": 5000,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 1075
+    },
+    {
+      "state": 5000,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1082
+    },
+    {
+      "state": 5000,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1088
+    },
+    {
+      "state": 5000,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1093
+    },
+    {
+      "state": 5000,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1101
+    },
+    {
+      "state": 5000,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1110
+    },
+    {
+      "state": 5001,
+      "type": "HitVelSet",
+      "source": "common1.cns",
+      "line": 1127
+    },
+    {
+      "state": 5001,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1132
+    },
+    {
+      "state": 5001,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 1137
+    },
+    {
+      "state": 5001,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 1142
+    },
+    {
+      "state": 5001,
+      "type": "DefenceMulSet",
+      "source": "common1.cns",
+      "line": 1147
+    },
+    {
+      "state": 5001,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1152
+    },
+    {
+      "state": 5010,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1166
+    },
+    {
+      "state": 5010,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1172
+    },
+    {
+      "state": 5010,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1178
+    },
+    {
+      "state": 5010,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1184
+    },
+    {
+      "state": 5010,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 1189
+    },
+    {
+      "state": 5010,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1196
+    },
+    {
+      "state": 5010,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1202
+    },
+    {
+      "state": 5010,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1207
+    },
+    {
+      "state": 5010,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1214
+    },
+    {
+      "state": 5010,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1222
+    },
+    {
+      "state": 5011,
+      "type": "HitVelSet",
+      "source": "common1.cns",
+      "line": 1237
+    },
+    {
+      "state": 5011,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1242
+    },
+    {
+      "state": 5011,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 1247
+    },
+    {
+      "state": 5011,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 1252
+    },
+    {
+      "state": 5011,
+      "type": "DefenceMulSet",
+      "source": "common1.cns",
+      "line": 1257
+    },
+    {
+      "state": 5011,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1262
+    },
+    {
+      "state": 5020,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1277
+    },
+    {
+      "state": 5020,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1283
+    },
+    {
+      "state": 5020,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1289
+    },
+    {
+      "state": 5020,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1295
+    },
+    {
+      "state": 5020,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1300
+    },
+    {
+      "state": 5020,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1305
+    },
+    {
+      "state": 5020,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1313
+    },
+    {
+      "state": 5020,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1322
+    },
+    {
+      "state": 5030,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 1341
+    },
+    {
+      "state": 5030,
+      "type": "HitVelSet",
+      "source": "common1.cns",
+      "line": 1346
+    },
+    {
+      "state": 5030,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1352
+    },
+    {
+      "state": 5030,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1360
+    },
+    {
+      "state": 5030,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1368
+    },
+    {
+      "state": 5035,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1380
+    },
+    {
+      "state": 5035,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 1388
+    },
+    {
+      "state": 5035,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1393
+    },
+    {
+      "state": 5035,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1404
+    },
+    {
+      "state": 5040,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1422
+    },
+    {
+      "state": 5040,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1427
+    },
+    {
+      "state": 5040,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 1435
+    },
+    {
+      "state": 5040,
+      "type": "StateTypeSet",
+      "source": "common1.cns",
+      "line": 1440
+    },
+    {
+      "state": 5040,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 1445
+    },
+    {
+      "state": 5040,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1450
+    },
+    {
+      "state": 5050,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1463
+    },
+    {
+      "state": 5050,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1473
+    },
+    {
+      "state": 5050,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 1481
+    },
+    {
+      "state": 5050,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1486
+    },
+    {
+      "state": 5050,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1495
+    },
+    {
+      "state": 5050,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1503
+    },
+    {
+      "state": 5070,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1517
+    },
+    {
+      "state": 5070,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1522
+    },
+    {
+      "state": 5070,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1527
+    },
+    {
+      "state": 5071,
+      "type": "HitVelSet",
+      "source": "common1.cns",
+      "line": 1541
+    },
+    {
+      "state": 5071,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 1547
+    },
+    {
+      "state": 5071,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1552
+    },
+    {
+      "state": 5080,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 1566
+    },
+    {
+      "state": 5080,
+      "type": "VarAdd",
+      "source": "common1.cns",
+      "line": 1571
+    },
+    {
+      "state": 5080,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 1578
+    },
+    {
+      "state": 5080,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1585
+    },
+    {
+      "state": 5080,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1590
+    },
+    {
+      "state": 5080,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1596
+    },
+    {
+      "state": 5081,
+      "type": "HitVelSet",
+      "source": "common1.cns",
+      "line": 1609
+    },
+    {
+      "state": 5081,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 1614
+    },
+    {
+      "state": 5081,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 1619
+    },
+    {
+      "state": 5081,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1624
+    },
+    {
+      "state": 5100,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 1644
+    },
+    {
+      "state": 5100,
+      "type": "FallEnvShake",
+      "source": "common1.cns",
+      "line": 1651
+    },
+    {
+      "state": 5100,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 1655
+    },
+    {
+      "state": 5100,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1660
+    },
+    {
+      "state": 5100,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1667
+    },
+    {
+      "state": 5100,
+      "type": "PosSet",
+      "source": "common1.cns",
+      "line": 1674
+    },
+    {
+      "state": 5100,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 1679
+    },
+    {
+      "state": 5100,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 1684
+    },
+    {
+      "state": 5100,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1689
+    },
+    {
+      "state": 5100,
+      "type": "GameMakeAnim",
+      "source": "common1.cns",
+      "line": 1695
+    },
+    {
+      "state": 5100,
+      "type": "HitFallDamage",
+      "source": "common1.cns",
+      "line": 1702
+    },
+    {
+      "state": 5100,
+      "type": "PlaySnd",
+      "source": "common1.cns",
+      "line": 1706
+    },
+    {
+      "state": 5100,
+      "type": "PosFreeze",
+      "source": "common1.cns",
+      "line": 1711
+    },
+    {
+      "state": 5100,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1715
+    },
+    {
+      "state": 5100,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1720
+    },
+    {
+      "state": 5101,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1734
+    },
+    {
+      "state": 5101,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1741
+    },
+    {
+      "state": 5101,
+      "type": "HitFallVel",
+      "source": "common1.cns",
+      "line": 1748
+    },
+    {
+      "state": 5101,
+      "type": "PosSet",
+      "source": "common1.cns",
+      "line": 1752
+    },
+    {
+      "state": 5101,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 1757
+    },
+    {
+      "state": 5101,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1762
+    },
+    {
+      "state": 5110,
+      "type": "FallEnvShake",
+      "source": "common1.cns",
+      "line": 1775
+    },
+    {
+      "state": 5110,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1779
+    },
+    {
+      "state": 5110,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1786
+    },
+    {
+      "state": 5110,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1794
+    },
+    {
+      "state": 5110,
+      "type": "HitFallDamage",
+      "source": "common1.cns",
+      "line": 1802
+    },
+    {
+      "state": 5110,
+      "type": "PosSet",
+      "source": "common1.cns",
+      "line": 1806
+    },
+    {
+      "state": 5110,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 1811
+    },
+    {
+      "state": 5110,
+      "type": "PlaySnd",
+      "source": "common1.cns",
+      "line": 1817
+    },
+    {
+      "state": 5110,
+      "type": "GameMakeAnim",
+      "source": "common1.cns",
+      "line": 1823
+    },
+    {
+      "state": 5110,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 1831
+    },
+    {
+      "state": 5110,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1836
+    },
+    {
+      "state": 5110,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1845
+    },
+    {
+      "state": 5110,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1853
+    },
+    {
+      "state": 5110,
+      "type": "VarSet",
+      "source": "common1.cns",
+      "line": 1861
+    },
+    {
+      "state": 5110,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 1867
+    },
+    {
+      "state": 5110,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1872
+    },
+    {
+      "state": 5110,
+      "type": "ForceFeedback",
+      "source": "common1.cns",
+      "line": 1880
+    },
+    {
+      "state": 5120,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1895
+    },
+    {
+      "state": 5120,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1902
+    },
+    {
+      "state": 5120,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 1909
+    },
+    {
+      "state": 5120,
+      "type": "NotHitBy",
+      "source": "common1.cns",
+      "line": 1914
+    },
+    {
+      "state": 5120,
+      "type": "HitFallSet",
+      "source": "common1.cns",
+      "line": 1920
+    },
+    {
+      "state": 5120,
+      "type": "NotHitBy",
+      "source": "common1.cns",
+      "line": 1925
+    },
+    {
+      "state": 5120,
+      "type": "NotHitBy",
+      "source": "common1.cns",
+      "line": 1931
+    },
+    {
+      "state": 5120,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 1937
+    },
+    {
+      "state": 5150,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1951
+    },
+    {
+      "state": 5150,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1959
+    },
+    {
+      "state": 5150,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1966
+    },
+    {
+      "state": 5150,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 1975
+    },
+    {
+      "state": 5150,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 1982
+    },
+    {
+      "state": 5150,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 1987
+    },
+    {
+      "state": 5150,
+      "type": "NotHitBy",
+      "source": "common1.cns",
+      "line": 1993
+    },
+    {
+      "state": 5200,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 2006
+    },
+    {
+      "state": 5200,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 2012
+    },
+    {
+      "state": 5200,
+      "type": "SelfState",
+      "source": "common1.cns",
+      "line": 2017
+    },
+    {
+      "state": 5201,
+      "type": "Turn",
+      "source": "common1.cns",
+      "line": 2031
+    },
+    {
+      "state": 5201,
+      "type": "VelSet",
+      "source": "common1.cns",
+      "line": 2036
+    },
+    {
+      "state": 5201,
+      "type": "PosSet",
+      "source": "common1.cns",
+      "line": 2042
+    },
+    {
+      "state": 5201,
+      "type": "NotHitBy",
+      "source": "common1.cns",
+      "line": 2047
+    },
+    {
+      "state": 5201,
+      "type": "PalFX",
+      "source": "common1.cns",
+      "line": 2053
+    },
+    {
+      "state": 5201,
+      "type": "GameMakeAnim",
+      "source": "common1.cns",
+      "line": 2059
+    },
+    {
+      "state": 5210,
+      "type": "PalFX",
+      "source": "common1.cns",
+      "line": 2075
+    },
+    {
+      "state": 5210,
+      "type": "PosFreeze",
+      "source": "common1.cns",
+      "line": 2081
+    },
+    {
+      "state": 5210,
+      "type": "Turn",
+      "source": "common1.cns",
+      "line": 2086
+    },
+    {
+      "state": 5210,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 2091
+    },
+    {
+      "state": 5210,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 2097
+    },
+    {
+      "state": 5210,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 2102
+    },
+    {
+      "state": 5210,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 2108
+    },
+    {
+      "state": 5210,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 2114
+    },
+    {
+      "state": 5210,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 2120
+    },
+    {
+      "state": 5210,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 2126
+    },
+    {
+      "state": 5210,
+      "type": "VelMul",
+      "source": "common1.cns",
+      "line": 2132
+    },
+    {
+      "state": 5210,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 2138
+    },
+    {
+      "state": 5210,
+      "type": "NotHitBy",
+      "source": "common1.cns",
+      "line": 2144
+    },
+    {
+      "state": 5210,
+      "type": "CtrlSet",
+      "source": "common1.cns",
+      "line": 2150
+    },
+    {
+      "state": 5210,
+      "type": "VelAdd",
+      "source": "common1.cns",
+      "line": 2155
+    },
+    {
+      "state": 5210,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 2160
+    },
+    {
+      "state": 5500,
+      "type": "ChangeAnim",
+      "source": "common1.cns",
+      "line": 2175
+    },
+    {
+      "state": 5900,
+      "type": "VarRangeSet",
+      "source": "common1.cns",
+      "line": 2186
+    },
+    {
+      "state": 5900,
+      "type": "VarRangeSet",
+      "source": "common1.cns",
+      "line": 2191
+    },
+    {
+      "state": 5900,
+      "type": "ChangeState",
+      "source": "common1.cns",
+      "line": 2196
+    }
+  ],
+  "animations": [
+    {
+      "id": 0,
+      "durations": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 10,
+      "durations": [
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 11,
+      "durations": [
+        1
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 12,
+      "durations": [
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 20,
+      "durations": [
+        1,
+        5,
+        5,
+        5,
+        5
+      ],
+      "loopStart": 2
+    },
+    {
+      "id": 21,
+      "durations": [
+        1,
+        5,
+        5,
+        5,
+        5
+      ],
+      "loopStart": 2
+    },
+    {
+      "id": 40,
+      "durations": [
+        3
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 41,
+      "durations": [
+        2,
+        3,
+        3,
+        1,
+        3,
+        3
+      ],
+      "loopStart": 5
+    },
+    {
+      "id": 42,
+      "durations": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "loopStart": 14
+    },
+    {
+      "id": 43,
+      "durations": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 10
+    },
+    {
+      "id": 47,
+      "durations": [
+        3
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 100,
+      "durations": [
+        5,
+        15,
+        3,
+        3
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 105,
+      "durations": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 9
+    },
+    {
+      "id": 150,
+      "durations": [
+        4,
+        8,
+        4,
+        -1
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 151,
+      "durations": [
+        -1
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 152,
+      "durations": [
+        -1
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 200,
+      "durations": [
+        2,
+        2,
+        2,
+        7,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 210,
+      "durations": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 220,
+      "durations": [
+        3,
+        3,
+        4,
+        3,
+        3,
+        3,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 230,
+      "durations": [
+        2,
+        5,
+        4,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 240,
+      "durations": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 250,
+      "durations": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 9
+    },
+    {
+      "id": 400,
+      "durations": [
+        2,
+        2,
+        2,
+        7,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 410,
+      "durations": [
+        2,
+        2,
+        2,
+        7,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 500,
+      "durations": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 600,
+      "durations": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        -1
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 610,
+      "durations": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        -1
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 1000,
+      "durations": [
+        2,
+        2,
+        2,
+        7,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 1002,
+      "durations": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 1020,
+      "durations": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        -1
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5000,
+      "durations": [
+        4,
+        4
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5001,
+      "durations": [
+        5,
+        5
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5002,
+      "durations": [
+        5,
+        5
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5010,
+      "durations": [
+        5,
+        5
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5011,
+      "durations": [
+        5,
+        5,
+        5
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5012,
+      "durations": [
+        1,
+        5,
+        5,
+        5
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5020,
+      "durations": [
+        5,
+        5
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5030,
+      "durations": [
+        5
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5050,
+      "durations": [
+        5,
+        5
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5110,
+      "durations": [
+        1
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5120,
+      "durations": [
+        5,
+        3
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 5150,
+      "durations": [
+        1
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 34675,
+      "durations": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "loopStart": 1
+    },
+    {
+      "id": 106,
+      "durations": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "loopStart": 1
+    }
+  ],
+  "routes": [
+    {
+      "state": 3000,
+      "commands": [
+        "RockSquad"
+      ],
+      "source": "pikachu.cmd",
+      "line": 254,
+      "reachableStates": [
+        3000,
+        3010
+      ],
+      "supported": false,
+      "blockers": [
+        {
+          "source": "pikachu.cmd",
+          "line": 254,
+          "reason": "Unsupported trigger hitdefattr"
+        },
+        {
+          "source": "pikachu.cmd",
+          "line": 254,
+          "reason": "Unsupported trigger sc"
+        },
+        {
+          "source": "pikachu.cmd",
+          "line": 254,
+          "reason": "Unsupported trigger na"
+        },
+        {
+          "source": "pikachu.cmd",
+          "line": 254,
+          "reason": "Unsupported trigger sa"
+        },
+        {
+          "source": "pikachu.cmd",
+          "line": 254,
+          "reason": "Unsupported trigger ha"
+        },
+        {
+          "state": 3000,
+          "source": "pikachu.cns",
+          "line": 2320,
+          "reason": "Only unqualified NotHitBy SCA is supported"
+        },
+        {
+          "state": 3000,
+          "source": "pikachu.cns",
+          "line": 2366,
+          "reason": "Unsupported superpause parameter p2defmul"
+        },
+        {
+          "state": 3000,
+          "source": "pikachu.cns",
+          "line": 2366,
+          "reason": "Qualified or dynamic SuperPause artwork is unsupported"
+        },
+        {
+          "state": 3010,
+          "source": "pikachu.cns",
+          "line": 2528,
+          "reason": "Unsupported hitdef parameter p2stateno"
+        }
+      ]
+    },
+    {
+      "state": 4000,
+      "commands": [
+        "BusterBlaster"
+      ],
+      "source": "pikachu.cmd",
+      "line": 265,
+      "reachableStates": [
+        4000,
+        4010
+      ],
+      "supported": false,
+      "blockers": [
+        {
+          "source": "pikachu.cmd",
+          "line": 265,
+          "reason": "Unsupported trigger hitdefattr"
+        },
+        {
+          "source": "pikachu.cmd",
+          "line": 265,
+          "reason": "Unsupported trigger sc"
+        },
+        {
+          "source": "pikachu.cmd",
+          "line": 265,
+          "reason": "Unsupported trigger na"
+        },
+        {
+          "source": "pikachu.cmd",
+          "line": 265,
+          "reason": "Unsupported trigger sa"
+        },
+        {
+          "source": "pikachu.cmd",
+          "line": 265,
+          "reason": "Unsupported trigger ha"
+        },
+        {
+          "state": 4000,
+          "source": "pikachu.cns",
+          "line": 2630,
+          "reason": "Only unqualified NotHitBy SCA is supported"
+        },
+        {
+          "state": 4000,
+          "source": "pikachu.cns",
+          "line": 2675,
+          "reason": "Unsupported superpause parameter p2defmul"
+        },
+        {
+          "state": 4000,
+          "source": "pikachu.cns",
+          "line": 2675,
+          "reason": "Qualified or dynamic SuperPause artwork is unsupported"
+        },
+        {
+          "state": 4010,
+          "source": "pikachu.cns",
+          "line": 2837,
+          "reason": "Unsupported hitdef parameter p2stateno"
+        }
+      ]
+    },
+    {
+      "state": 100,
+      "commands": [
+        "FF"
+      ],
+      "source": "pikachu.cmd",
+      "line": 279,
+      "reachableStates": [],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 105,
+      "commands": [
+        "BB"
+      ],
+      "source": "pikachu.cmd",
+      "line": 288,
+      "reachableStates": [],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 200,
+      "commands": [
+        "x",
+        "holddown"
+      ],
+      "source": "pikachu.cmd",
+      "line": 313,
+      "reachableStates": [
+        200
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 230,
+      "commands": [
+        "x",
+        "holddown"
+      ],
+      "source": "pikachu.cmd",
+      "line": 322,
+      "reachableStates": [
+        230
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 240,
+      "commands": [
+        "x",
+        "holddown"
+      ],
+      "source": "pikachu.cmd",
+      "line": 332,
+      "reachableStates": [
+        240
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 210,
+      "commands": [
+        "y",
+        "holddown"
+      ],
+      "source": "pikachu.cmd",
+      "line": 341,
+      "reachableStates": [
+        210
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 250,
+      "commands": [
+        "y",
+        "holddown"
+      ],
+      "source": "pikachu.cmd",
+      "line": 352,
+      "reachableStates": [
+        250
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 220,
+      "commands": [
+        "a",
+        "holddown"
+      ],
+      "source": "pikachu.cmd",
+      "line": 363,
+      "reachableStates": [
+        220
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 400,
+      "commands": [
+        "x",
+        "holddown"
+      ],
+      "source": "pikachu.cmd",
+      "line": 405,
+      "reachableStates": [
+        400
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 410,
+      "commands": [
+        "y",
+        "holddown"
+      ],
+      "source": "pikachu.cmd",
+      "line": 417,
+      "reachableStates": [
+        410
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 420,
+      "commands": [
+        "a"
+      ],
+      "source": "pikachu.cmd",
+      "line": 428,
+      "reachableStates": [
+        420
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 600,
+      "commands": [
+        "x"
+      ],
+      "source": "pikachu.cmd",
+      "line": 437,
+      "reachableStates": [
+        600
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 610,
+      "commands": [
+        "y"
+      ],
+      "source": "pikachu.cmd",
+      "line": 448,
+      "reachableStates": [
+        610
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 620,
+      "commands": [
+        "a"
+      ],
+      "source": "pikachu.cmd",
+      "line": 461,
+      "reachableStates": [
+        620,
+        51
+      ],
+      "supported": false,
+      "blockers": [
+        {
+          "state": 620,
+          "source": "pikachu.cns",
+          "line": 1625,
+          "reason": "Unsupported trigger gethitvar"
+        },
+        {
+          "state": 620,
+          "source": "pikachu.cns",
+          "line": 1625,
+          "reason": "Unsupported trigger isbound"
+        },
+        {
+          "state": 620,
+          "source": "pikachu.cns",
+          "line": 1625,
+          "reason": "Unsupported trigger alive"
+        },
+        {
+          "state": 620,
+          "source": "pikachu.cns",
+          "line": 1625,
+          "reason": "Unsupported trigger canrecover"
+        },
+        {
+          "state": 620,
+          "source": "pikachu.cns",
+          "line": 1625,
+          "reason": "Unsupported controller selfstate"
+        },
+        {
+          "state": 620,
+          "source": "pikachu.cns",
+          "line": 1625,
+          "reason": "Conflicting/duplicate controller types"
+        }
+      ]
+    },
+    {
+      "state": 1000,
+      "commands": [
+        "b"
+      ],
+      "source": "pikachu.cmd",
+      "line": 473,
+      "reachableStates": [
+        1000,
+        1001,
+        1002
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 1010,
+      "commands": [
+        "b"
+      ],
+      "source": "pikachu.cmd",
+      "line": 483,
+      "reachableStates": [
+        1010,
+        1011,
+        1002
+      ],
+      "supported": true,
+      "blockers": []
+    },
+    {
+      "state": 1020,
+      "commands": [
+        "b"
+      ],
+      "source": "pikachu.cmd",
+      "line": 493,
+      "reachableStates": [
+        1020,
+        1021,
+        1002
+      ],
+      "supported": true,
+      "blockers": []
+    }
+  ],
+  "presentationOmissions": [
+    {
+      "state": 3000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2330,
+      "reasons": [
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 3000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2348,
+      "reasons": [
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 3000,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2377,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 3000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2384,
+      "reasons": [
+        "Unsupported explod parameter shadow"
+      ]
+    },
+    {
+      "state": 3000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2400,
+      "reasons": [
+        "Unsupported explod parameter shadow",
+        "Missing or ambiguous Explod AIR 34688"
+      ]
+    },
+    {
+      "state": 3000,
+      "type": "EnvColor",
+      "source": "pikachu.cns",
+      "line": 2415,
+      "reasons": [
+        "Unsupported controller envcolor"
+      ]
+    },
+    {
+      "state": 3000,
+      "type": "BGPalFX",
+      "source": "pikachu.cns",
+      "line": 2424,
+      "reasons": [
+        "Unsupported controller bgpalfx"
+      ]
+    },
+    {
+      "state": 3010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2476,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 3010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2483,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 3010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2561,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 3010,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2568,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 3010,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2580,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter random"
+      ]
+    },
+    {
+      "state": 3010,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2604,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 4000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2639,
+      "reasons": [
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 4000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2657,
+      "reasons": [
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 4000,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2686,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 4000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2693,
+      "reasons": [
+        "Unsupported explod parameter shadow"
+      ]
+    },
+    {
+      "state": 4000,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2709,
+      "reasons": [
+        "Unsupported explod parameter shadow",
+        "Missing or ambiguous Explod AIR 34688"
+      ]
+    },
+    {
+      "state": 4000,
+      "type": "EnvColor",
+      "source": "pikachu.cns",
+      "line": 2724,
+      "reasons": [
+        "Unsupported controller envcolor"
+      ]
+    },
+    {
+      "state": 4000,
+      "type": "BGPalFX",
+      "source": "pikachu.cns",
+      "line": 2733,
+      "reasons": [
+        "Unsupported controller bgpalfx"
+      ]
+    },
+    {
+      "state": 4010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2785,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 4010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2792,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 4010,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2870,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 4010,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2877,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 4010,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2889,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter random"
+      ]
+    },
+    {
+      "state": 4010,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2913,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 200,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 420,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 200,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 425,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 200,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 430,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 200,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 435,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 200,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 476,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 200,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 488,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 200,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 502,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 230,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 791,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 230,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 821,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 240,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 853,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 240,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 883,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 210,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 526,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 210,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 531,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 210,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 536,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 210,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 542,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 210,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 583,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 210,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 597,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 210,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 602,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 250,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 915,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 250,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 920,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 250,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 963,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 220,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 632,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 220,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 637,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 220,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 642,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 220,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 647,
+      "reasons": [
+        "Unsupported controller afterimage"
+      ]
+    },
+    {
+      "state": 220,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 683,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 220,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 694,
+      "reasons": [
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 220,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 705,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 220,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 747,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 220,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 759,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 400,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 994,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 400,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 999,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 400,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1004,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 400,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1009,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 400,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1050,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 400,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1062,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 400,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1076,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 410,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1099,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 410,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1104,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 410,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1109,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 410,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1115,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 410,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1156,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 410,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1170,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 410,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1175,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 420,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1205,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 420,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1210,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 420,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1215,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 420,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 1231,
+      "reasons": [
+        "Unsupported controller afterimage"
+      ]
+    },
+    {
+      "state": 600,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1306,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 600,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1311,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 600,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1316,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 600,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1321,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 600,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1355,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 600,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1367,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 600,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1381,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 610,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 1403,
+      "reasons": [
+        "Unsupported controller afterimage"
+      ]
+    },
+    {
+      "state": 610,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1414,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 610,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1419,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 610,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1456,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 620,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1485,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 620,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1490,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 620,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1495,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 620,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 1500,
+      "reasons": [
+        "Unsupported controller afterimage"
+      ]
+    },
+    {
+      "state": 620,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1511,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 620,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1550,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Unsupported explod parameter time"
+      ]
+    },
+    {
+      "state": 620,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1591,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 620,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1603,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 1001,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 1923,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 1001,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1936,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 1001,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 1944,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 1001,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 1952,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim",
+        "Missing or ambiguous Explod AIR 1001"
+      ]
+    },
+    {
+      "state": 1002,
+      "type": "AfterImage",
+      "source": "pikachu.cns",
+      "line": 2018,
+      "reasons": [
+        "Unsupported controller afterimage"
+      ]
+    },
+    {
+      "state": 1002,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2029,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 1002,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2066,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 1002,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2078,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 1002,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2100,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 1011,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2146,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 1011,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2158,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 1011,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2166,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 1011,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2173,
+      "reasons": [
+        "Missing or ambiguous Explod AIR 1001"
+      ]
+    },
+    {
+      "state": 1021,
+      "type": "PalFX",
+      "source": "pikachu.cns",
+      "line": 2241,
+      "reasons": [
+        "Unsupported controller palfx"
+      ]
+    },
+    {
+      "state": 1021,
+      "type": "Explod",
+      "source": "pikachu.cns",
+      "line": 2254,
+      "reasons": [
+        "Unsupported Explod lifetime bindtime=anim"
+      ]
+    },
+    {
+      "state": 1021,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2268,
+      "reasons": [
+        "Audio deferred"
+      ]
+    },
+    {
+      "state": 1021,
+      "type": "PlaySnd",
+      "source": "pikachu.cns",
+      "line": 2276,
+      "reasons": [
+        "Audio deferred"
+      ]
+    }
+  ]
+}

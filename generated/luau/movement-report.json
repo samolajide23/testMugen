@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "ticksPerSecond": 60,
+  "limitations": [
+    "Prototype movement states, not execution of MUGEN CMD/CNS triggers, controllers, or common1.cns.",
+    "Transition durations use one AIR pass, not custom state timing. Duplicate movement actions use the first definition.",
+    "No running, air jumps, air steering, turn animation, friction/inertia, collisions, or combat.",
+    "Positions and velocities use source coordinate units at 60 ticks/second; sprite scale and Roblox studs are rendering concerns."
+  ],
+  "characters": [
+    {
+      "id": "coiny",
+      "config": {
+        "walkForward": 2.4,
+        "walkBackward": -2.2,
+        "jumpNeutral": {
+          "x": 0,
+          "y": -8.4
+        },
+        "jumpForward": {
+          "x": 2.5,
+          "y": -8.4
+        },
+        "jumpBackward": {
+          "x": -2.55,
+          "y": -8.4
+        },
+        "gravity": 0.44,
+        "crouchDownTicks": 5,
+        "crouchUpTicks": 5,
+        "jumpStartTicks": 1,
+        "landTicks": 1,
+        "animations": {
+          "idle": 0,
+          "walkForward": 20,
+          "walkBackward": 21,
+          "crouchDown": 10,
+          "crouch": 11,
+          "crouchUp": 12,
+          "jumpStart": 40,
+          "jumpNeutral": 41,
+          "jumpForward": 42,
+          "jumpBackward": 43,
+          "land": 47
+        }
+      },
+      "warnings": [],
+      "localcoord": [
+        320,
+        240
+      ]
+    },
+    {
+      "id": "pikachu",
+      "config": {
+        "walkForward": 4.5,
+        "walkBackward": -4.5,
+        "jumpNeutral": {
+          "x": 0,
+          "y": -9.5
+        },
+        "jumpForward": {
+          "x": 2.5,
+          "y": -9.5
+        },
+        "jumpBackward": {
+          "x": -2.55,
+          "y": -9.5
+        },
+        "gravity": 0.44,
+        "crouchDownTicks": 2,
+        "crouchUpTicks": 2,
+        "jumpStartTicks": 3,
+        "landTicks": 3,
+        "animations": {
+          "idle": 0,
+          "walkForward": 20,
+          "walkBackward": 21,
+          "crouchDown": 10,
+          "crouch": 11,
+          "crouchUp": 12,
+          "jumpStart": 40,
+          "jumpNeutral": 41,
+          "jumpForward": 42,
+          "jumpBackward": 43,
+          "land": 47
+        }
+      },
+      "warnings": [
+        "Authored air jumps are not enabled in this ground-jump milestone."
+      ],
+      "localcoord": [
+        320,
+        240
+      ]
+    },
+    {
+      "id": "sylveon",
+      "config": {
+        "walkForward": 2.2,
+        "walkBackward": -2.2,
+        "jumpNeutral": {
+          "x": 0,
+          "y": -8.4
+        },
+        "jumpForward": {
+          "x": 2.5,
+          "y": -8.4
+        },
+        "jumpBackward": {
+          "x": -2.55,
+          "y": -8.4
+        },
+        "gravity": 0.44,
+        "crouchDownTicks": 10,
+        "crouchUpTicks": 10,
+        "jumpStartTicks": 4,
+        "landTicks": 5,
+        "animations": {
+          "idle": 0,
+          "walkForward": 20,
+          "walkBackward": 21,
+          "crouchDown": 10,
+          "crouch": 11,
+          "crouchUp": 12,
+          "jumpStart": 40,
+          "jumpNeutral": 41,
+          "jumpForward": 42,
+          "jumpBackward": 43,
+          "land": 47
+        }
+      },
+      "warnings": [
+        "Authored air jumps are not enabled in this ground-jump milestone."
+      ],
+      "localcoord": [
+        320,
+        240
+      ]
+    },
+    {
+      "id": "tyrone",
+      "config": {
+        "walkForward": 3,
+        "walkBackward": -2.5,
+        "jumpNeutral": {
+          "x": 0,
+          "y": -12.5
+        },
+        "jumpForward": {
+          "x": 3.5,
+          "y": -12.5
+        },
+        "jumpBackward": {
+          "x": -3.5,
+          "y": -12.5
+        },
+        "gravity": 0.565,
+        "crouchDownTicks": 4,
+        "crouchUpTicks": 4,
+        "jumpStartTicks": 5,
+        "landTicks": 8,
+        "animations": {
+          "idle": 0,
+          "walkForward": 20,
+          "walkBackward": 21,
+          "crouchDown": 10,
+          "crouch": 11,
+          "crouchUp": 12,
+          "jumpStart": 40,
+          "jumpNeutral": 41,
+          "jumpForward": 42,
+          "jumpBackward": 43,
+          "land": 47
+        }
+      },
+      "warnings": [
+        "Authored air jumps are not enabled in this ground-jump milestone."
+      ],
+      "localcoord": [
+        320,
+        240
+      ]
+    },
+    {
+      "id": "goku-ssgss",
+      "config": {
+        "walkForward": 2.4,
+        "walkBackward": -2.2,
+        "jumpNeutral": {
+          "x": 0,
+          "y": -8.4
+        },
+        "jumpForward": {
+          "x": 2.5,
+          "y": -8.4
+        },
+        "jumpBackward": {
+          "x": -2.55,
+          "y": -8.4
+        },
+        "gravity": 0.44,
+        "crouchDownTicks": 9,
+        "crouchUpTicks": 9,
+        "jumpStartTicks": 1,
+        "landTicks": 1,
+        "animations": {
+          "idle": 0,
+          "walkForward": 20,
+          "walkBackward": 21,
+          "crouchDown": 10,
+          "crouch": 11,
+          "crouchUp": 12,
+          "jumpStart": 40,
+          "jumpNeutral": 41,
+          "jumpForward": 42,
+          "jumpBackward": 43,
+          "land": 47
+        }
+      },
+      "warnings": [
+        "Authored air jumps are not enabled in this ground-jump milestone."
+      ],
+      "localcoord": [
+        320,
+        240
+      ]
+    }
+  ]
+}
