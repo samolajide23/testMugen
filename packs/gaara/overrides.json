@@ -1,0 +1,11 @@
+{
+  "_comment": "Prefer local sand FX companions over shared Helper pools (7022).",
+  "vfx": {
+    "200": 205,
+    "210": 215,
+    "220": 225,
+    "230": 235,
+    "240": 245,
+    "285": 8235
+  }
+}

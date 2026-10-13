@@ -1,0 +1,10 @@
+{
+  "_comment": "Example polish — CNS already links 1880–1883→8103; keep explicit for repacks.",
+  "maxSpecials": 4,
+  "vfx": {
+    "1880": 8103,
+    "1881": 8103,
+    "1882": 8103,
+    "1883": 8103
+  }
+}

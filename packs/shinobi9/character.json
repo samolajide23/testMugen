@@ -1,0 +1,7215 @@
+{
+  "id": "shinobi9",
+  "name": "Shinobi 9",
+  "version": 3,
+  "style": "framesheet",
+  "roblox": {
+    "upload": [
+      "atlas.png"
+    ],
+    "animate": "ImageRectOffset",
+    "moduleFrom": "character.json"
+  },
+  "skin": {
+    "style": "framesheet",
+    "atlasPack": "shinobi9",
+    "bone": "#c8d0dc",
+    "joint": "#7eb8ff",
+    "accent": null
+  },
+  "physics": {
+    "height": 60,
+    "walkFwd": 4,
+    "walkBack": 4,
+    "jumpY": 9,
+    "jumpFwdX": 4,
+    "jumpBackX": 4,
+    "airJumpY": 9,
+    "airJumpFwdX": 2.5,
+    "airJumpBackX": 2.5,
+    "yaccel": 0.44,
+    "standFriction": 0.85,
+    "crouchFriction": 0.82,
+    "airJumpNum": 0,
+    "airJumpHeight": 35,
+    "jumpStartFrames": 3
+  },
+  "moves": {
+    "normal1": {
+      "label": "Normal 1",
+      "startup": 11,
+      "active": 2,
+      "recovery": 8,
+      "damage": 28,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1.14,
+        "h": 1.26,
+        "offsetX": 0.49,
+        "offsetY": 0.43
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal1",
+      "sourceAction": 4680,
+      "band": "normal",
+      "vfx": "normal1_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        42,
+        -46
+      ],
+      "vfxHit": "normal1_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal1_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "normal2": {
+      "label": "Normal 2",
+      "startup": 15,
+      "active": 3,
+      "recovery": 20,
+      "damage": 36,
+      "hitstun": 12,
+      "blockstun": 9,
+      "knockback": 0.41,
+      "hitbox": {
+        "w": 2.06,
+        "h": 2.26,
+        "offsetX": -0.26,
+        "offsetY": 0.46
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal2",
+      "sourceAction": 4681,
+      "band": "normal",
+      "vfx": "normal2_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        44,
+        -42
+      ],
+      "vfxHit": "normal2_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal2_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            44,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 3,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal2_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal2_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            44,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "normal3": {
+      "label": "Normal 3",
+      "startup": 11,
+      "active": 2,
+      "recovery": 38,
+      "damage": 44,
+      "hitstun": 14,
+      "blockstun": 10,
+      "knockback": 0.47,
+      "hitbox": {
+        "w": 1.89,
+        "h": 1.83,
+        "offsetX": -0.09,
+        "offsetY": 0.43
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal3",
+      "sourceAction": 4682,
+      "band": "normal",
+      "vfx": "normal3_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        38,
+        -42
+      ],
+      "vfxHit": "normal3_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal3_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            38,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 3,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal3_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal3_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            38,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "throw1": {
+      "label": "Throw 1",
+      "startup": 4,
+      "active": 6,
+      "recovery": 8,
+      "damage": 28,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1.18,
+        "h": 0.93,
+        "offsetX": 0.32,
+        "offsetY": 0.2
+      },
+      "hitboxSource": "clsn2-inferred",
+      "animation": "throw1",
+      "sourceAction": 5120,
+      "band": "throw"
+    },
+    "crouchAttack1": {
+      "label": "Crouch 1",
+      "startup": 3,
+      "active": 4,
+      "recovery": 7,
+      "damage": 28,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1,
+        "h": 1.21,
+        "offsetX": 0.45,
+        "offsetY": 0.28
+      },
+      "hitboxSource": "clsn2-inferred",
+      "animation": "crouchAttack1",
+      "sourceAction": 5005,
+      "band": "crouchAttack"
+    },
+    "crouchAttack2": {
+      "label": "Crouch 2",
+      "startup": 4,
+      "active": 6,
+      "recovery": 9,
+      "damage": 36,
+      "hitstun": 12,
+      "blockstun": 9,
+      "knockback": 0.41,
+      "hitbox": {
+        "w": 0.68,
+        "h": 1.19,
+        "offsetX": 0.2,
+        "offsetY": 0.26
+      },
+      "hitboxSource": "clsn2-inferred",
+      "animation": "crouchAttack2",
+      "sourceAction": 5006,
+      "band": "crouchAttack"
+    },
+    "crouchAttack3": {
+      "label": "Crouch 3",
+      "startup": 5,
+      "active": 7,
+      "recovery": 9,
+      "damage": 44,
+      "hitstun": 14,
+      "blockstun": 10,
+      "knockback": 0.47,
+      "hitbox": {
+        "w": 0.68,
+        "h": 1.19,
+        "offsetX": 0.22,
+        "offsetY": 0.31
+      },
+      "hitboxSource": "clsn2-inferred",
+      "animation": "crouchAttack3",
+      "sourceAction": 5007,
+      "band": "crouchAttack",
+      "vfx": "crouchAttack3_s0",
+      "vfxAction": 5050,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        0,
+        0
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "crouchAttack3_s0",
+          "action": 5050,
+          "kind": "air",
+          "postype": "p1",
+          "pos": [
+            0,
+            0
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": -1,
+          "removetime": -2,
+          "scale": [
+            1,
+            1
+          ],
+          "facing": 1,
+          "sprpriority": 0,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "airAttack1": {
+      "label": "Air 1",
+      "startup": 3,
+      "active": 5,
+      "recovery": 7,
+      "damage": 32,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1.63,
+        "h": 1.98,
+        "offsetX": 0.16,
+        "offsetY": 0.22
+      },
+      "hitboxSource": "clsn2-inferred",
+      "animation": "airAttack1",
+      "sourceAction": 5200,
+      "band": "airAttack"
+    },
+    "airAttack2": {
+      "label": "Air 2",
+      "startup": 3,
+      "active": 5,
+      "recovery": 7,
+      "damage": 40,
+      "hitstun": 12,
+      "blockstun": 9,
+      "knockback": 0.41,
+      "hitbox": {
+        "w": 1.78,
+        "h": 1.98,
+        "offsetX": 0.18,
+        "offsetY": 0.22
+      },
+      "hitboxSource": "clsn2-inferred",
+      "animation": "airAttack2",
+      "sourceAction": 5210,
+      "band": "airAttack"
+    },
+    "jab": {
+      "label": "jab",
+      "startup": 11,
+      "active": 2,
+      "recovery": 8,
+      "damage": 28,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1.14,
+        "h": 1.26,
+        "offsetX": 0.49,
+        "offsetY": 0.43
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal1",
+      "sourceAction": 4680,
+      "band": "normal",
+      "vfx": "normal1_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        42,
+        -46
+      ],
+      "vfxHit": "normal1_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal1_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "forwardTilt": {
+      "label": "forwardTilt",
+      "startup": 15,
+      "active": 3,
+      "recovery": 20,
+      "damage": 36,
+      "hitstun": 12,
+      "blockstun": 9,
+      "knockback": 0.41,
+      "hitbox": {
+        "w": 2.06,
+        "h": 2.26,
+        "offsetX": -0.26,
+        "offsetY": 0.46
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal2",
+      "sourceAction": 4681,
+      "band": "normal",
+      "vfx": "normal2_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        44,
+        -42
+      ],
+      "vfxHit": "normal2_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal2_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            44,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 3,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal2_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal2_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            44,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "upTilt": {
+      "label": "upTilt",
+      "startup": 3,
+      "active": 5,
+      "recovery": 7,
+      "damage": 32,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1.63,
+        "h": 1.98,
+        "offsetX": 0.16,
+        "offsetY": 0.22
+      },
+      "hitboxSource": "clsn2-inferred",
+      "animation": "airAttack1",
+      "sourceAction": 5200,
+      "band": "airAttack"
+    },
+    "downTilt": {
+      "label": "downTilt",
+      "startup": 3,
+      "active": 4,
+      "recovery": 7,
+      "damage": 28,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1,
+        "h": 1.21,
+        "offsetX": 0.45,
+        "offsetY": 0.28
+      },
+      "hitboxSource": "clsn2-inferred",
+      "animation": "crouchAttack1",
+      "sourceAction": 5005,
+      "band": "crouchAttack"
+    },
+    "neutralSpecial": {
+      "label": "neutralSpecial",
+      "startup": 11,
+      "active": 2,
+      "recovery": 8,
+      "damage": 28,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1.14,
+        "h": 1.26,
+        "offsetX": 0.49,
+        "offsetY": 0.43
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal1",
+      "sourceAction": 4680,
+      "band": "normal",
+      "vfx": "normal1_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        42,
+        -46
+      ],
+      "vfxHit": "normal1_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal1_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "sideSpecial": {
+      "label": "sideSpecial",
+      "startup": 15,
+      "active": 3,
+      "recovery": 20,
+      "damage": 36,
+      "hitstun": 12,
+      "blockstun": 9,
+      "knockback": 0.41,
+      "hitbox": {
+        "w": 2.06,
+        "h": 2.26,
+        "offsetX": -0.26,
+        "offsetY": 0.46
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal2",
+      "sourceAction": 4681,
+      "band": "normal",
+      "vfx": "normal2_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        44,
+        -42
+      ],
+      "vfxHit": "normal2_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal2_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            44,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 3,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal2_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal2_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            44,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "upSpecial": {
+      "label": "upSpecial",
+      "startup": 11,
+      "active": 2,
+      "recovery": 8,
+      "damage": 28,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1.14,
+        "h": 1.26,
+        "offsetX": 0.49,
+        "offsetY": 0.43
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal1",
+      "sourceAction": 4680,
+      "band": "normal",
+      "vfx": "normal1_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        42,
+        -46
+      ],
+      "vfxHit": "normal1_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal1_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "downSpecial": {
+      "label": "downSpecial",
+      "startup": 11,
+      "active": 2,
+      "recovery": 8,
+      "damage": 28,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1.14,
+        "h": 1.26,
+        "offsetX": 0.49,
+        "offsetY": 0.43
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal1",
+      "sourceAction": 4680,
+      "band": "normal",
+      "vfx": "normal1_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        42,
+        -46
+      ],
+      "vfxHit": "normal1_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal1_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "parry": {
+      "label": "Parry",
+      "startup": 1,
+      "active": 8,
+      "recovery": 10,
+      "damage": 0,
+      "hitstun": 0,
+      "blockstun": 0,
+      "knockback": 0,
+      "hitbox": {
+        "w": 0.55,
+        "h": 0.85,
+        "offsetX": 0.45,
+        "offsetY": 0.7
+      },
+      "animation": "parry",
+      "isParry": true
+    },
+    "lightPunch": {
+      "label": "Light",
+      "startup": 11,
+      "active": 2,
+      "recovery": 8,
+      "damage": 28,
+      "hitstun": 10,
+      "blockstun": 8,
+      "knockback": 0.35,
+      "hitbox": {
+        "w": 1.14,
+        "h": 1.26,
+        "offsetX": 0.49,
+        "offsetY": 0.43
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal1",
+      "sourceAction": 4680,
+      "band": "normal",
+      "vfx": "normal1_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        42,
+        -46
+      ],
+      "vfxHit": "normal1_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal1_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal1_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            42,
+            -46
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    },
+    "heavyKick": {
+      "label": "Heavy",
+      "startup": 15,
+      "active": 3,
+      "recovery": 20,
+      "damage": 36,
+      "hitstun": 12,
+      "blockstun": 9,
+      "knockback": 0.41,
+      "hitbox": {
+        "w": 2.06,
+        "h": 2.26,
+        "offsetX": -0.26,
+        "offsetY": 0.46
+      },
+      "hitboxSource": "clsn1-atlas",
+      "animation": "normal2",
+      "sourceAction": 4681,
+      "band": "normal",
+      "vfx": "normal2_s0",
+      "vfxAction": 8103,
+      "vfxPostype": "p1",
+      "vfxPos": [
+        44,
+        -42
+      ],
+      "vfxHit": "normal2_s1",
+      "vfxHitAction": 7000,
+      "vfxHitPostype": "p2",
+      "vfxHitPos": [
+        8,
+        -30
+      ],
+      "vfxSpawns": [
+        {
+          "anim": "normal2_s0",
+          "action": 8103,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            44,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.12,
+            0.12
+          ],
+          "facing": 1,
+          "sprpriority": 3,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal2_s1",
+          "action": 7000,
+          "kind": "explod",
+          "postype": "p2",
+          "pos": [
+            8,
+            -30
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        },
+        {
+          "anim": "normal2_s2",
+          "action": 7026,
+          "kind": "explod",
+          "postype": "p1",
+          "pos": [
+            44,
+            -42
+          ],
+          "vel": [
+            0,
+            0
+          ],
+          "bindtime": 1,
+          "removetime": -2,
+          "scale": [
+            0.14,
+            0.14
+          ],
+          "facing": 1,
+          "sprpriority": 2,
+          "delay": 0,
+          "removeonhit": false
+        }
+      ]
+    }
+  },
+  "moveList": [
+    {
+      "id": "normal1",
+      "label": "Normal 1",
+      "band": "normal"
+    },
+    {
+      "id": "normal2",
+      "label": "Normal 2",
+      "band": "normal"
+    },
+    {
+      "id": "normal3",
+      "label": "Normal 3",
+      "band": "normal"
+    },
+    {
+      "id": "throw1",
+      "label": "Throw 1",
+      "band": "throw"
+    },
+    {
+      "id": "crouchAttack1",
+      "label": "Crouch 1",
+      "band": "crouchAttack"
+    },
+    {
+      "id": "crouchAttack2",
+      "label": "Crouch 2",
+      "band": "crouchAttack"
+    },
+    {
+      "id": "crouchAttack3",
+      "label": "Crouch 3",
+      "band": "crouchAttack"
+    },
+    {
+      "id": "airAttack1",
+      "label": "Air 1",
+      "band": "airAttack"
+    },
+    {
+      "id": "airAttack2",
+      "label": "Air 2",
+      "band": "airAttack"
+    }
+  ],
+  "binds": {
+    "scheme": "jkluio-v1",
+    "help": "A/D walk · double-tap dash · hold away block · W jump · S crouch · J/K/L attacks · U heavy · I/O specials · Space pause",
+    "keyboard": {
+      "KeyJ": {
+        "move": "normal1",
+        "slot": "attack1"
+      },
+      "KeyK": {
+        "move": "normal2",
+        "slot": "attack2"
+      },
+      "KeyL": {
+        "move": "normal3",
+        "slot": "attack3"
+      },
+      "KeyU": {
+        "move": "normal3",
+        "slot": "heavy1"
+      },
+      "KeyI": {
+        "move": "normal3",
+        "slot": "special1"
+      }
+    },
+    "slots": {
+      "attack1": {
+        "neutral": "normal1",
+        "forward": "normal1",
+        "up": "airAttack1",
+        "down": "crouchAttack1",
+        "air": "airAttack1",
+        "crouch": "crouchAttack1"
+      },
+      "attack2": {
+        "neutral": "normal2",
+        "forward": "normal2",
+        "up": "airAttack2",
+        "down": "crouchAttack2",
+        "air": "airAttack2",
+        "crouch": "crouchAttack2"
+      },
+      "attack3": {
+        "neutral": "normal3",
+        "forward": "normal3",
+        "up": "airAttack1",
+        "down": "crouchAttack3",
+        "air": "airAttack1",
+        "crouch": "crouchAttack3"
+      },
+      "heavy1": {
+        "neutral": "normal3",
+        "forward": "normal3",
+        "up": "airAttack2",
+        "down": "crouchAttack3",
+        "air": "airAttack2",
+        "crouch": "crouchAttack3"
+      },
+      "special1": {
+        "neutral": "normal3",
+        "forward": "normal3",
+        "up": "normal3",
+        "down": "normal3",
+        "air": "normal3",
+        "crouch": "normal3"
+      },
+      "special2": {
+        "neutral": null,
+        "forward": null,
+        "up": null,
+        "down": null,
+        "air": null,
+        "crouch": null
+      }
+    },
+    "context": {
+      "crouchLight": "crouchAttack1",
+      "crouchHeavy": "crouchAttack3",
+      "airLight": "airAttack1",
+      "airHeavy": "airAttack2"
+    },
+    "unbound": [
+      "throw1"
+    ]
+  },
+  "atlas": {
+    "image": "atlas.png",
+    "scale": 2,
+    "pxToWorld": 0.02857142857142857,
+    "frames": {
+      "1_0": {
+        "x": 250,
+        "y": 92,
+        "w": 53,
+        "h": 70,
+        "ax": 29,
+        "ay": 132
+      },
+      "1_1": {
+        "x": 305,
+        "y": 92,
+        "w": 55,
+        "h": 70,
+        "ax": 26,
+        "ay": 132
+      },
+      "1_2": {
+        "x": 362,
+        "y": 92,
+        "w": 57,
+        "h": 70,
+        "ax": 23,
+        "ay": 132
+      },
+      "1_3": {
+        "x": 1420,
+        "y": 92,
+        "w": 64,
+        "h": 58,
+        "ax": 35,
+        "ay": 99
+      },
+      "1_4": {
+        "x": 612,
+        "y": 92,
+        "w": 62,
+        "h": 63,
+        "ax": 37,
+        "ay": 99
+      },
+      "1_5": {
+        "x": 745,
+        "y": 92,
+        "w": 53,
+        "h": 62,
+        "ax": 28,
+        "ay": 101
+      },
+      "1_6": {
+        "x": 1116,
+        "y": 92,
+        "w": 61,
+        "h": 59,
+        "ax": 31,
+        "ay": 99
+      },
+      "1_7": {
+        "x": 800,
+        "y": 92,
+        "w": 61,
+        "h": 61,
+        "ax": 29,
+        "ay": 99
+      },
+      "1_8": {
+        "x": 863,
+        "y": 92,
+        "w": 53,
+        "h": 61,
+        "ax": 29,
+        "ay": 102
+      },
+      "1_9": {
+        "x": 1179,
+        "y": 92,
+        "w": 65,
+        "h": 59,
+        "ax": 30,
+        "ay": 72
+      },
+      "1_10": {
+        "x": 1246,
+        "y": 92,
+        "w": 63,
+        "h": 59,
+        "ax": 29,
+        "ay": 72
+      },
+      "1_11": {
+        "x": 1311,
+        "y": 92,
+        "w": 61,
+        "h": 59,
+        "ax": 28,
+        "ay": 72
+      },
+      "1_12": {
+        "x": 1679,
+        "y": 2,
+        "w": 53,
+        "h": 80,
+        "ax": 29,
+        "ay": 80
+      },
+      "1_13": {
+        "x": 1810,
+        "y": 92,
+        "w": 49,
+        "h": 54,
+        "ax": 31,
+        "ay": 108
+      },
+      "1_14": {
+        "x": 546,
+        "y": 92,
+        "w": 64,
+        "h": 64,
+        "ax": 28,
+        "ay": 99
+      },
+      "1_15": {
+        "x": 184,
+        "y": 92,
+        "w": 64,
+        "h": 72,
+        "ax": 25,
+        "ay": 108
+      },
+      "1_16": {
+        "x": 119,
+        "y": 92,
+        "w": 63,
+        "h": 73,
+        "ax": 30,
+        "ay": 110
+      },
+      "1_17": {
+        "x": 918,
+        "y": 92,
+        "w": 75,
+        "h": 60,
+        "ax": 32,
+        "ay": 98
+      },
+      "1_18": {
+        "x": 1559,
+        "y": 92,
+        "w": 72,
+        "h": 57,
+        "ax": 45,
+        "ay": 95
+      },
+      "1_19": {
+        "x": 1633,
+        "y": 92,
+        "w": 58,
+        "h": 57,
+        "ax": 32,
+        "ay": 96
+      },
+      "1_20": {
+        "x": 1693,
+        "y": 92,
+        "w": 56,
+        "h": 57,
+        "ax": 27,
+        "ay": 95
+      },
+      "1_21": {
+        "x": 995,
+        "y": 92,
+        "w": 56,
+        "h": 60,
+        "ax": 27,
+        "ay": 100
+      },
+      "1_22": {
+        "x": 2,
+        "y": 2,
+        "w": 160,
+        "h": 88,
+        "ax": 76,
+        "ay": 46
+      },
+      "1_23": {
+        "x": 164,
+        "y": 2,
+        "w": 153,
+        "h": 88,
+        "ax": 72,
+        "ay": 42
+      },
+      "1_24": {
+        "x": 319,
+        "y": 2,
+        "w": 160,
+        "h": 88,
+        "ax": 74,
+        "ay": 42
+      },
+      "1_25": {
+        "x": 481,
+        "y": 2,
+        "w": 172,
+        "h": 88,
+        "ax": 80,
+        "ay": 44
+      },
+      "1_26": {
+        "x": 655,
+        "y": 2,
+        "w": 82,
+        "h": 88,
+        "ax": 41,
+        "ay": 44
+      },
+      "1_27": {
+        "x": 676,
+        "y": 92,
+        "w": 28,
+        "h": 63,
+        "ax": 14,
+        "ay": 32
+      },
+      "1_28": {
+        "x": 1795,
+        "y": 2,
+        "w": 35,
+        "h": 78,
+        "ax": 17,
+        "ay": 38
+      },
+      "1_29": {
+        "x": 739,
+        "y": 2,
+        "w": 40,
+        "h": 88,
+        "ax": 20,
+        "ay": 44
+      },
+      "1_30": {
+        "x": 781,
+        "y": 2,
+        "w": 39,
+        "h": 88,
+        "ax": 19,
+        "ay": 44
+      },
+      "1_31": {
+        "x": 822,
+        "y": 2,
+        "w": 34,
+        "h": 88,
+        "ax": 19,
+        "ay": 44
+      },
+      "1_32": {
+        "x": 858,
+        "y": 2,
+        "w": 75,
+        "h": 88,
+        "ax": 38,
+        "ay": 45
+      },
+      "1_33": {
+        "x": 935,
+        "y": 2,
+        "w": 91,
+        "h": 88,
+        "ax": 45,
+        "ay": 45
+      },
+      "1_34": {
+        "x": 1028,
+        "y": 2,
+        "w": 92,
+        "h": 88,
+        "ax": 46,
+        "ay": 45
+      },
+      "1_35": {
+        "x": 1122,
+        "y": 2,
+        "w": 96,
+        "h": 88,
+        "ax": 48,
+        "ay": 45
+      },
+      "1_36": {
+        "x": 1220,
+        "y": 2,
+        "w": 164,
+        "h": 88,
+        "ax": 81,
+        "ay": 58
+      },
+      "1_37": {
+        "x": 1374,
+        "y": 92,
+        "w": 44,
+        "h": 59,
+        "ax": 17,
+        "ay": 95
+      },
+      "1_38": {
+        "x": 706,
+        "y": 92,
+        "w": 37,
+        "h": 63,
+        "ax": 25,
+        "ay": 102
+      },
+      "1_39": {
+        "x": 1751,
+        "y": 92,
+        "w": 57,
+        "h": 55,
+        "ax": 31,
+        "ay": 94
+      },
+      "1_40": {
+        "x": 472,
+        "y": 92,
+        "w": 72,
+        "h": 66,
+        "ax": 36,
+        "ay": 102
+      },
+      "1_41": {
+        "x": 1953,
+        "y": 2,
+        "w": 75,
+        "h": 76,
+        "ax": 35,
+        "ay": 110
+      },
+      "1_42": {
+        "x": 1734,
+        "y": 2,
+        "w": 59,
+        "h": 79,
+        "ax": 22,
+        "ay": 114
+      },
+      "1_43": {
+        "x": 2,
+        "y": 92,
+        "w": 61,
+        "h": 74,
+        "ax": 27,
+        "ay": 110
+      },
+      "1_44": {
+        "x": 1386,
+        "y": 2,
+        "w": 71,
+        "h": 88,
+        "ax": 28,
+        "ay": 120
+      },
+      "1_45": {
+        "x": 1459,
+        "y": 2,
+        "w": 42,
+        "h": 88,
+        "ax": 23,
+        "ay": 121
+      },
+      "1_46": {
+        "x": 1503,
+        "y": 2,
+        "w": 59,
+        "h": 83,
+        "ax": 38,
+        "ay": 115
+      },
+      "1_47": {
+        "x": 1832,
+        "y": 2,
+        "w": 60,
+        "h": 78,
+        "ax": 31,
+        "ay": 82
+      },
+      "1_48": {
+        "x": 1935,
+        "y": 92,
+        "w": 91,
+        "h": 19,
+        "ax": 47,
+        "ay": 23
+      },
+      "1_49": {
+        "x": 1053,
+        "y": 92,
+        "w": 61,
+        "h": 60,
+        "ax": 30,
+        "ay": 65
+      },
+      "1_50": {
+        "x": 1486,
+        "y": 92,
+        "w": 71,
+        "h": 58,
+        "ax": 34,
+        "ay": 63
+      },
+      "1_51": {
+        "x": 1564,
+        "y": 2,
+        "w": 53,
+        "h": 81,
+        "ax": 25,
+        "ay": 85
+      },
+      "1_52": {
+        "x": 65,
+        "y": 92,
+        "w": 52,
+        "h": 74,
+        "ax": 25,
+        "ay": 79
+      },
+      "1_53": {
+        "x": 421,
+        "y": 92,
+        "w": 49,
+        "h": 69,
+        "ax": 24,
+        "ay": 70
+      },
+      "1_54": {
+        "x": 1894,
+        "y": 2,
+        "w": 57,
+        "h": 77,
+        "ax": 31,
+        "ay": 82
+      },
+      "1_55": {
+        "x": 1861,
+        "y": 92,
+        "w": 72,
+        "h": 50,
+        "ax": 36,
+        "ay": 63
+      },
+      "1_56": {
+        "x": 1619,
+        "y": 2,
+        "w": 58,
+        "h": 81,
+        "ax": 18,
+        "ay": 80
+      }
+    }
+  },
+  "anims": {
+    "actions": {
+      "0": {
+        "action": 0,
+        "total": 46,
+        "frames": [
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 10,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -18,
+                "y1": -70,
+                "x2": 17,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 1,
+            "xoff": 2,
+            "yoff": 63,
+            "ticks": 11,
+            "flipH": false,
+            "key": "1_1",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -18,
+                "y1": -70,
+                "x2": 17,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 2,
+            "xoff": -1,
+            "yoff": 63,
+            "ticks": 12,
+            "flipH": false,
+            "key": "1_2",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -18,
+                "y1": -70,
+                "x2": 17,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 1,
+            "xoff": 2,
+            "yoff": 63,
+            "ticks": 13,
+            "flipH": false,
+            "key": "1_1",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -18,
+                "y1": -70,
+                "x2": 17,
+                "y2": -1
+              }
+            ]
+          }
+        ]
+      },
+      "5": {
+        "action": 5,
+        "total": 8,
+        "frames": [
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": -5,
+            "yoff": 63,
+            "ticks": 4,
+            "flipH": true,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -12,
+                "y1": -63,
+                "x2": 2,
+                "y2": -50
+              },
+              {
+                "x1": -16,
+                "y1": -53,
+                "x2": 14,
+                "y2": -2
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -64,
+                "x2": 14,
+                "y2": -51
+              },
+              {
+                "x1": -17,
+                "y1": -53,
+                "x2": 13,
+                "y2": -2
+              }
+            ]
+          }
+        ]
+      },
+      "6": {
+        "action": 6,
+        "total": 6,
+        "frames": [
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": -5,
+            "yoff": 63,
+            "ticks": 3,
+            "flipH": true,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -13,
+                "y1": -65,
+                "x2": 1,
+                "y2": -51
+              },
+              {
+                "x1": -16,
+                "y1": -55,
+                "x2": 14,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -1,
+                "y1": -65,
+                "x2": 13,
+                "y2": -51
+              },
+              {
+                "x1": -16,
+                "y1": -55,
+                "x2": 14,
+                "y2": -1
+              }
+            ]
+          }
+        ]
+      },
+      "10": {
+        "action": 10,
+        "total": 6,
+        "frames": [
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -68,
+                "x2": 14,
+                "y2": -50
+              },
+              {
+                "x1": -13,
+                "y1": -53,
+                "x2": 15,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -68,
+                "x2": 14,
+                "y2": -50
+              },
+              {
+                "x1": -13,
+                "y1": -53,
+                "x2": 15,
+                "y2": -1
+              }
+            ]
+          }
+        ]
+      },
+      "11": {
+        "action": 11,
+        "total": 1,
+        "frames": [
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 1,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -68,
+                "x2": 14,
+                "y2": -50
+              },
+              {
+                "x1": -13,
+                "y1": -53,
+                "x2": 15,
+                "y2": -1
+              }
+            ]
+          }
+        ]
+      },
+      "12": {
+        "action": 12,
+        "total": 6,
+        "frames": [
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -68,
+                "x2": 14,
+                "y2": -50
+              },
+              {
+                "x1": -13,
+                "y1": -53,
+                "x2": 15,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -68,
+                "x2": 14,
+                "y2": -50
+              },
+              {
+                "x1": -13,
+                "y1": -53,
+                "x2": 15,
+                "y2": -1
+              }
+            ]
+          }
+        ]
+      },
+      "20": {
+        "action": 20,
+        "total": 48,
+        "frames": [
+          {
+            "group": 1,
+            "image": 3,
+            "xoff": 6,
+            "yoff": 40,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_3",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -12,
+                "y1": -55,
+                "x2": 22,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 4,
+            "xoff": 9,
+            "yoff": 39,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_4",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -12,
+                "y1": -55,
+                "x2": 22,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 5,
+            "xoff": 9,
+            "yoff": 42,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_5",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -12,
+                "y1": -55,
+                "x2": 22,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 6,
+            "xoff": 5,
+            "yoff": 41,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_6",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -12,
+                "y1": -55,
+                "x2": 22,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 7,
+            "xoff": 2,
+            "yoff": 40,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_7",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -12,
+                "y1": -55,
+                "x2": 22,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 8,
+            "xoff": 9,
+            "yoff": 43,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_8",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -12,
+                "y1": -55,
+                "x2": 22,
+                "y2": -1
+              }
+            ]
+          }
+        ]
+      },
+      "21": {
+        "action": 21,
+        "total": 48,
+        "frames": [
+          {
+            "group": 1,
+            "image": 3,
+            "xoff": -6,
+            "yoff": 40,
+            "ticks": 8,
+            "flipH": true,
+            "key": "1_3",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -21,
+                "y1": -55,
+                "x2": 13,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 4,
+            "xoff": -9,
+            "yoff": 39,
+            "ticks": 8,
+            "flipH": true,
+            "key": "1_4",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -21,
+                "y1": -55,
+                "x2": 13,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 5,
+            "xoff": -9,
+            "yoff": 42,
+            "ticks": 8,
+            "flipH": true,
+            "key": "1_5",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -21,
+                "y1": -55,
+                "x2": 13,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 6,
+            "xoff": -5,
+            "yoff": 41,
+            "ticks": 8,
+            "flipH": true,
+            "key": "1_6",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -21,
+                "y1": -55,
+                "x2": 13,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 7,
+            "xoff": -2,
+            "yoff": 40,
+            "ticks": 8,
+            "flipH": true,
+            "key": "1_7",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -21,
+                "y1": -55,
+                "x2": 13,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 8,
+            "xoff": -9,
+            "yoff": 43,
+            "ticks": 8,
+            "flipH": true,
+            "key": "1_8",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -21,
+                "y1": -55,
+                "x2": 13,
+                "y2": -1
+              }
+            ]
+          }
+        ]
+      },
+      "40": {
+        "action": 40,
+        "total": 46,
+        "frames": [
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 10,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -18,
+                "y1": -70,
+                "x2": 17,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 1,
+            "xoff": 2,
+            "yoff": 63,
+            "ticks": 11,
+            "flipH": false,
+            "key": "1_1",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -18,
+                "y1": -70,
+                "x2": 17,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 2,
+            "xoff": -1,
+            "yoff": 63,
+            "ticks": 12,
+            "flipH": false,
+            "key": "1_2",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -18,
+                "y1": -70,
+                "x2": 17,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 1,
+            "xoff": 2,
+            "yoff": 63,
+            "ticks": 13,
+            "flipH": false,
+            "key": "1_1",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -18,
+                "y1": -70,
+                "x2": 17,
+                "y2": -1
+              }
+            ]
+          }
+        ]
+      },
+      "41": {
+        "action": 41,
+        "total": 13,
+        "frames": [
+          {
+            "group": 1,
+            "image": 9,
+            "xoff": 1,
+            "yoff": 15,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_9",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 10,
+            "xoff": 1,
+            "yoff": 15,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_10",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 11,
+            "xoff": 1,
+            "yoff": 15,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_11",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 6,
+            "xoff": 4,
+            "yoff": 42,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_6",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 12,
+            "xoff": -3,
+            "yoff": 5,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_12",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "47": {
+        "action": 47,
+        "total": 8,
+        "frames": [
+          {
+            "group": 1,
+            "image": 13,
+            "xoff": 6,
+            "yoff": 55,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_13",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 1,
+                "y1": -51,
+                "x2": 18,
+                "y2": -36
+              },
+              {
+                "x1": -15,
+                "y1": -42,
+                "x2": 14,
+                "y2": -2
+              }
+            ]
+          }
+        ]
+      },
+      "200": {
+        "action": 200,
+        "total": 21,
+        "frames": [
+          {
+            "group": 1,
+            "image": 14,
+            "xoff": 0,
+            "yoff": 37,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_14",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 2,
+                "y1": -59,
+                "x2": 18,
+                "y2": -44
+              },
+              {
+                "x1": -6,
+                "y1": -45,
+                "x2": 11,
+                "y2": -19
+              },
+              {
+                "x1": 6,
+                "y1": -24,
+                "x2": 21,
+                "y2": -14
+              },
+              {
+                "x1": 17,
+                "y1": -16,
+                "x2": 25,
+                "y2": -1
+              },
+              {
+                "x1": -13,
+                "y1": -25,
+                "x2": -2,
+                "y2": -14
+              },
+              {
+                "x1": -20,
+                "y1": -17,
+                "x2": -7,
+                "y2": -9
+              },
+              {
+                "x1": -29,
+                "y1": -10,
+                "x2": -16,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 15,
+            "xoff": -5,
+            "yoff": 36,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_15",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 2,
+                "y1": -59,
+                "x2": 18,
+                "y2": -44
+              },
+              {
+                "x1": -6,
+                "y1": -45,
+                "x2": 11,
+                "y2": -19
+              },
+              {
+                "x1": 6,
+                "y1": -24,
+                "x2": 21,
+                "y2": -14
+              },
+              {
+                "x1": 17,
+                "y1": -16,
+                "x2": 25,
+                "y2": -1
+              },
+              {
+                "x1": -13,
+                "y1": -25,
+                "x2": -2,
+                "y2": -14
+              },
+              {
+                "x1": -20,
+                "y1": -17,
+                "x2": -7,
+                "y2": -9
+              },
+              {
+                "x1": -29,
+                "y1": -10,
+                "x2": -16,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 16,
+            "xoff": 2,
+            "yoff": 38,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_16",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 10,
+                "y1": -53,
+                "x2": 24,
+                "y2": -41
+              },
+              {
+                "x1": -1,
+                "y1": -45,
+                "x2": 17,
+                "y2": -34
+              },
+              {
+                "x1": -6,
+                "y1": -35,
+                "x2": 11,
+                "y2": -18
+              },
+              {
+                "x1": 12,
+                "y1": -23,
+                "x2": 21,
+                "y2": -12
+              },
+              {
+                "x1": 17,
+                "y1": -13,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -12,
+                "y1": -22,
+                "x2": 0,
+                "y2": -9
+              },
+              {
+                "x1": -27,
+                "y1": -11,
+                "x2": -11,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 17,
+            "xoff": 9,
+            "yoff": 39,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_17",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 18,
+            "xoff": 22,
+            "yoff": 39,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_18",
+            "clsn1": [
+              {
+                "x1": 17,
+                "y1": -29,
+                "x2": 42,
+                "y2": -15
+              },
+              {
+                "x1": 30,
+                "y1": -59,
+                "x2": 49,
+                "y2": -44
+              },
+              {
+                "x1": 37,
+                "y1": -47,
+                "x2": 57,
+                "y2": -23
+              }
+            ],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 19,
+            "xoff": 9,
+            "yoff": 40,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_19",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 20,
+            "xoff": 4,
+            "yoff": 39,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_20",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 21,
+            "xoff": 8,
+            "yoff": 40,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_21",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 10,
+                "y1": -54,
+                "x2": 23,
+                "y2": -41
+              },
+              {
+                "x1": -1,
+                "y1": -46,
+                "x2": 14,
+                "y2": -37
+              },
+              {
+                "x1": -5,
+                "y1": -39,
+                "x2": 12,
+                "y2": -21
+              },
+              {
+                "x1": 10,
+                "y1": -25,
+                "x2": 23,
+                "y2": -16
+              },
+              {
+                "x1": 20,
+                "y1": -17,
+                "x2": 29,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -23,
+                "x2": 3,
+                "y2": -11
+              },
+              {
+                "x1": -18,
+                "y1": -12,
+                "x2": -4,
+                "y2": 0
+              }
+            ]
+          }
+        ]
+      },
+      "230": {
+        "action": 230,
+        "total": 6,
+        "frames": [
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": -5,
+            "yoff": 63,
+            "ticks": 3,
+            "flipH": true,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -13,
+                "y1": -65,
+                "x2": 1,
+                "y2": -51
+              },
+              {
+                "x1": -16,
+                "y1": -55,
+                "x2": 14,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 0,
+            "xoff": 5,
+            "yoff": 63,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_0",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -1,
+                "y1": -65,
+                "x2": 13,
+                "y2": -51
+              },
+              {
+                "x1": -16,
+                "y1": -55,
+                "x2": 14,
+                "y2": -1
+              }
+            ]
+          }
+        ]
+      },
+      "240": {
+        "action": 240,
+        "total": 38,
+        "frames": [
+          {
+            "group": 1,
+            "image": 21,
+            "xoff": 8,
+            "yoff": 40,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_21",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 9,
+                "y1": -56,
+                "x2": 24,
+                "y2": -41
+              },
+              {
+                "x1": -4,
+                "y1": -46,
+                "x2": 12,
+                "y2": -21
+              },
+              {
+                "x1": 10,
+                "y1": -25,
+                "x2": 21,
+                "y2": -17
+              },
+              {
+                "x1": 17,
+                "y1": -19,
+                "x2": 27,
+                "y2": -1
+              },
+              {
+                "x1": -7,
+                "y1": -24,
+                "x2": 4,
+                "y2": -7
+              },
+              {
+                "x1": -18,
+                "y1": -12,
+                "x2": -3,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 37,
+            "xoff": -6,
+            "yoff": 40,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_37",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -51,
+                "x2": 15,
+                "y2": -36
+              },
+              {
+                "x1": -7,
+                "y1": -42,
+                "x2": 8,
+                "y2": -14
+              },
+              {
+                "x1": -5,
+                "y1": -17,
+                "x2": 5,
+                "y2": 0
+              },
+              {
+                "x1": -22,
+                "y1": -7,
+                "x2": 0,
+                "y2": 3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 38,
+            "xoff": 0,
+            "yoff": 41,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_38",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -7,
+                "y1": -56,
+                "x2": 9,
+                "y2": -18
+              },
+              {
+                "x1": 2,
+                "y1": -22,
+                "x2": 11,
+                "y2": -2
+              },
+              {
+                "x1": -11,
+                "y1": -28,
+                "x2": -2,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 39,
+            "xoff": 4,
+            "yoff": 40,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_39",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 1,
+                "y1": -51,
+                "x2": 15,
+                "y2": -37
+              },
+              {
+                "x1": -7,
+                "y1": -41,
+                "x2": 16,
+                "y2": -17
+              },
+              {
+                "x1": 13,
+                "y1": -22,
+                "x2": 24,
+                "y2": -1
+              },
+              {
+                "x1": -15,
+                "y1": -24,
+                "x2": -4,
+                "y2": -14
+              },
+              {
+                "x1": -23,
+                "y1": -16,
+                "x2": -11,
+                "y2": -2
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 40,
+            "xoff": 14,
+            "yoff": 36,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_40",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 24,
+                "y1": -47,
+                "x2": 35,
+                "y2": -34
+              },
+              {
+                "x1": 2,
+                "y1": -39,
+                "x2": 28,
+                "y2": -28
+              },
+              {
+                "x1": -3,
+                "y1": -29,
+                "x2": 20,
+                "y2": -18
+              },
+              {
+                "x1": 9,
+                "y1": -20,
+                "x2": 23,
+                "y2": -1
+              },
+              {
+                "x1": -10,
+                "y1": -23,
+                "x2": 5,
+                "y2": -11
+              },
+              {
+                "x1": -23,
+                "y1": -14,
+                "x2": -5,
+                "y2": -3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 41,
+            "xoff": 8,
+            "yoff": 35,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_41",
+            "clsn1": [
+              {
+                "x1": 31,
+                "y1": -70,
+                "x2": 63,
+                "y2": -45
+              },
+              {
+                "x1": 27,
+                "y1": -51,
+                "x2": 58,
+                "y2": -29
+              },
+              {
+                "x1": 14,
+                "y1": -34,
+                "x2": 46,
+                "y2": -16
+              },
+              {
+                "x1": -3,
+                "y1": -79,
+                "x2": 46,
+                "y2": -60
+              }
+            ],
+            "clsn2": [
+              {
+                "x1": 23,
+                "y1": -52,
+                "x2": 34,
+                "y2": -39
+              },
+              {
+                "x1": 2,
+                "y1": -41,
+                "x2": 28,
+                "y2": -30
+              },
+              {
+                "x1": -3,
+                "y1": -29,
+                "x2": 20,
+                "y2": -18
+              },
+              {
+                "x1": 9,
+                "y1": -20,
+                "x2": 23,
+                "y2": -1
+              },
+              {
+                "x1": -10,
+                "y1": -23,
+                "x2": 5,
+                "y2": -11
+              },
+              {
+                "x1": -23,
+                "y1": -14,
+                "x2": -5,
+                "y2": -3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 42,
+            "xoff": 4,
+            "yoff": 36,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_42",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 20,
+                "y1": -61,
+                "x2": 32,
+                "y2": -45
+              },
+              {
+                "x1": 9,
+                "y1": -51,
+                "x2": 28,
+                "y2": -34
+              },
+              {
+                "x1": 3,
+                "y1": -37,
+                "x2": 21,
+                "y2": -19
+              },
+              {
+                "x1": 15,
+                "y1": -23,
+                "x2": 27,
+                "y2": -12
+              },
+              {
+                "x1": 10,
+                "y1": -15,
+                "x2": 21,
+                "y2": 0
+              },
+              {
+                "x1": -6,
+                "y1": -20,
+                "x2": 9,
+                "y2": -9
+              },
+              {
+                "x1": -18,
+                "y1": -14,
+                "x2": -5,
+                "y2": -4
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 43,
+            "xoff": 5,
+            "yoff": 38,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_43",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 11,
+                "y1": -69,
+                "x2": 24,
+                "y2": -52
+              },
+              {
+                "x1": 5,
+                "y1": -55,
+                "x2": 23,
+                "y2": -25
+              },
+              {
+                "x1": 7,
+                "y1": -30,
+                "x2": 22,
+                "y2": -13
+              },
+              {
+                "x1": 6,
+                "y1": -17,
+                "x2": 16,
+                "y2": 1
+              },
+              {
+                "x1": -11,
+                "y1": -19,
+                "x2": 12,
+                "y2": -6
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 44,
+            "xoff": -1,
+            "yoff": 31,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_44",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -1.89247311827957,
+                "y1": -76.64516129032259,
+                "x2": 9.46236559139785,
+                "y2": -61.505376344086024
+              },
+              {
+                "x1": -2.838709677419355,
+                "y1": -62.45161290322581,
+                "x2": 16.086021505376344,
+                "y2": -41.63440860215054
+              },
+              {
+                "x1": -1.89247311827957,
+                "y1": -43.52688172043011,
+                "x2": 18.9247311827957,
+                "y2": -24.602150537634408
+              },
+              {
+                "x1": -2.838709677419355,
+                "y1": -28.38709677419355,
+                "x2": 13.24731182795699,
+                "y2": -5.67741935483871
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 45,
+            "xoff": 3,
+            "yoff": 32,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_45",
+            "clsn1": [
+              {
+                "x1": -8.979591836734693,
+                "y1": -95.18367346938776,
+                "x2": 27.836734693877553,
+                "y2": -74.53061224489795
+              },
+              {
+                "x1": 11.673469387755102,
+                "y1": -87.10204081632654,
+                "x2": 40.40816326530612,
+                "y2": -59.265306122448976
+              },
+              {
+                "x1": 12.571428571428571,
+                "y1": -65.55102040816327,
+                "x2": 41.30612244897959,
+                "y2": -35.02040816326531
+              },
+              {
+                "x1": 16.163265306122447,
+                "y1": -43.10204081632653,
+                "x2": 35.02040816326531,
+                "y2": -21.551020408163264
+              }
+            ],
+            "clsn2": [
+              {
+                "x1": -7.183673469387755,
+                "y1": -71.83673469387755,
+                "x2": 4.489795918367347,
+                "y2": -57.46938775510204
+              },
+              {
+                "x1": -4.489795918367347,
+                "y1": -59.265306122448976,
+                "x2": 13.46938775510204,
+                "y2": -35.02040816326531
+              },
+              {
+                "x1": -2.693877551020408,
+                "y1": -37.714285714285715,
+                "x2": 15.26530612244898,
+                "y2": -26.93877551020408
+              },
+              {
+                "x1": 8.979591836734693,
+                "y1": -27.836734693877553,
+                "x2": 16.163265306122447,
+                "y2": -8.081632653061224
+              },
+              {
+                "x1": -6.285714285714286,
+                "y1": -28.73469387755102,
+                "x2": 4.489795918367347,
+                "y2": -2.693877551020408
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 46,
+            "xoff": 3,
+            "yoff": 31,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_46",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -14,
+                "y1": -68,
+                "x2": -1,
+                "y2": -57
+              },
+              {
+                "x1": -6,
+                "y1": -60,
+                "x2": 10,
+                "y2": -46
+              },
+              {
+                "x1": -4,
+                "y1": -49,
+                "x2": 14,
+                "y2": -33
+              },
+              {
+                "x1": 5,
+                "y1": -33,
+                "x2": 16,
+                "y2": -26
+              },
+              {
+                "x1": 13,
+                "y1": -30,
+                "x2": 24,
+                "y2": -18
+              },
+              {
+                "x1": -6,
+                "y1": -37,
+                "x2": 6,
+                "y2": -2
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 47,
+            "xoff": -4,
+            "yoff": 4,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_47",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -14,
+                "y1": -68,
+                "x2": -1,
+                "y2": -57
+              },
+              {
+                "x1": -6,
+                "y1": -60,
+                "x2": 10,
+                "y2": -46
+              },
+              {
+                "x1": -4,
+                "y1": -49,
+                "x2": 14,
+                "y2": -33
+              },
+              {
+                "x1": 5,
+                "y1": -33,
+                "x2": 16,
+                "y2": -26
+              },
+              {
+                "x1": 13,
+                "y1": -30,
+                "x2": 24,
+                "y2": -18
+              },
+              {
+                "x1": -6,
+                "y1": -37,
+                "x2": 6,
+                "y2": -2
+              }
+            ]
+          }
+        ]
+      },
+      "501": {
+        "action": 501,
+        "total": 21,
+        "frames": [
+          {
+            "group": 1,
+            "image": 14,
+            "xoff": 0,
+            "yoff": 37,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_14",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 2,
+                "y1": -59,
+                "x2": 18,
+                "y2": -44
+              },
+              {
+                "x1": -6,
+                "y1": -45,
+                "x2": 11,
+                "y2": -19
+              },
+              {
+                "x1": 6,
+                "y1": -24,
+                "x2": 21,
+                "y2": -14
+              },
+              {
+                "x1": 17,
+                "y1": -16,
+                "x2": 25,
+                "y2": -1
+              },
+              {
+                "x1": -13,
+                "y1": -25,
+                "x2": -2,
+                "y2": -14
+              },
+              {
+                "x1": -20,
+                "y1": -17,
+                "x2": -7,
+                "y2": -9
+              },
+              {
+                "x1": -29,
+                "y1": -10,
+                "x2": -16,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 15,
+            "xoff": -5,
+            "yoff": 36,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_15",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 2,
+                "y1": -59,
+                "x2": 18,
+                "y2": -44
+              },
+              {
+                "x1": -6,
+                "y1": -45,
+                "x2": 11,
+                "y2": -19
+              },
+              {
+                "x1": 6,
+                "y1": -24,
+                "x2": 21,
+                "y2": -14
+              },
+              {
+                "x1": 17,
+                "y1": -16,
+                "x2": 25,
+                "y2": -1
+              },
+              {
+                "x1": -13,
+                "y1": -25,
+                "x2": -2,
+                "y2": -14
+              },
+              {
+                "x1": -20,
+                "y1": -17,
+                "x2": -7,
+                "y2": -9
+              },
+              {
+                "x1": -29,
+                "y1": -10,
+                "x2": -16,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 16,
+            "xoff": 2,
+            "yoff": 38,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_16",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 10,
+                "y1": -53,
+                "x2": 24,
+                "y2": -41
+              },
+              {
+                "x1": -1,
+                "y1": -45,
+                "x2": 17,
+                "y2": -34
+              },
+              {
+                "x1": -6,
+                "y1": -35,
+                "x2": 11,
+                "y2": -18
+              },
+              {
+                "x1": 12,
+                "y1": -23,
+                "x2": 21,
+                "y2": -12
+              },
+              {
+                "x1": 17,
+                "y1": -13,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -12,
+                "y1": -22,
+                "x2": 0,
+                "y2": -9
+              },
+              {
+                "x1": -27,
+                "y1": -11,
+                "x2": -11,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 17,
+            "xoff": 9,
+            "yoff": 39,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_17",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 18,
+            "xoff": 22,
+            "yoff": 39,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_18",
+            "clsn1": [
+              {
+                "x1": 17,
+                "y1": -29,
+                "x2": 42,
+                "y2": -15
+              },
+              {
+                "x1": 30,
+                "y1": -59,
+                "x2": 49,
+                "y2": -44
+              },
+              {
+                "x1": 37,
+                "y1": -47,
+                "x2": 57,
+                "y2": -23
+              }
+            ],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 19,
+            "xoff": 9,
+            "yoff": 40,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_19",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 20,
+            "xoff": 4,
+            "yoff": 39,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_20",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 21,
+            "xoff": 8,
+            "yoff": 40,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_21",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 10,
+                "y1": -54,
+                "x2": 23,
+                "y2": -41
+              },
+              {
+                "x1": -1,
+                "y1": -46,
+                "x2": 14,
+                "y2": -37
+              },
+              {
+                "x1": -5,
+                "y1": -39,
+                "x2": 12,
+                "y2": -21
+              },
+              {
+                "x1": 10,
+                "y1": -25,
+                "x2": 23,
+                "y2": -16
+              },
+              {
+                "x1": 20,
+                "y1": -17,
+                "x2": 29,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -23,
+                "x2": 3,
+                "y2": -11
+              },
+              {
+                "x1": -18,
+                "y1": -12,
+                "x2": -4,
+                "y2": 0
+              }
+            ]
+          }
+        ]
+      },
+      "502": {
+        "action": 502,
+        "total": 38,
+        "frames": [
+          {
+            "group": 1,
+            "image": 21,
+            "xoff": 8,
+            "yoff": 40,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_21",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 9,
+                "y1": -56,
+                "x2": 24,
+                "y2": -41
+              },
+              {
+                "x1": -4,
+                "y1": -46,
+                "x2": 12,
+                "y2": -21
+              },
+              {
+                "x1": 10,
+                "y1": -25,
+                "x2": 21,
+                "y2": -17
+              },
+              {
+                "x1": 17,
+                "y1": -19,
+                "x2": 27,
+                "y2": -1
+              },
+              {
+                "x1": -7,
+                "y1": -24,
+                "x2": 4,
+                "y2": -7
+              },
+              {
+                "x1": -18,
+                "y1": -12,
+                "x2": -3,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 37,
+            "xoff": -6,
+            "yoff": 40,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_37",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -51,
+                "x2": 15,
+                "y2": -36
+              },
+              {
+                "x1": -7,
+                "y1": -42,
+                "x2": 8,
+                "y2": -14
+              },
+              {
+                "x1": -5,
+                "y1": -17,
+                "x2": 5,
+                "y2": 0
+              },
+              {
+                "x1": -22,
+                "y1": -7,
+                "x2": 0,
+                "y2": 3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 38,
+            "xoff": 0,
+            "yoff": 41,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_38",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -7,
+                "y1": -56,
+                "x2": 9,
+                "y2": -18
+              },
+              {
+                "x1": 2,
+                "y1": -22,
+                "x2": 11,
+                "y2": -2
+              },
+              {
+                "x1": -11,
+                "y1": -28,
+                "x2": -2,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 39,
+            "xoff": 4,
+            "yoff": 40,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_39",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 1,
+                "y1": -51,
+                "x2": 15,
+                "y2": -37
+              },
+              {
+                "x1": -7,
+                "y1": -41,
+                "x2": 16,
+                "y2": -17
+              },
+              {
+                "x1": 13,
+                "y1": -22,
+                "x2": 24,
+                "y2": -1
+              },
+              {
+                "x1": -15,
+                "y1": -24,
+                "x2": -4,
+                "y2": -14
+              },
+              {
+                "x1": -23,
+                "y1": -16,
+                "x2": -11,
+                "y2": -2
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 40,
+            "xoff": 14,
+            "yoff": 36,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_40",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 24,
+                "y1": -47,
+                "x2": 35,
+                "y2": -34
+              },
+              {
+                "x1": 2,
+                "y1": -39,
+                "x2": 28,
+                "y2": -28
+              },
+              {
+                "x1": -3,
+                "y1": -29,
+                "x2": 20,
+                "y2": -18
+              },
+              {
+                "x1": 9,
+                "y1": -20,
+                "x2": 23,
+                "y2": -1
+              },
+              {
+                "x1": -10,
+                "y1": -23,
+                "x2": 5,
+                "y2": -11
+              },
+              {
+                "x1": -23,
+                "y1": -14,
+                "x2": -5,
+                "y2": -3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 41,
+            "xoff": 8,
+            "yoff": 35,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_41",
+            "clsn1": [
+              {
+                "x1": 31,
+                "y1": -70,
+                "x2": 63,
+                "y2": -45
+              },
+              {
+                "x1": 27,
+                "y1": -51,
+                "x2": 58,
+                "y2": -29
+              },
+              {
+                "x1": 14,
+                "y1": -34,
+                "x2": 46,
+                "y2": -16
+              },
+              {
+                "x1": -3,
+                "y1": -79,
+                "x2": 46,
+                "y2": -60
+              }
+            ],
+            "clsn2": [
+              {
+                "x1": 23,
+                "y1": -52,
+                "x2": 34,
+                "y2": -39
+              },
+              {
+                "x1": 2,
+                "y1": -41,
+                "x2": 28,
+                "y2": -30
+              },
+              {
+                "x1": -3,
+                "y1": -29,
+                "x2": 20,
+                "y2": -18
+              },
+              {
+                "x1": 9,
+                "y1": -20,
+                "x2": 23,
+                "y2": -1
+              },
+              {
+                "x1": -10,
+                "y1": -23,
+                "x2": 5,
+                "y2": -11
+              },
+              {
+                "x1": -23,
+                "y1": -14,
+                "x2": -5,
+                "y2": -3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 42,
+            "xoff": 4,
+            "yoff": 36,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_42",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 20,
+                "y1": -61,
+                "x2": 32,
+                "y2": -45
+              },
+              {
+                "x1": 9,
+                "y1": -51,
+                "x2": 28,
+                "y2": -34
+              },
+              {
+                "x1": 3,
+                "y1": -37,
+                "x2": 21,
+                "y2": -19
+              },
+              {
+                "x1": 15,
+                "y1": -23,
+                "x2": 27,
+                "y2": -12
+              },
+              {
+                "x1": 10,
+                "y1": -15,
+                "x2": 21,
+                "y2": 0
+              },
+              {
+                "x1": -6,
+                "y1": -20,
+                "x2": 9,
+                "y2": -9
+              },
+              {
+                "x1": -18,
+                "y1": -14,
+                "x2": -5,
+                "y2": -4
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 43,
+            "xoff": 5,
+            "yoff": 38,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_43",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 11,
+                "y1": -69,
+                "x2": 24,
+                "y2": -52
+              },
+              {
+                "x1": 5,
+                "y1": -55,
+                "x2": 23,
+                "y2": -25
+              },
+              {
+                "x1": 7,
+                "y1": -30,
+                "x2": 22,
+                "y2": -13
+              },
+              {
+                "x1": 6,
+                "y1": -17,
+                "x2": 16,
+                "y2": 1
+              },
+              {
+                "x1": -11,
+                "y1": -19,
+                "x2": 12,
+                "y2": -6
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 44,
+            "xoff": -1,
+            "yoff": 31,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_44",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -1.89247311827957,
+                "y1": -76.64516129032259,
+                "x2": 9.46236559139785,
+                "y2": -61.505376344086024
+              },
+              {
+                "x1": -2.838709677419355,
+                "y1": -62.45161290322581,
+                "x2": 16.086021505376344,
+                "y2": -41.63440860215054
+              },
+              {
+                "x1": -1.89247311827957,
+                "y1": -43.52688172043011,
+                "x2": 18.9247311827957,
+                "y2": -24.602150537634408
+              },
+              {
+                "x1": -2.838709677419355,
+                "y1": -28.38709677419355,
+                "x2": 13.24731182795699,
+                "y2": -5.67741935483871
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 45,
+            "xoff": 3,
+            "yoff": 32,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_45",
+            "clsn1": [
+              {
+                "x1": -8.979591836734693,
+                "y1": -95.18367346938776,
+                "x2": 27.836734693877553,
+                "y2": -74.53061224489795
+              },
+              {
+                "x1": 11.673469387755102,
+                "y1": -87.10204081632654,
+                "x2": 40.40816326530612,
+                "y2": -59.265306122448976
+              },
+              {
+                "x1": 12.571428571428571,
+                "y1": -65.55102040816327,
+                "x2": 41.30612244897959,
+                "y2": -35.02040816326531
+              },
+              {
+                "x1": 16.163265306122447,
+                "y1": -43.10204081632653,
+                "x2": 35.02040816326531,
+                "y2": -21.551020408163264
+              }
+            ],
+            "clsn2": [
+              {
+                "x1": -7.183673469387755,
+                "y1": -71.83673469387755,
+                "x2": 4.489795918367347,
+                "y2": -57.46938775510204
+              },
+              {
+                "x1": -4.489795918367347,
+                "y1": -59.265306122448976,
+                "x2": 13.46938775510204,
+                "y2": -35.02040816326531
+              },
+              {
+                "x1": -2.693877551020408,
+                "y1": -37.714285714285715,
+                "x2": 15.26530612244898,
+                "y2": -26.93877551020408
+              },
+              {
+                "x1": 8.979591836734693,
+                "y1": -27.836734693877553,
+                "x2": 16.163265306122447,
+                "y2": -8.081632653061224
+              },
+              {
+                "x1": -6.285714285714286,
+                "y1": -28.73469387755102,
+                "x2": 4.489795918367347,
+                "y2": -2.693877551020408
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 46,
+            "xoff": 3,
+            "yoff": 31,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_46",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -14,
+                "y1": -68,
+                "x2": -1,
+                "y2": -57
+              },
+              {
+                "x1": -6,
+                "y1": -60,
+                "x2": 10,
+                "y2": -46
+              },
+              {
+                "x1": -4,
+                "y1": -49,
+                "x2": 14,
+                "y2": -33
+              },
+              {
+                "x1": 5,
+                "y1": -33,
+                "x2": 16,
+                "y2": -26
+              },
+              {
+                "x1": 13,
+                "y1": -30,
+                "x2": 24,
+                "y2": -18
+              },
+              {
+                "x1": -6,
+                "y1": -37,
+                "x2": 6,
+                "y2": -2
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 47,
+            "xoff": -4,
+            "yoff": 4,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_47",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -14,
+                "y1": -68,
+                "x2": -1,
+                "y2": -57
+              },
+              {
+                "x1": -6,
+                "y1": -60,
+                "x2": 10,
+                "y2": -46
+              },
+              {
+                "x1": -4,
+                "y1": -49,
+                "x2": 14,
+                "y2": -33
+              },
+              {
+                "x1": 5,
+                "y1": -33,
+                "x2": 16,
+                "y2": -26
+              },
+              {
+                "x1": 13,
+                "y1": -30,
+                "x2": 24,
+                "y2": -18
+              },
+              {
+                "x1": -6,
+                "y1": -37,
+                "x2": 6,
+                "y2": -2
+              }
+            ]
+          }
+        ]
+      },
+      "503": {
+        "action": 503,
+        "total": 36,
+        "frames": [
+          {
+            "group": 1,
+            "image": 14,
+            "xoff": 0,
+            "yoff": 37,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_14",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 2,
+                "y1": -59,
+                "x2": 18,
+                "y2": -44
+              },
+              {
+                "x1": -6,
+                "y1": -45,
+                "x2": 11,
+                "y2": -19
+              },
+              {
+                "x1": 6,
+                "y1": -24,
+                "x2": 21,
+                "y2": -14
+              },
+              {
+                "x1": 17,
+                "y1": -16,
+                "x2": 25,
+                "y2": -1
+              },
+              {
+                "x1": -13,
+                "y1": -25,
+                "x2": -2,
+                "y2": -14
+              },
+              {
+                "x1": -20,
+                "y1": -17,
+                "x2": -7,
+                "y2": -9
+              },
+              {
+                "x1": -29,
+                "y1": -10,
+                "x2": -16,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 15,
+            "xoff": -5,
+            "yoff": 36,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_15",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 2,
+                "y1": -59,
+                "x2": 18,
+                "y2": -44
+              },
+              {
+                "x1": -6,
+                "y1": -45,
+                "x2": 11,
+                "y2": -19
+              },
+              {
+                "x1": 6,
+                "y1": -24,
+                "x2": 21,
+                "y2": -14
+              },
+              {
+                "x1": 17,
+                "y1": -16,
+                "x2": 25,
+                "y2": -1
+              },
+              {
+                "x1": -13,
+                "y1": -25,
+                "x2": -2,
+                "y2": -14
+              },
+              {
+                "x1": -20,
+                "y1": -17,
+                "x2": -7,
+                "y2": -9
+              },
+              {
+                "x1": -29,
+                "y1": -10,
+                "x2": -16,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 17,
+            "xoff": 9,
+            "yoff": 39,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_17",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 18,
+            "xoff": 22,
+            "yoff": 39,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_18",
+            "clsn1": [
+              {
+                "x1": 17,
+                "y1": -29,
+                "x2": 42,
+                "y2": -15
+              },
+              {
+                "x1": 30,
+                "y1": -59,
+                "x2": 49,
+                "y2": -44
+              },
+              {
+                "x1": 37,
+                "y1": -47,
+                "x2": 57,
+                "y2": -23
+              }
+            ],
+            "clsn2": [
+              {
+                "x1": 14,
+                "y1": -52,
+                "x2": 28,
+                "y2": -40
+              },
+              {
+                "x1": 5,
+                "y1": -41,
+                "x2": 23,
+                "y2": -30
+              },
+              {
+                "x1": 3,
+                "y1": -33,
+                "x2": 20,
+                "y2": -16
+              },
+              {
+                "x1": 17,
+                "y1": -18,
+                "x2": 26,
+                "y2": -1
+              },
+              {
+                "x1": -5,
+                "y1": -20,
+                "x2": 7,
+                "y2": -7
+              },
+              {
+                "x1": -21,
+                "y1": -10,
+                "x2": -3,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 37,
+            "xoff": -6,
+            "yoff": 40,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_37",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -51,
+                "x2": 15,
+                "y2": -36
+              },
+              {
+                "x1": -7,
+                "y1": -42,
+                "x2": 8,
+                "y2": -14
+              },
+              {
+                "x1": -5,
+                "y1": -17,
+                "x2": 5,
+                "y2": 0
+              },
+              {
+                "x1": -22,
+                "y1": -7,
+                "x2": 0,
+                "y2": 3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 38,
+            "xoff": 0,
+            "yoff": 41,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_38",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -7,
+                "y1": -56,
+                "x2": 9,
+                "y2": -18
+              },
+              {
+                "x1": 2,
+                "y1": -22,
+                "x2": 11,
+                "y2": -2
+              },
+              {
+                "x1": -11,
+                "y1": -28,
+                "x2": -2,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 40,
+            "xoff": 14,
+            "yoff": 36,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_40",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 24,
+                "y1": -47,
+                "x2": 35,
+                "y2": -34
+              },
+              {
+                "x1": 2,
+                "y1": -39,
+                "x2": 28,
+                "y2": -28
+              },
+              {
+                "x1": -3,
+                "y1": -29,
+                "x2": 20,
+                "y2": -18
+              },
+              {
+                "x1": 9,
+                "y1": -20,
+                "x2": 23,
+                "y2": -1
+              },
+              {
+                "x1": -10,
+                "y1": -23,
+                "x2": 5,
+                "y2": -11
+              },
+              {
+                "x1": -23,
+                "y1": -14,
+                "x2": -5,
+                "y2": -3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 41,
+            "xoff": 8,
+            "yoff": 35,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_41",
+            "clsn1": [
+              {
+                "x1": 31,
+                "y1": -70,
+                "x2": 63,
+                "y2": -45
+              },
+              {
+                "x1": 27,
+                "y1": -51,
+                "x2": 58,
+                "y2": -29
+              },
+              {
+                "x1": 14,
+                "y1": -34,
+                "x2": 46,
+                "y2": -16
+              },
+              {
+                "x1": -3,
+                "y1": -79,
+                "x2": 46,
+                "y2": -60
+              }
+            ],
+            "clsn2": [
+              {
+                "x1": 23,
+                "y1": -52,
+                "x2": 34,
+                "y2": -39
+              },
+              {
+                "x1": 2,
+                "y1": -41,
+                "x2": 28,
+                "y2": -30
+              },
+              {
+                "x1": -3,
+                "y1": -29,
+                "x2": 20,
+                "y2": -18
+              },
+              {
+                "x1": 9,
+                "y1": -20,
+                "x2": 23,
+                "y2": -1
+              },
+              {
+                "x1": -10,
+                "y1": -23,
+                "x2": 5,
+                "y2": -11
+              },
+              {
+                "x1": -23,
+                "y1": -14,
+                "x2": -5,
+                "y2": -3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 43,
+            "xoff": 5,
+            "yoff": 38,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_43",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 11,
+                "y1": -69,
+                "x2": 24,
+                "y2": -52
+              },
+              {
+                "x1": 5,
+                "y1": -55,
+                "x2": 23,
+                "y2": -25
+              },
+              {
+                "x1": 7,
+                "y1": -30,
+                "x2": 22,
+                "y2": -13
+              },
+              {
+                "x1": 6,
+                "y1": -17,
+                "x2": 16,
+                "y2": 1
+              },
+              {
+                "x1": -11,
+                "y1": -19,
+                "x2": 12,
+                "y2": -6
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 44,
+            "xoff": -1,
+            "yoff": 31,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_44",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -1.89247311827957,
+                "y1": -76.64516129032259,
+                "x2": 9.46236559139785,
+                "y2": -61.505376344086024
+              },
+              {
+                "x1": -2.838709677419355,
+                "y1": -62.45161290322581,
+                "x2": 16.086021505376344,
+                "y2": -41.63440860215054
+              },
+              {
+                "x1": -1.89247311827957,
+                "y1": -43.52688172043011,
+                "x2": 18.9247311827957,
+                "y2": -24.602150537634408
+              },
+              {
+                "x1": -2.838709677419355,
+                "y1": -28.38709677419355,
+                "x2": 13.24731182795699,
+                "y2": -5.67741935483871
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 46,
+            "xoff": 3,
+            "yoff": 31,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_46",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -14,
+                "y1": -68,
+                "x2": -1,
+                "y2": -57
+              },
+              {
+                "x1": -6,
+                "y1": -60,
+                "x2": 10,
+                "y2": -46
+              },
+              {
+                "x1": -4,
+                "y1": -49,
+                "x2": 14,
+                "y2": -33
+              },
+              {
+                "x1": 5,
+                "y1": -33,
+                "x2": 16,
+                "y2": -26
+              },
+              {
+                "x1": 13,
+                "y1": -30,
+                "x2": 24,
+                "y2": -18
+              },
+              {
+                "x1": -6,
+                "y1": -37,
+                "x2": 6,
+                "y2": -2
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 47,
+            "xoff": -4,
+            "yoff": 4,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_47",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -14,
+                "y1": -68,
+                "x2": -1,
+                "y2": -57
+              },
+              {
+                "x1": -6,
+                "y1": -60,
+                "x2": 10,
+                "y2": -46
+              },
+              {
+                "x1": -4,
+                "y1": -49,
+                "x2": 14,
+                "y2": -33
+              },
+              {
+                "x1": 5,
+                "y1": -33,
+                "x2": 16,
+                "y2": -26
+              },
+              {
+                "x1": 13,
+                "y1": -30,
+                "x2": 24,
+                "y2": -18
+              },
+              {
+                "x1": -6,
+                "y1": -37,
+                "x2": 6,
+                "y2": -2
+              }
+            ]
+          }
+        ]
+      },
+      "601": {
+        "action": 601,
+        "total": 20,
+        "frames": [
+          {
+            "group": 1,
+            "image": 22,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_22",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 23,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_23",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 24,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_24",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 25,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_25",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 26,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_26",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "602": {
+        "action": 602,
+        "total": 20,
+        "frames": [
+          {
+            "group": 1,
+            "image": 22,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_22",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 23,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_23",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 24,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_24",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 25,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_25",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 26,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_26",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "603": {
+        "action": 603,
+        "total": 20,
+        "frames": [
+          {
+            "group": 1,
+            "image": 22,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_22",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 23,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_23",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 24,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_24",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 25,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_25",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 26,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_26",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "701": {
+        "action": 701,
+        "total": 10,
+        "frames": [
+          {
+            "group": 1,
+            "image": 27,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_27",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 28,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_28",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 29,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_29",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 30,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_30",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 31,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_31",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "702": {
+        "action": 702,
+        "total": 10,
+        "frames": [
+          {
+            "group": 1,
+            "image": 27,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_27",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 28,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_28",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 29,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_29",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 30,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_30",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 31,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_31",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "703": {
+        "action": 703,
+        "total": 10,
+        "frames": [
+          {
+            "group": 1,
+            "image": 27,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_27",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 28,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_28",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 29,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_29",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 30,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_30",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 31,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_31",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "810": {
+        "action": 810,
+        "total": 20,
+        "frames": [
+          {
+            "group": 1,
+            "image": 22,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_22",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 23,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_23",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 24,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_24",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 25,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_25",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 26,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_26",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "811": {
+        "action": 811,
+        "total": 10,
+        "frames": [
+          {
+            "group": 1,
+            "image": 27,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_27",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 28,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_28",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 29,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_29",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 30,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_30",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 31,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_31",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "812": {
+        "action": 812,
+        "total": 15,
+        "frames": [
+          {
+            "group": 1,
+            "image": 32,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_32",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 33,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_33",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 34,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_34",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 35,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_35",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 36,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_36",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "820": {
+        "action": 820,
+        "total": 20,
+        "frames": [
+          {
+            "group": 1,
+            "image": 22,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_22",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 23,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_23",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 24,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_24",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 25,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_25",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 26,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_26",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "821": {
+        "action": 821,
+        "total": 10,
+        "frames": [
+          {
+            "group": 1,
+            "image": 27,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_27",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 28,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_28",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 29,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_29",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 30,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_30",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 31,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_31",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "822": {
+        "action": 822,
+        "total": 15,
+        "frames": [
+          {
+            "group": 1,
+            "image": 32,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_32",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 33,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_33",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 34,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_34",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 35,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_35",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 36,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_36",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "830": {
+        "action": 830,
+        "total": 20,
+        "frames": [
+          {
+            "group": 1,
+            "image": 22,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_22",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 23,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_23",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 24,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_24",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 25,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_25",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 26,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_26",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "831": {
+        "action": 831,
+        "total": 10,
+        "frames": [
+          {
+            "group": 1,
+            "image": 27,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_27",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 28,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_28",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 29,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_29",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 30,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_30",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 31,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 2,
+            "flipH": false,
+            "key": "1_31",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "832": {
+        "action": 832,
+        "total": 15,
+        "frames": [
+          {
+            "group": 1,
+            "image": 32,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_32",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 33,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_33",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 34,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_34",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 35,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_35",
+            "clsn1": [],
+            "clsn2": []
+          },
+          {
+            "group": 1,
+            "image": 36,
+            "xoff": 0,
+            "yoff": 0,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_36",
+            "clsn1": [],
+            "clsn2": []
+          }
+        ]
+      },
+      "1101": {
+        "action": 1101,
+        "total": 14,
+        "frames": [
+          {
+            "group": 1,
+            "image": 51,
+            "xoff": 8,
+            "yoff": 5,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_51",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -9,
+                "y1": -70,
+                "x2": 3,
+                "y2": -53
+              },
+              {
+                "x1": -13,
+                "y1": -56,
+                "x2": 6,
+                "y2": -25
+              },
+              {
+                "x1": -11,
+                "y1": -25,
+                "x2": 9,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 52,
+            "xoff": 9,
+            "yoff": 7,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_52",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -1,
+                "y1": -70,
+                "x2": 11,
+                "y2": -53
+              },
+              {
+                "x1": -13,
+                "y1": -56,
+                "x2": 6,
+                "y2": -25
+              },
+              {
+                "x1": -11,
+                "y1": -25,
+                "x2": 9,
+                "y2": -1
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 52,
+            "xoff": 9,
+            "yoff": 7,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_52",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 4,
+                "y1": -12,
+                "x2": 14,
+                "y2": -2
+              },
+              {
+                "x1": -16,
+                "y1": -22,
+                "x2": -6,
+                "y2": -12
+              },
+              {
+                "x1": -6,
+                "y1": -32,
+                "x2": 24,
+                "y2": -12
+              },
+              {
+                "x1": -6,
+                "y1": -52,
+                "x2": 4,
+                "y2": -32
+              },
+              {
+                "x1": 4,
+                "y1": -62,
+                "x2": 14,
+                "y2": -32
+              }
+            ]
+          }
+        ]
+      },
+      "1102": {
+        "action": 1102,
+        "total": 19,
+        "frames": [
+          {
+            "group": 1,
+            "image": 51,
+            "xoff": 8,
+            "yoff": 5,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_51",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -11,
+                "y1": -68,
+                "x2": 1,
+                "y2": -53
+              },
+              {
+                "x1": -15,
+                "y1": -56,
+                "x2": 7,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 51,
+            "xoff": 8,
+            "yoff": 5,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_51",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -11,
+                "y1": -68,
+                "x2": 1,
+                "y2": -53
+              },
+              {
+                "x1": -15,
+                "y1": -56,
+                "x2": 7,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 52,
+            "xoff": 9,
+            "yoff": 7,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_52",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -68,
+                "x2": 12,
+                "y2": -53
+              },
+              {
+                "x1": -15,
+                "y1": -56,
+                "x2": 7,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 52,
+            "xoff": 9,
+            "yoff": 7,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_52",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 0,
+                "y1": -68,
+                "x2": 12,
+                "y2": -53
+              },
+              {
+                "x1": -15,
+                "y1": -56,
+                "x2": 7,
+                "y2": 0
+              }
+            ]
+          }
+        ]
+      },
+      "1103": {
+        "action": 1103,
+        "total": 21,
+        "frames": [
+          {
+            "group": 1,
+            "image": 51,
+            "xoff": 8,
+            "yoff": 5,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_51",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -10,
+                "y1": -70,
+                "x2": 2,
+                "y2": -53
+              },
+              {
+                "x1": -14,
+                "y1": -57,
+                "x2": 9,
+                "y2": -4
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 51,
+            "xoff": 8,
+            "yoff": 5,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_51",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -10,
+                "y1": -70,
+                "x2": 2,
+                "y2": -53
+              },
+              {
+                "x1": -14,
+                "y1": -57,
+                "x2": 9,
+                "y2": -4
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 52,
+            "xoff": 9,
+            "yoff": 7,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_52",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 1,
+                "y1": -70,
+                "x2": 13,
+                "y2": -53
+              },
+              {
+                "x1": -11,
+                "y1": -55,
+                "x2": 12,
+                "y2": -2
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 52,
+            "xoff": 9,
+            "yoff": 7,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_52",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 1,
+                "y1": -70,
+                "x2": 13,
+                "y2": -53
+              },
+              {
+                "x1": -11,
+                "y1": -55,
+                "x2": 12,
+                "y2": -2
+              }
+            ]
+          }
+        ]
+      },
+      "1153": {
+        "action": 1153,
+        "total": 10,
+        "frames": [
+          {
+            "group": 1,
+            "image": 53,
+            "xoff": -4,
+            "yoff": 7,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_53",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -30,
+                "y1": -11,
+                "x2": -3,
+                "y2": 4
+              },
+              {
+                "x1": -9,
+                "y1": -25,
+                "x2": 6,
+                "y2": -1
+              },
+              {
+                "x1": -3,
+                "y1": -50,
+                "x2": 15,
+                "y2": -10
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 53,
+            "xoff": -4,
+            "yoff": 7,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_53",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -30,
+                "y1": -11,
+                "x2": -3,
+                "y2": 4
+              },
+              {
+                "x1": -9,
+                "y1": -25,
+                "x2": 6,
+                "y2": -1
+              },
+              {
+                "x1": -3,
+                "y1": -50,
+                "x2": 15,
+                "y2": -10
+              }
+            ]
+          }
+        ]
+      },
+      "1200": {
+        "action": 1200,
+        "total": 10,
+        "frames": [
+          {
+            "group": 1,
+            "image": 53,
+            "xoff": -4,
+            "yoff": 7,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_53",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -30,
+                "y1": -11,
+                "x2": -3,
+                "y2": 4
+              },
+              {
+                "x1": -9,
+                "y1": -25,
+                "x2": 6,
+                "y2": -1
+              },
+              {
+                "x1": -3,
+                "y1": -50,
+                "x2": 15,
+                "y2": -10
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 53,
+            "xoff": -4,
+            "yoff": 7,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_53",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -30,
+                "y1": -11,
+                "x2": -3,
+                "y2": 4
+              },
+              {
+                "x1": -9,
+                "y1": -25,
+                "x2": 6,
+                "y2": -1
+              },
+              {
+                "x1": -3,
+                "y1": -50,
+                "x2": 15,
+                "y2": -10
+              }
+            ]
+          }
+        ]
+      },
+      "1201": {
+        "action": 1201,
+        "total": 15,
+        "frames": [
+          {
+            "group": 1,
+            "image": 54,
+            "xoff": 8,
+            "yoff": -26,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_54",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -13,
+                "y1": -45,
+                "x2": -3,
+                "y2": -35
+              },
+              {
+                "x1": -13,
+                "y1": -85,
+                "x2": 7,
+                "y2": -45
+              },
+              {
+                "x1": -23,
+                "y1": -105,
+                "x2": -3,
+                "y2": -85
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 55,
+            "xoff": -18,
+            "yoff": -60,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_55",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": 1,
+                "y1": -30,
+                "x2": 16,
+                "y2": -18
+              },
+              {
+                "x1": -13,
+                "y1": -43,
+                "x2": 13,
+                "y2": -26
+              },
+              {
+                "x1": -49,
+                "y1": -45,
+                "x2": -8,
+                "y2": -26
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 56,
+            "xoff": 0,
+            "yoff": 6,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_56",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -14,
+                "y1": -12,
+                "x2": -4,
+                "y2": 8
+              },
+              {
+                "x1": -4,
+                "y1": -32,
+                "x2": 6,
+                "y2": -12
+              },
+              {
+                "x1": -24,
+                "y1": -42,
+                "x2": 16,
+                "y2": -32
+              },
+              {
+                "x1": -14,
+                "y1": -52,
+                "x2": -4,
+                "y2": -42
+              },
+              {
+                "x1": -4,
+                "y1": -62,
+                "x2": 6,
+                "y2": -42
+              },
+              {
+                "x1": 6,
+                "y1": -72,
+                "x2": 16,
+                "y2": -52
+              }
+            ]
+          }
+        ]
+      },
+      "1202": {
+        "action": 1202,
+        "total": 15,
+        "frames": [
+          {
+            "group": 1,
+            "image": 54,
+            "xoff": 8,
+            "yoff": -26,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_54",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -13,
+                "y1": -45,
+                "x2": -3,
+                "y2": -35
+              },
+              {
+                "x1": -13,
+                "y1": -85,
+                "x2": 7,
+                "y2": -45
+              },
+              {
+                "x1": -23,
+                "y1": -105,
+                "x2": -3,
+                "y2": -85
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 55,
+            "xoff": -18,
+            "yoff": -60,
+            "ticks": 4,
+            "flipH": false,
+            "key": "1_55",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -4,
+                "y1": -34,
+                "x2": 18,
+                "y2": -17
+              },
+              {
+                "x1": -31,
+                "y1": -46,
+                "x2": 10,
+                "y2": -26
+              },
+              {
+                "x1": -53,
+                "y1": -45,
+                "x2": -19,
+                "y2": -27
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 56,
+            "xoff": 0,
+            "yoff": 6,
+            "ticks": 8,
+            "flipH": false,
+            "key": "1_56",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -14,
+                "y1": -12,
+                "x2": -4,
+                "y2": 8
+              },
+              {
+                "x1": -4,
+                "y1": -32,
+                "x2": 6,
+                "y2": -12
+              },
+              {
+                "x1": -24,
+                "y1": -42,
+                "x2": 16,
+                "y2": -32
+              },
+              {
+                "x1": -14,
+                "y1": -52,
+                "x2": -4,
+                "y2": -42
+              },
+              {
+                "x1": -4,
+                "y1": -62,
+                "x2": 6,
+                "y2": -42
+              },
+              {
+                "x1": 6,
+                "y1": -72,
+                "x2": 16,
+                "y2": -52
+              }
+            ]
+          }
+        ]
+      },
+      "1601": {
+        "action": 1601,
+        "total": 18,
+        "frames": [
+          {
+            "group": 1,
+            "image": 48,
+            "xoff": -2,
+            "yoff": 12,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_48",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -40,
+                "y1": -5,
+                "x2": 40,
+                "y2": 5
+              },
+              {
+                "x1": -32,
+                "y1": -13,
+                "x2": 28,
+                "y2": -3
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 49,
+            "xoff": 2,
+            "yoff": 12,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_49",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -20,
+                "y1": -12,
+                "x2": 20,
+                "y2": -2
+              },
+              {
+                "x1": -27,
+                "y1": -33,
+                "x2": -17,
+                "y2": -13
+              },
+              {
+                "x1": -20,
+                "y1": -33,
+                "x2": 0,
+                "y2": -3
+              },
+              {
+                "x1": -23,
+                "y1": -41,
+                "x2": -13,
+                "y2": -31
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 50,
+            "xoff": 13,
+            "yoff": 8,
+            "ticks": 3,
+            "flipH": false,
+            "key": "1_50",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -6,
+                "y1": -53,
+                "x2": 8,
+                "y2": -38
+              },
+              {
+                "x1": -10,
+                "y1": -39,
+                "x2": 5,
+                "y2": -18
+              },
+              {
+                "x1": -16,
+                "y1": -20,
+                "x2": 17,
+                "y2": 0
+              }
+            ]
+          },
+          {
+            "group": 1,
+            "image": 50,
+            "xoff": 13,
+            "yoff": 8,
+            "ticks": 5,
+            "flipH": false,
+            "key": "1_50",
+            "clsn1": [],
+            "clsn2": [
+              {
+                "x1": -6,
+                "y1": -53,
+                "x2": 8,
+                "y2": -38
+              },
+              {
+                "x1": -10,
+                "y1": -39,
+                "x2": 5,
+                "y2": -18
+              },
+              {
+                "x1": -16,
+                "y1": -20,
+                "x2": 17,
+                "y2": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "map": {
+      "idle": 0,
+      "hitstun": 5,
+      "block": 6,
+      "crouchStart": 10,
+      "crouch": 11,
+      "crouchEnd": 12,
+      "walk": 20,
+      "walkBack": 21,
+      "jumpStart": 40,
+      "jump": 41,
+      "land": 47,
+      "parry": 230,
+      "parryStun": 5,
+      "normal1": 501,
+      "normal1_s0": 810,
+      "normal1_s1": 811,
+      "normal1_s2": 812,
+      "normal1_fx": 601,
+      "normal1_hitfx": 701,
+      "normal2": 502,
+      "normal2_s0": 820,
+      "normal2_s1": 821,
+      "normal2_s2": 822,
+      "normal2_fx": 602,
+      "normal2_hitfx": 702,
+      "normal3": 503,
+      "normal3_s0": 830,
+      "normal3_s1": 831,
+      "normal3_s2": 832,
+      "normal3_fx": 603,
+      "normal3_hitfx": 703,
+      "throw1": 1601,
+      "crouchAttack1": 1101,
+      "crouchAttack2": 1102,
+      "crouchAttack3": 1103,
+      "crouchAttack3_s0": 1200,
+      "crouchAttack3_fx": 1153,
+      "airAttack1": 1201,
+      "airAttack2": 1202,
+      "lightPunch": 200,
+      "heavyKick": 240
+    }
+  },
+  "source": {
+    "type": "mugen",
+    "folder": "chars/Shinobi Alliance",
+    "offset": 4600,
+    "attackActions": [
+      4680,
+      4681,
+      4682
+    ],
+    "normalActions": [
+      4680,
+      4681,
+      4682
+    ],
+    "specialActions": [],
+    "hyperActions": [],
+    "commandActions": [],
+    "throwActions": [
+      5120
+    ],
+    "crouchAttackActions": [
+      5005,
+      5006,
+      5007
+    ],
+    "airAttackActions": [
+      5200,
+      5210
+    ],
+    "skipped": [
+      ".snd",
+      "full CNS state machines",
+      "helper AI beyond VelSet"
+    ]
+  }
+}

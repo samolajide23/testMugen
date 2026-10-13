@@ -1,1 +1,11 @@
-/.tools/
+node_modules/
+chars/
+_mugen_ref/
+_test_out/
+.vercel/
+*.zip
+!vendor/jsmugen/kfm.zip
+Thumbs.db
+.env
+.env.*
+tools/_restore-from-vercel.js

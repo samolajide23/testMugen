@@ -1,0 +1,9 @@
+node_modules
+chars
+_mugen_ref
+_test_out
+.git
+*.zip
+!vendor/jsmugen/kfm.zip
+**/SOURCE.txt
+**/Thumbs.db

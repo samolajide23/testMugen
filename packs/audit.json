@@ -1,0 +1,960 @@
+{
+  "generatedAt": "2026-10-13T14:34:28.217Z",
+  "packs": [
+    {
+      "id": "gaara",
+      "atlasKB": 4098.4,
+      "atlasW": 2048,
+      "atlasH": 2004,
+      "sprites": 366,
+      "normals": 6,
+      "specials": 10,
+      "hypers": 3,
+      "crouchAttacks": 3,
+      "airAttacks": 5,
+      "bindKeys": 6,
+      "dash": true,
+      "dashBack": true,
+      "vfxLinked": 30,
+      "vfxRate": 0.94,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 3,
+      "anims": 155,
+      "source": {
+        "type": "mugen",
+        "folder": "../../../../../Downloads/Gaara/Gaara",
+        "offset": 0,
+        "attackActions": [
+          200,
+          210,
+          220,
+          230,
+          240,
+          285
+        ],
+        "normalActions": [
+          200,
+          210,
+          220,
+          230,
+          240,
+          285
+        ],
+        "specialActions": [
+          1210,
+          1211,
+          1212,
+          1250,
+          1260,
+          1350,
+          1352,
+          1450,
+          1452,
+          1550
+        ],
+        "hyperActions": [
+          3000,
+          3012,
+          3014
+        ],
+        "commandActions": [
+          300,
+          310,
+          320,
+          330
+        ],
+        "throwActions": [
+          500
+        ],
+        "crouchAttackActions": [
+          400,
+          401,
+          457
+        ],
+        "airAttackActions": [
+          600,
+          601,
+          605,
+          610,
+          615
+        ],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "shinobi1",
+      "atlasKB": 490.5,
+      "atlasW": 2027,
+      "atlasH": 322,
+      "sprites": 79,
+      "normals": 4,
+      "specials": 0,
+      "hypers": 0,
+      "crouchAttacks": 4,
+      "airAttacks": 0,
+      "bindKeys": 5,
+      "dash": false,
+      "dashBack": false,
+      "vfxLinked": 8,
+      "vfxRate": 1,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 0,
+      "anims": 53,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Shinobi Alliance",
+        "offset": 1400,
+        "attackActions": [
+          1480,
+          1481,
+          1482,
+          1485
+        ],
+        "normalActions": [
+          1480,
+          1481,
+          1482,
+          1485
+        ],
+        "specialActions": [],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [
+          1880,
+          1881,
+          1882,
+          1883
+        ],
+        "airAttackActions": [],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "shinobi2",
+      "atlasKB": 250.1,
+      "atlasW": 2035,
+      "atlasH": 245,
+      "sprites": 86,
+      "normals": 4,
+      "specials": 0,
+      "hypers": 0,
+      "crouchAttacks": 3,
+      "airAttacks": 0,
+      "bindKeys": 5,
+      "dash": false,
+      "dashBack": false,
+      "vfxLinked": 6,
+      "vfxRate": 0.86,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 2,
+      "anims": 44,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Shinobi Alliance",
+        "offset": 1800,
+        "attackActions": [
+          1880,
+          1881,
+          1882,
+          1883
+        ],
+        "normalActions": [
+          1880,
+          1881,
+          1882,
+          1883
+        ],
+        "specialActions": [],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [
+          2200,
+          2216,
+          2286
+        ],
+        "airAttackActions": [],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "shinobi3",
+      "atlasKB": 246.2,
+      "atlasW": 2031,
+      "atlasH": 249,
+      "sprites": 88,
+      "normals": 4,
+      "specials": 0,
+      "hypers": 0,
+      "crouchAttacks": 2,
+      "airAttacks": 0,
+      "bindKeys": 5,
+      "dash": false,
+      "dashBack": false,
+      "vfxLinked": 6,
+      "vfxRate": 1,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 3,
+      "anims": 39,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Shinobi Alliance",
+        "offset": 2200,
+        "attackActions": [
+          2280,
+          2281,
+          2282,
+          2286
+        ],
+        "normalActions": [
+          2280,
+          2281,
+          2282,
+          2286
+        ],
+        "specialActions": [],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [
+          2680,
+          2681
+        ],
+        "airAttackActions": [],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "shinobi4",
+      "atlasKB": 344.1,
+      "atlasW": 2044,
+      "atlasH": 308,
+      "sprites": 84,
+      "normals": 2,
+      "specials": 0,
+      "hypers": 0,
+      "crouchAttacks": 2,
+      "airAttacks": 0,
+      "bindKeys": 4,
+      "dash": false,
+      "dashBack": false,
+      "vfxLinked": 4,
+      "vfxRate": 1,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 0,
+      "anims": 36,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Shinobi Alliance",
+        "offset": 2600,
+        "attackActions": [
+          2680,
+          2681
+        ],
+        "normalActions": [
+          2680,
+          2681
+        ],
+        "specialActions": [],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [
+          3080,
+          3085
+        ],
+        "airAttackActions": [],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "shinobi5",
+      "atlasKB": 332.6,
+      "atlasW": 2043,
+      "atlasH": 310,
+      "sprites": 79,
+      "normals": 2,
+      "specials": 0,
+      "hypers": 0,
+      "crouchAttacks": 3,
+      "airAttacks": 0,
+      "bindKeys": 4,
+      "dash": false,
+      "dashBack": false,
+      "vfxLinked": 5,
+      "vfxRate": 1,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 0,
+      "anims": 41,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Shinobi Alliance",
+        "offset": 3000,
+        "attackActions": [
+          3080,
+          3085
+        ],
+        "normalActions": [
+          3080,
+          3085
+        ],
+        "specialActions": [],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [
+          3480,
+          3481,
+          3482
+        ],
+        "airAttackActions": [],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "shinobi6",
+      "atlasKB": 839.6,
+      "atlasW": 2018,
+      "atlasH": 592,
+      "sprites": 119,
+      "normals": 3,
+      "specials": 0,
+      "hypers": 0,
+      "crouchAttacks": 4,
+      "airAttacks": 0,
+      "bindKeys": 5,
+      "dash": false,
+      "dashBack": false,
+      "vfxLinked": 8,
+      "vfxRate": 1,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 1,
+      "anims": 60,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Shinobi Alliance",
+        "offset": 3400,
+        "attackActions": [
+          3480,
+          3481,
+          3482
+        ],
+        "normalActions": [
+          3480,
+          3481,
+          3482
+        ],
+        "specialActions": [],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [
+          3905
+        ],
+        "crouchAttackActions": [
+          3880,
+          3881,
+          3882,
+          3885
+        ],
+        "airAttackActions": [],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "shinobi7",
+      "atlasKB": 781.5,
+      "atlasW": 2017,
+      "atlasH": 527,
+      "sprites": 117,
+      "normals": 4,
+      "specials": 0,
+      "hypers": 0,
+      "crouchAttacks": 3,
+      "airAttacks": 0,
+      "bindKeys": 5,
+      "dash": true,
+      "dashBack": true,
+      "vfxLinked": 7,
+      "vfxRate": 1,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 0,
+      "anims": 56,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Shinobi Alliance",
+        "offset": 3800,
+        "attackActions": [
+          3880,
+          3881,
+          3882,
+          3885
+        ],
+        "normalActions": [
+          3880,
+          3881,
+          3882,
+          3885
+        ],
+        "specialActions": [],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [
+          4280,
+          4281,
+          4282
+        ],
+        "airAttackActions": [],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "shinobi8",
+      "atlasKB": 185.7,
+      "atlasW": 2037,
+      "atlasH": 252,
+      "sprites": 70,
+      "normals": 3,
+      "specials": 0,
+      "hypers": 0,
+      "crouchAttacks": 3,
+      "airAttacks": 0,
+      "bindKeys": 5,
+      "dash": false,
+      "dashBack": false,
+      "vfxLinked": 6,
+      "vfxRate": 1,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 0,
+      "anims": 48,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Shinobi Alliance",
+        "offset": 4200,
+        "attackActions": [
+          4280,
+          4281,
+          4282
+        ],
+        "normalActions": [
+          4280,
+          4281,
+          4282
+        ],
+        "specialActions": [],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [
+          4680,
+          4681,
+          4682
+        ],
+        "airAttackActions": [],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "shinobi9",
+      "atlasKB": 155.5,
+      "atlasW": 2030,
+      "atlasH": 168,
+      "sprites": 57,
+      "normals": 3,
+      "specials": 0,
+      "hypers": 0,
+      "crouchAttacks": 3,
+      "airAttacks": 2,
+      "bindKeys": 5,
+      "dash": false,
+      "dashBack": false,
+      "vfxLinked": 4,
+      "vfxRate": 0.44,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 6,
+      "anims": 41,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Shinobi Alliance",
+        "offset": 4600,
+        "attackActions": [
+          4680,
+          4681,
+          4682
+        ],
+        "normalActions": [
+          4680,
+          4681,
+          4682
+        ],
+        "specialActions": [],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [
+          5120
+        ],
+        "crouchAttackActions": [
+          5005,
+          5006,
+          5007
+        ],
+        "airAttackActions": [
+          5200,
+          5210
+        ],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "kung_fu_man",
+      "atlasKB": 360.1,
+      "atlasW": 2016,
+      "atlasH": 436,
+      "sprites": 156,
+      "normals": 4,
+      "specials": 10,
+      "hypers": 2,
+      "crouchAttacks": 4,
+      "airAttacks": 4,
+      "bindKeys": 6,
+      "dash": true,
+      "dashBack": true,
+      "vfxLinked": 5,
+      "vfxRate": 0.21,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 0,
+      "anims": 54,
+      "source": {
+        "type": "mugen",
+        "folder": "_mugen_ref/kfm/kfm",
+        "offset": 0,
+        "attackActions": [
+          200,
+          210,
+          230,
+          240
+        ],
+        "normalActions": [
+          200,
+          210,
+          230,
+          240
+        ],
+        "specialActions": [
+          1000,
+          1010,
+          1020,
+          1050,
+          1051,
+          1055,
+          1060,
+          1061,
+          1070,
+          1071
+        ],
+        "hyperActions": [
+          3000,
+          3050
+        ],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [
+          400,
+          410,
+          430,
+          440
+        ],
+        "airAttackActions": [
+          600,
+          610,
+          630,
+          640
+        ],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "bax2",
+      "atlasKB": 492.7,
+      "atlasW": 2039,
+      "atlasH": 526,
+      "sprites": 127,
+      "normals": 6,
+      "specials": 10,
+      "hypers": 6,
+      "crouchAttacks": 3,
+      "airAttacks": 3,
+      "bindKeys": 6,
+      "dash": true,
+      "dashBack": true,
+      "vfxLinked": 11,
+      "vfxRate": 0.39,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 0,
+      "anims": 82,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/Bax2FC",
+        "offset": 0,
+        "attackActions": [
+          200,
+          201,
+          210,
+          211,
+          230,
+          241
+        ],
+        "normalActions": [
+          200,
+          201,
+          210,
+          211,
+          230,
+          241
+        ],
+        "specialActions": [
+          1001,
+          1011,
+          1021,
+          1100,
+          1101,
+          1110,
+          1120,
+          1200,
+          1210,
+          1220
+        ],
+        "hyperActions": [
+          3002,
+          3021,
+          3101,
+          3110,
+          3120,
+          3200
+        ],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [
+          400,
+          410,
+          430
+        ],
+        "airAttackActions": [
+          600,
+          610,
+          630
+        ],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "sk_kaneki",
+      "atlasKB": 406.3,
+      "atlasW": 2040,
+      "atlasH": 309,
+      "sprites": 121,
+      "normals": 8,
+      "specials": 9,
+      "hypers": 0,
+      "crouchAttacks": 0,
+      "airAttacks": 0,
+      "bindKeys": 6,
+      "dash": true,
+      "dashBack": true,
+      "vfxLinked": 17,
+      "vfxRate": 1,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 0,
+      "anims": 82,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/SK'Kaneki",
+        "offset": 0,
+        "attackActions": [
+          200,
+          210,
+          220,
+          230,
+          240,
+          250,
+          260,
+          270
+        ],
+        "normalActions": [
+          200,
+          210,
+          220,
+          230,
+          240,
+          250,
+          260,
+          270
+        ],
+        "specialActions": [
+          1000,
+          1102,
+          1200,
+          1302,
+          1400,
+          1401,
+          1402,
+          1500,
+          1501
+        ],
+        "hyperActions": [],
+        "commandActions": [],
+        "throwActions": [],
+        "crouchAttackActions": [],
+        "airAttackActions": [],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "luffynw",
+      "atlasKB": 1897.2,
+      "atlasW": 2046,
+      "atlasH": 1450,
+      "sprites": 396,
+      "normals": 5,
+      "specials": 10,
+      "hypers": 6,
+      "crouchAttacks": 5,
+      "airAttacks": 6,
+      "bindKeys": 6,
+      "dash": true,
+      "dashBack": true,
+      "vfxLinked": 36,
+      "vfxRate": 0.97,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 1,
+      "anims": 234,
+      "source": {
+        "type": "mugen",
+        "folder": "chars/LuffyNW",
+        "offset": 0,
+        "attackActions": [
+          200,
+          205,
+          210,
+          220,
+          230
+        ],
+        "normalActions": [
+          200,
+          205,
+          210,
+          220,
+          230
+        ],
+        "specialActions": [
+          1000,
+          1002,
+          1004,
+          1101,
+          1110,
+          1111,
+          1130,
+          1131,
+          1250,
+          1301
+        ],
+        "hyperActions": [
+          2200,
+          2205,
+          2220,
+          2300,
+          2310,
+          2400
+        ],
+        "commandActions": [
+          300,
+          310,
+          320,
+          330
+        ],
+        "throwActions": [
+          500
+        ],
+        "crouchAttackActions": [
+          400,
+          402,
+          403,
+          420,
+          430
+        ],
+        "airAttackActions": [
+          600,
+          601,
+          605,
+          609,
+          610,
+          620
+        ],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    },
+    {
+      "id": "son_goku",
+      "atlasKB": 1303.3,
+      "atlasW": 2043,
+      "atlasH": 1048,
+      "sprites": 244,
+      "normals": 7,
+      "specials": 8,
+      "hypers": 6,
+      "crouchAttacks": 6,
+      "airAttacks": 6,
+      "bindKeys": 6,
+      "dash": true,
+      "dashBack": true,
+      "vfxLinked": 6,
+      "vfxRate": 0.18,
+      "placeholderHitboxes": 0,
+      "inferredHitboxes": 1,
+      "anims": 66,
+      "source": {
+        "type": "mugen",
+        "folder": "../../../../../AppData/Local/Temp/mugenskel-Tc0fUy/Goku SSGSS",
+        "offset": 0,
+        "attackActions": [
+          200,
+          210,
+          220,
+          230,
+          240,
+          250,
+          255
+        ],
+        "normalActions": [
+          200,
+          210,
+          220,
+          230,
+          240,
+          250,
+          255
+        ],
+        "specialActions": [
+          1005,
+          1101,
+          1102,
+          1103,
+          1104,
+          1302,
+          1303,
+          1304
+        ],
+        "hyperActions": [
+          3005,
+          3101,
+          3102,
+          3155,
+          3202,
+          3255
+        ],
+        "commandActions": [
+          362
+        ],
+        "throwActions": [],
+        "crouchAttackActions": [
+          400,
+          410,
+          420,
+          430,
+          440,
+          450
+        ],
+        "airAttackActions": [
+          600,
+          610,
+          620,
+          630,
+          640,
+          650
+        ],
+        "skipped": [
+          ".snd",
+          "full CNS state machines",
+          "helper AI beyond VelSet"
+        ]
+      }
+    }
+  ],
+  "issues": [
+    {
+      "id": "shinobi9",
+      "issue": "low VFX link rate (44%) - need CNS Helper/Explod or baked-in FX"
+    },
+    {
+      "id": "bax2",
+      "issue": "low VFX link rate (39%) - need CNS Helper/Explod or baked-in FX"
+    },
+    {
+      "id": "son_goku",
+      "issue": "low VFX link rate (18%) - need CNS Helper/Explod or baked-in FX"
+    }
+  ],
+  "improvements": [
+    "Done: Explod bind/remove/scale/facing/delay + Helper/Projectile vel + preview spawn sim",
+    "Done: packs/<id>/overrides.json (see _overrides.example.json)",
+    "Done: dash/run/dashBack + crouchStart/End + jumpFwd/Back + crouch/air attack bands",
+    "Kung Fu Man: no Explod VFX in CNS — FX baked into body frames (expected 0%)"
+  ]
+}
