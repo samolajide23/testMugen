@@ -1,95 +1,13 @@
 {
-  "updatedAt": "2026-10-13T11:55:15.010Z",
+  "updatedAt": "2026-10-15T14:38:00.921Z",
+  "sourceOfTruth": "packs/hitman",
   "packs": [
     {
-      "id": "gaara",
-      "path": "packs/gaara",
-      "atlasKB": 4098.4,
-      "sprites": 366
-    },
-    {
-      "id": "shinobi1",
-      "path": "packs/shinobi1",
-      "atlasKB": 490.5,
-      "sprites": 79
-    },
-    {
-      "id": "shinobi2",
-      "path": "packs/shinobi2",
-      "atlasKB": 250.1,
-      "sprites": 86
-    },
-    {
-      "id": "shinobi3",
-      "path": "packs/shinobi3",
-      "atlasKB": 246.2,
-      "sprites": 88
-    },
-    {
-      "id": "shinobi4",
-      "path": "packs/shinobi4",
-      "atlasKB": 344.1,
-      "sprites": 84
-    },
-    {
-      "id": "shinobi5",
-      "path": "packs/shinobi5",
-      "atlasKB": 332.6,
-      "sprites": 79
-    },
-    {
-      "id": "shinobi6",
-      "path": "packs/shinobi6",
-      "atlasKB": 839.6,
-      "sprites": 119
-    },
-    {
-      "id": "shinobi7",
-      "path": "packs/shinobi7",
-      "atlasKB": 781.5,
-      "sprites": 117
-    },
-    {
-      "id": "shinobi8",
-      "path": "packs/shinobi8",
-      "atlasKB": 185.7,
-      "sprites": 70
-    },
-    {
-      "id": "shinobi9",
-      "path": "packs/shinobi9",
-      "atlasKB": 155.5,
-      "sprites": 57
-    },
-    {
-      "id": "kung_fu_man",
-      "path": "packs/kung_fu_man",
-      "atlasKB": 360.1,
-      "sprites": 156
-    },
-    {
-      "id": "bax2",
-      "path": "packs/bax2",
-      "atlasKB": 492.7,
-      "sprites": 127
-    },
-    {
-      "id": "sk_kaneki",
-      "path": "packs/sk_kaneki",
-      "atlasKB": 406.3,
-      "sprites": 121
-    },
-    {
-      "id": "luffynw",
-      "path": "packs/luffynw",
-      "atlasKB": 1897.2,
-      "sprites": 396
-    },
-    {
-      "id": "son_goku",
-      "path": "packs/son_goku",
-      "atlasKB": 1303.3,
-      "sprites": 244
+      "id": "hitman",
+      "path": "packs/hitman",
+      "kind": "spine",
+      "rig": "hitman",
+      "skin": "hitman"
     }
   ]
 }

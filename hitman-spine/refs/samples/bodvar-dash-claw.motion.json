@@ -1,0 +1,133 @@
+{
+  "id": "bodvar_dash_claw",
+  "name": "Bodvar dash → triple claw (keyed from clip)",
+  "fps": 60,
+  "source": "capture-keyframe",
+  "note": "Manual tick keys from Warchief Bodvar dash+claw GIF: crouch → dash burst → R claw → L claw → double lunge → recover. Angles are approximate side-view rotoscope, not ANM dump.",
+  "bones": {
+    "TORSO": [
+      { "time": 0.00, "angle": 8 },
+      { "time": 0.06, "angle": 14 },
+      { "time": 0.12, "angle": -18 },
+      { "time": 0.22, "angle": -10 },
+      { "time": 0.32, "angle": -6 },
+      { "time": 0.42, "angle": -8 },
+      { "time": 0.52, "angle": -16 },
+      { "time": 0.62, "angle": -4 },
+      { "time": 0.75, "angle": 8 }
+    ],
+    "Hip": [
+      { "time": 0.00, "x": 0, "y": 0 },
+      { "time": 0.06, "x": -6, "y": -4 },
+      { "time": 0.14, "x": 55, "y": -10 },
+      { "time": 0.28, "x": 70, "y": -6 },
+      { "time": 0.40, "x": 78, "y": -4 },
+      { "time": 0.52, "x": 110, "y": -8 },
+      { "time": 0.65, "x": 118, "y": -2 },
+      { "time": 0.75, "x": 120, "y": 0 }
+    ],
+    "LEG_F": [
+      { "time": 0.00, "angle": 22 },
+      { "time": 0.06, "angle": 38 },
+      { "time": 0.14, "angle": -28 },
+      { "time": 0.28, "angle": 10 },
+      { "time": 0.40, "angle": 18 },
+      { "time": 0.52, "angle": -20 },
+      { "time": 0.65, "angle": 16 },
+      { "time": 0.75, "angle": 22 }
+    ],
+    "SHIN_F": [
+      { "time": 0.00, "angle": -18 },
+      { "time": 0.06, "angle": -42 },
+      { "time": 0.14, "angle": 25 },
+      { "time": 0.28, "angle": -8 },
+      { "time": 0.40, "angle": -12 },
+      { "time": 0.52, "angle": 18 },
+      { "time": 0.65, "angle": -10 },
+      { "time": 0.75, "angle": -18 }
+    ],
+    "FOOT_F": [
+      { "time": 0.00, "angle": 6 },
+      { "time": 0.14, "angle": -10 },
+      { "time": 0.52, "angle": -8 },
+      { "time": 0.75, "angle": 6 }
+    ],
+    "LEG_B": [
+      { "time": 0.00, "angle": -12 },
+      { "time": 0.06, "angle": 8 },
+      { "time": 0.14, "angle": 42 },
+      { "time": 0.28, "angle": -5 },
+      { "time": 0.40, "angle": 6 },
+      { "time": 0.52, "angle": 35 },
+      { "time": 0.65, "angle": -8 },
+      { "time": 0.75, "angle": -12 }
+    ],
+    "SHIN_B": [
+      { "time": 0.00, "angle": 10 },
+      { "time": 0.06, "angle": -15 },
+      { "time": 0.14, "angle": -35 },
+      { "time": 0.28, "angle": 5 },
+      { "time": 0.52, "angle": -28 },
+      { "time": 0.75, "angle": 10 }
+    ],
+    "FOOT_B": [
+      { "time": 0.00, "angle": -4 },
+      { "time": 0.14, "angle": 12 },
+      { "time": 0.52, "angle": 10 },
+      { "time": 0.75, "angle": -4 }
+    ],
+    "ARM_B": [
+      { "time": 0.00, "angle": 35 },
+      { "time": 0.10, "angle": 55 },
+      { "time": 0.22, "angle": -40 },
+      { "time": 0.30, "angle": -110 },
+      { "time": 0.38, "angle": -55 },
+      { "time": 0.48, "angle": 20 },
+      { "time": 0.56, "angle": -95 },
+      { "time": 0.68, "angle": 25 },
+      { "time": 0.75, "angle": 35 }
+    ],
+    "FOREARM_B": [
+      { "time": 0.00, "angle": 25 },
+      { "time": 0.10, "angle": 40 },
+      { "time": 0.22, "angle": -20 },
+      { "time": 0.30, "angle": -70 },
+      { "time": 0.38, "angle": -15 },
+      { "time": 0.56, "angle": -50 },
+      { "time": 0.75, "angle": 25 }
+    ],
+    "ARM_F": [
+      { "time": 0.00, "angle": -30 },
+      { "time": 0.10, "angle": -15 },
+      { "time": 0.22, "angle": 25 },
+      { "time": 0.32, "angle": 45 },
+      { "time": 0.40, "angle": -95 },
+      { "time": 0.48, "angle": -40 },
+      { "time": 0.56, "angle": -120 },
+      { "time": 0.68, "angle": -35 },
+      { "time": 0.75, "angle": -30 }
+    ],
+    "FOREARM_F": [
+      { "time": 0.00, "angle": -20 },
+      { "time": 0.10, "angle": -8 },
+      { "time": 0.22, "angle": 15 },
+      { "time": 0.40, "angle": -65 },
+      { "time": 0.48, "angle": -20 },
+      { "time": 0.56, "angle": -70 },
+      { "time": 0.75, "angle": -20 }
+    ],
+    "NECK": [
+      { "time": 0.00, "angle": -4 },
+      { "time": 0.12, "angle": 8 },
+      { "time": 0.30, "angle": -6 },
+      { "time": 0.52, "angle": 10 },
+      { "time": 0.75, "angle": -4 }
+    ],
+    "HEAD": [
+      { "time": 0.00, "angle": 0 },
+      { "time": 0.12, "angle": 6 },
+      { "time": 0.52, "angle": 8 },
+      { "time": 0.75, "angle": 0 }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "synthetic-jab",
+  "name": "Synthetic Jab (demo retarget)",
+  "fps": 60,
+  "source": "authored-demo",
+  "note": "Not from Brawlhalla files — demo motion in BH-like bone IDs to prove the Hitman retarget pipeline.",
+  "bones": {
+    "TORSO": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.05, "angle": -4 },
+      { "time": 0.12, "angle": 6 },
+      { "time": 0.22, "angle": 0 }
+    ],
+    "ARM_F": [
+      { "time": 0, "angle": -10 },
+      { "time": 0.04, "angle": -55 },
+      { "time": 0.1, "angle": -95 },
+      { "time": 0.16, "angle": -40 },
+      { "time": 0.24, "angle": -10 }
+    ],
+    "FOREARM_F": [
+      { "time": 0, "angle": -5 },
+      { "time": 0.04, "angle": -25 },
+      { "time": 0.1, "angle": -55 },
+      { "time": 0.16, "angle": -15 },
+      { "time": 0.24, "angle": -5 }
+    ],
+    "ARM_B": [
+      { "time": 0, "angle": 8 },
+      { "time": 0.1, "angle": 25 },
+      { "time": 0.24, "angle": 8 }
+    ],
+    "FOREARM_B": [
+      { "time": 0, "angle": 5 },
+      { "time": 0.1, "angle": 18 },
+      { "time": 0.24, "angle": 5 }
+    ],
+    "LEG_F": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.1, "angle": -8 },
+      { "time": 0.24, "angle": 0 }
+    ],
+    "SHIN_F": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.1, "angle": 6 },
+      { "time": 0.24, "angle": 0 }
+    ],
+    "LEG_B": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.1, "angle": 5 },
+      { "time": 0.24, "angle": 0 }
+    ],
+    "NECK": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.1, "angle": -6 },
+      { "time": 0.24, "angle": 0 }
+    ],
+    "HEAD": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.1, "angle": -4 },
+      { "time": 0.24, "angle": 0 }
+    ]
+  }
+}

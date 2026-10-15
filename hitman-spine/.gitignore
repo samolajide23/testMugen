@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+refs/captures/
+refs/private/
+*.anm
+assets/Hitman.pre-attack-author.bak.json

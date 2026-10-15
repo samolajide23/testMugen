@@ -1,0 +1,8 @@
+{
+  "default": "hitman",
+  "rig": {
+    "skeleton": "Hitman.json",
+    "atlas": "Hitman.atlas",
+    "note": "Skins are auto-read from assets/skins/*.png — no need to list them here."
+  }
+}

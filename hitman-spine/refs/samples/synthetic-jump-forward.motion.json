@@ -1,0 +1,58 @@
+{
+  "id": "synthetic-jump-forward",
+  "name": "Jump forward",
+  "fps": 60,
+  "source": "authored-demo",
+  "bones": {
+    "Hip": [
+      { "time": 0.00, "x": 0, "y": 0 },
+      { "time": 0.08, "x": -4, "y": -16 },
+      { "time": 0.18, "x": 45, "y": 90 },
+      { "time": 0.32, "x": 95, "y": 115 },
+      { "time": 0.45, "x": 130, "y": 55 },
+      { "time": 0.58, "x": 150, "y": 0 }
+    ],
+    "TORSO": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.08, "angle": 12 },
+      { "time": 0.2, "angle": -16 },
+      { "time": 0.58, "angle": 0 }
+    ],
+    "LEG_F": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.08, "angle": 32 },
+      { "time": 0.2, "angle": -35 },
+      { "time": 0.4, "angle": -12 },
+      { "time": 0.58, "angle": 0 }
+    ],
+    "SHIN_F": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.08, "angle": -38 },
+      { "time": 0.2, "angle": 28 },
+      { "time": 0.58, "angle": 0 }
+    ],
+    "LEG_B": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.08, "angle": 28 },
+      { "time": 0.2, "angle": 40 },
+      { "time": 0.4, "angle": -8 },
+      { "time": 0.58, "angle": 0 }
+    ],
+    "SHIN_B": [
+      { "time": 0, "angle": 0 },
+      { "time": 0.08, "angle": -30 },
+      { "time": 0.2, "angle": -25 },
+      { "time": 0.58, "angle": 0 }
+    ],
+    "ARM_F": [
+      { "time": 0, "angle": -10 },
+      { "time": 0.2, "angle": -100 },
+      { "time": 0.58, "angle": -10 }
+    ],
+    "ARM_B": [
+      { "time": 0, "angle": 10 },
+      { "time": 0.2, "angle": 95 },
+      { "time": 0.58, "angle": 10 }
+    ]
+  }
+}

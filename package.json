@@ -1,16 +1,14 @@
 {
   "name": "mugenskel",
   "version": "1.0.0",
-  "description": "MUGEN → pack → HTML preview → Roblox-ready fighter data",
+  "description": "Hitman Spine pack mirror — live preview is hitman-spine on :5180",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "node tools/pack-character.js",
-    "pack:shinobi": "node tools/pack-character.js \"chars/Shinobi Alliance\"",
-    "pack:gaara": "node tools/pack-character.js packs/gaara",
-    "pack-server": "node tools/pack-server.js",
-    "dev": "node tools/dev-server.js",
-    "build:packer": "node tools/build-browser-packer.js"
+    "sync:hitman": "node tools/sync-hitman.mjs",
+    "preview": "node tools/preview-server.mjs",
+    "dev": "node tools/preview-server.mjs",
+    "build:walk-profiles": "node tools/build-walk-profiles.mjs",
+    "test:hitman": "node tests/spine-hitman-smoke.mjs"
   },
   "keywords": [],
   "author": "",

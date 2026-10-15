@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hitman Spine</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <header>
+    <h1>HITMAN SPINE</h1>
+    <p>Skeleton + atlas PNG · anims by category</p>
+  </header>
+  <main>
+    <div class="toolbar">
+      <label>Skin
+        <select id="skin" disabled><option>Loading…</option></select>
+      </label>
+      <label>Category
+        <select id="category" disabled><option>Loading…</option></select>
+      </label>
+      <label>Animation
+        <select id="animation" disabled><option>Select a category</option></select>
+      </label>
+      <label>Zoom
+        <select id="zoom">
+          <option value="1" selected>1×</option>
+          <option value="1.5">1.5×</option>
+          <option value="2">2×</option>
+          <option value="3">3×</option>
+        </select>
+      </label>
+    </div>
+    <div class="stage">
+      <canvas id="stage" width="960" height="540" tabindex="0" aria-label="Hitman canvas. A/D move, F flip, Space pause."></canvas>
+      <div class="stage-label">HITMAN · SPINE 3.8</div>
+    </div>
+    <div class="transport">
+      <button id="pause" type="button" disabled>Pause</button>
+      <button id="reset" type="button" disabled>Reset</button>
+      <button id="flip" type="button" disabled>Flip</button>
+      <label class="check"><input type="checkbox" id="skeleton-only"> Skeleton only</label>
+      <label class="check"><input type="checkbox" id="debug"> Bone overlay</label>
+      <label class="check"><input type="checkbox" id="loop-override"> Force loop (skip return to idle)</label>
+    </div>
+    <div class="readout" id="readout">Loading Hitman…</div>
+    <section class="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title">Category clips</h2>
+      <p id="category-note" class="muted" hidden></p>
+      <ul id="clip-list"></ul>
+    </section>
+    <p class="hint">Focus the stage: <kbd>A</kbd>/<kbd>D</kbd> move · <kbd>F</kbd> flip · <kbd>Space</kbd> pause · Drop PNGs in the <strong>mugenSkel/skins/</strong> folder — Skin dropdown auto-reads them</p>
+  </main>
+</body>
+</html>

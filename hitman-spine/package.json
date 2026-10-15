@@ -1,0 +1,14 @@
+{
+  "name": "hitman-spine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone Hitman Spine preview — skeleton, atlas PNG, and canvas player only.",
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/server.mjs",
+    "start": "node tools/server.mjs",
+    "retarget": "node tools/retarget-motion-to-hitman.mjs",
+    "retarget:samples": "node tools/retarget-motion-to-hitman.mjs refs/samples/synthetic-jab.motion.json refs/samples/synthetic-jump.motion.json",
+    "find:brawlhalla": "node tools/find-brawlhalla.mjs"
+  }
+}

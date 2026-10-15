@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-10-15T14:17:02.495Z",
+  "hitmanReference": {
+    "walkClip": "Walk",
+    "walkDurationSec": 0.9333,
+    "nativeLocoTimeScale": 1.35,
+    "nativeWalkFwd": 4.6,
+    "note": "Sprite walks map cycle length → Spine timeScale; walk.fwd → move speed vs Hitman 4.6."
+  },
+  "profiles": [
+    {
+      "id": "hitman",
+      "name": "Hitman (Spine)",
+      "source": "packs/hitman",
+      "kind": "spine",
+      "clip": "Walk",
+      "locoTimeScale": 1.35,
+      "walkFwd": 4.6,
+      "walkBack": 3.8,
+      "cycleTicks": null,
+      "cycleSeconds": null,
+      "frames": null,
+      "note": "Spine loco×1.35",
+      "hitman": {
+        "timeScale": 1.35,
+        "moveSpeedScale": 1,
+        "targetCycleSeconds": 0.6913333333333334,
+        "label": "Spine loco×1.35"
+      }
+    }
+  ]
+}

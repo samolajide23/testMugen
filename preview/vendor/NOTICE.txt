@@ -1,0 +1,5 @@
+﻿Spine Runtimes License Agreement
+https://github.com/EsotericSoftware/spine-runtimes/blob/3.8/LICENSE
+
+spine-canvas-3.8.js is built from EsotericSoftware/spine-runtimes @ 3.8.
+Hitman character assets remain under the Spine Asset Pack License (see generated/spine/hitman/LICENSE.txt).

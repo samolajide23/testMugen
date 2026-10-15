@@ -1,8 +1,11 @@
 import { createPlayback, currentFrame, tickPlayback, frameTransform, characterScale, TICKS_PER_SECOND } from './animation.mjs';
-import { setupZipUpload } from './upload.mjs';
 import { renderCommandGuide } from './command-guide.mjs';
 import { createMovementClient } from './movement.mjs';
 import { createSourceCombatClient, combatInputs, COMBAT_KEYS, sourceFrame, sourceResources, sourceVisualTransform, sourceBlend, combatLayers, superPauseFlash, contactSpark, sparkAtTick, combatResult } from './source-combat.mjs';
+import {
+  isSpineCharacter, createSpinePlayback, setSpineAnimation, updateSpine, drawSpine, spineReadout,
+} from './spine.mjs';
+import { profileLabel, applyWalkProfile, walkMoveDelta } from './walk-profiles.mjs';
 
 const $ = (id) => document.getElementById(id);
 const canvas = $('stage');
@@ -10,7 +13,10 @@ const ctx = canvas.getContext('2d');
 const keys = new Set();
 const images = new Map();
 let character = null;
+let characterUrl = null;
 let playback = createPlayback(null);
+let spinePlayback = null;
+let walkProfiles = [];
 let paused = false;
 let pausedByFocus = false;
 let facing = 1;
@@ -23,6 +29,8 @@ let movementWarnings = '';
 let jumpQueued = false;
 const isLuau = () => $('mode').value === 'luau';
 const isCombat = () => $('mode').value === 'source-combat';
+const isSpine = () => isSpineCharacter(character);
+const isHitmanRig = () => character?.rig === 'hitman' || character?.id === 'hitman' || character?.id === 'coral_striker';
 let combatSnapshot = null;
 let combatEvents = [];
 let contactSparks = [];
@@ -100,14 +108,22 @@ const movement = createMovementClient({
 
 function syncControls() {
   const loaded = character !== null;
-  $('mode').disabled = !loaded;
-  $('mode').querySelector('[value="source-combat"]').disabled = character?.id !== 'coiny';
+  const spine = isSpine();
+  $('mode').disabled = !loaded || spine;
+  $('mode').querySelector('[value="luau"]').disabled = spine;
+  $('mode').querySelector('[value="source-combat"]').disabled = spine || character?.id !== 'coiny';
+  if (spine && $('mode').value !== 'animation') $('mode').value = 'animation';
   $('combat-panel').hidden = !isCombat();
-  $('animation').disabled = !loaded || isLuau() || isCombat() || !character.animations.length;
+  $('animation').disabled = !loaded || isLuau() || isCombat() || !(character?.animations?.length);
   $('flip').disabled = !loaded || isLuau() || isCombat();
   $('step').disabled = !loaded || (isLuau() && (!movement.ready || movement.pending)) || (isCombat() && (!combat.ready || combat.pending));
   $('pause').disabled = !loaded;
   $('reset').disabled = !loaded;
+  // Collision boxes are AIR metadata; Spine debug bones use the origin checkbox.
+  $('boxes').disabled = spine;
+  const walkLab = spine && isHitmanRig() && walkProfiles.length > 0;
+  $('walk-type-label').hidden = !walkLab;
+  $('walk-type').disabled = !walkLab;
 }
 
 function resetMovement() {
@@ -161,10 +177,41 @@ function showWarnings(warnings) {
   }));
 }
 
+function chooseWalkType() {
+  if (!spinePlayback || !isHitmanRig()) return;
+  const id = $('walk-type').value;
+  const profile = walkProfiles.find((entry) => entry.id === id) ?? null;
+  applyWalkProfile(spinePlayback, profile, { forceWalk: true });
+  if (profile && !profile.missing) {
+    const walkIndex = character.animations.findIndex((anim) => anim.id === 'Walk');
+    if (walkIndex >= 0) $('animation').value = String(walkIndex);
+  }
+  const map = profile?.hitman;
+  $('movement-status').textContent = profile && !profile.missing
+    ? `Walk type · ${profile.name} · ${profile.note} · Hitman timeScale ${map.timeScale} · move×${map.moveSpeedScale} · hold A/D to compare stride`
+    : 'Spine preview: A/D move · F flip · Space pause. Origin checkbox draws bone debug.';
+  render();
+}
+
 function chooseAnimation() {
   const animation = character?.animations[Number($('animation').value)];
-  playback = createPlayback(animation);
   accumulator = 0;
+  if (isSpine()) {
+    if (spinePlayback && animation?.id) setSpineAnimation(spinePlayback, animation.id, { loop: true });
+    // Keep walk-type timeScale even when scrubbing other clips.
+    if (isHitmanRig() && $('walk-type').value) {
+      const profile = walkProfiles.find((entry) => entry.id === $('walk-type').value);
+      if (profile?.hitman && !profile.missing) {
+        spinePlayback.timeScale = profile.hitman.timeScale;
+        spinePlayback.walkMoveScale = profile.hitman.moveSpeedScale;
+        spinePlayback.walkProfile = profile;
+        spinePlayback.walkProfileId = profile.id;
+      }
+    }
+    render();
+    return;
+  }
+  playback = createPlayback(animation);
   render();
 }
 
@@ -190,6 +237,8 @@ async function loadCharacter(url) {
   $('mode').disabled = true;
   keys.clear();
   character = null;
+  characterUrl = null;
+  spinePlayback = null;
   images.clear();
   playback = createPlayback(null);
   $('status').textContent = 'Reading character and decoding sprite images…';
@@ -198,9 +247,63 @@ async function loadCharacter(url) {
   showWarnings([]);
   $('controllers').textContent = '—';
   renderCommandGuide($('command-guide'), null);
+  $('walk-type-label').hidden = true;
+  $('walk-type').disabled = true;
   for (const id of ['animation', 'pause', 'step', 'reset', 'flip']) $(id).disabled = true;
   try {
     const data = await readJson(url);
+    if (generation !== loadGeneration) return;
+
+    if (isSpineCharacter(data)) {
+      $('status').textContent = 'Loading Spine skeleton, atlas, and textures…';
+      const loadedSpine = await createSpinePlayback(data, url, data.spine.defaultAnimation);
+      if (generation !== loadGeneration) return;
+      data.animations = loadedSpine.animations;
+      character = data;
+      characterUrl = url;
+      spinePlayback = loadedSpine;
+      $('mode').value = 'animation';
+      position = canvas.width / 2;
+      facing = 1;
+      $('animation').replaceChildren(...data.animations.map((anim, index) =>
+        option(index, `${anim.name ?? anim.id}`)));
+      const idleIndex = data.animations.findIndex((anim) => anim.id === (data.spine.defaultAnimation ?? 'Idle'));
+      if (idleIndex >= 0) $('animation').value = String(idleIndex);
+      $('name').textContent = data.name;
+      $('status').textContent = `Spine ${data.spine.runtime} skeleton ready · ${data.animations.length} animations · skeletal preview only.`;
+      const stats = {
+        'Source': data.sourceVersion ?? 'Spine',
+        'Kind': 'Spine skeletal',
+        'Animations': data.animations.length,
+        'Bones': loadedSpine.skeletonData.bones.length,
+        'Slots': loadedSpine.skeletonData.slots.length,
+        'Display scale': data.spine.scale,
+      };
+      if ((data.rig === 'hitman' || data.id === 'hitman' || data.id === 'coral_striker') && walkProfiles.length) {
+        stats['Walk types'] = walkProfiles.filter((entry) => !entry.missing).length;
+      }
+      $('stats').replaceChildren(...Object.entries(stats).flatMap(([label, value]) => {
+        const dt = document.createElement('dt');
+        const dd = document.createElement('dd');
+        dt.textContent = label;
+        dd.textContent = String(value);
+        return [dt, dd];
+      }));
+      showWarnings([...(data.report?.warnings ?? [])]);
+      $('controllers').textContent = 'Spine AnimationState (no MUGEN controllers)';
+      renderCommandGuide($('command-guide'), null);
+      for (const id of ['animation', 'pause', 'step', 'reset', 'flip']) $(id).disabled = !data.animations.length;
+      populateWalkTypeSelect(data.id);
+      setPaused(false);
+      chooseAnimation();
+      if ((data.rig === 'hitman' || data.id === 'hitman' || data.id === 'coral_striker') && walkProfiles.length) chooseWalkType();
+      else {
+        $('movement-status').textContent = 'Spine preview: A/D move · F flip · Space pause. Origin checkbox draws bone debug.';
+      }
+      syncControls();
+      return true;
+    }
+
     let checkpointReport = null;
     if (/^[a-z0-9][a-z0-9_-]{0,63}$/.test(data.id)) {
       try {
@@ -239,6 +342,7 @@ async function loadCharacter(url) {
     }));
     if (generation !== loadGeneration) return;
     character = data;
+    characterUrl = url;
     renderCommandGuide($('command-guide'), data, checkpointReport);
     if (isCombat() && data.id !== 'coiny') $('mode').value = 'animation';
     for (const entry of loaded) images.set(...entry);
@@ -424,6 +528,27 @@ function render() {
   $('victory-quote').textContent = isCombat() ? combatSnapshot?.victoryQuote ?? '' : '';
   $('victory-quote').hidden = !$('victory-quote').textContent;
   if (isCombat()) { renderCombat(); return; }
+  if (isSpine()) {
+    if (!spinePlayback) {
+      ctx.fillStyle = '#6e88a6'; ctx.font = '16px Segoe UI'; ctx.textAlign = 'center';
+      ctx.fillText('Loading Spine skeleton…', w / 2, h / 2);
+      $('readout').textContent = 'Waiting for Spine assets.';
+      return;
+    }
+    ctx.save();
+    ctx.translate(position, floor);
+    ctx.scale(zoom, zoom);
+    ctx.imageSmoothingEnabled = true;
+    drawSpine(ctx, spinePlayback, {
+      x: 0,
+      y: 0,
+      facing,
+      debug: $('origin').checked,
+    });
+    ctx.restore();
+    $('readout').textContent = spineReadout(spinePlayback, facing);
+    return;
+  }
   const frame = currentFrame(playback);
   if (!character || !frame) {
     ctx.fillStyle = '#6e88a6'; ctx.font = '16px Segoe UI'; ctx.textAlign = 'center';
@@ -478,6 +603,24 @@ function simulateTick() {
   position = Math.max(40, Math.min(canvas.width - 40, position + direction * 3));
 }
 
+function populateWalkTypeSelect(characterId) {
+  const hitmanRig = characterId === 'hitman' || characterId === 'coral_striker' || character?.rig === 'hitman';
+  if (!hitmanRig || !walkProfiles.length) {
+    $('walk-type').replaceChildren(option('', 'Hitman only'));
+    return;
+  }
+  $('walk-type').replaceChildren(...walkProfiles.map((profile) =>
+    option(profile.id, profileLabel(profile))));
+  const preferred = walkProfiles.find((profile) => profile.id === 'hitman') ?? walkProfiles[0];
+  if (preferred) $('walk-type').value = preferred.id;
+}
+
+function simulateSpine(delta) {
+  updateSpine(spinePlayback, delta);
+  const direction = Number(keys.has('KeyD') || keys.has('ArrowRight')) - Number(keys.has('KeyA') || keys.has('ArrowLeft'));
+  position = Math.max(40, Math.min(canvas.width - 40, position + walkMoveDelta(spinePlayback, direction, delta)));
+}
+
 function loop(now) {
   const delta = Math.min((now - (lastTime || now)) / 1000, 0.1);
   lastTime = now;
@@ -496,6 +639,9 @@ function loop(now) {
         void movement.advance(movementInput(), ticks).finally(syncControls);
         syncControls();
       }
+    } else if (isSpine()) {
+      simulateSpine(accumulator);
+      accumulator = 0;
     } else {
       while (accumulator >= 1 / TICKS_PER_SECOND) {
         simulateTick();
@@ -511,6 +657,7 @@ for (const id of ['pause', 'step', 'reset']) $(id).addEventListener('pointerdown
   if (isCombat()) event.preventDefault();
 });
 $('animation').addEventListener('change', chooseAnimation);
+$('walk-type').addEventListener('change', chooseWalkType);
 $('character').addEventListener('change', () => loadCharacter(new URL($('character').value, location.href)));
 $('pause').addEventListener('click', () => {
   setPaused(!paused);
@@ -525,12 +672,14 @@ $('step').addEventListener('click', () => {
     else void combat.advance(1).then(() => combat.play(0, true)).finally(syncControls);
     syncControls();
   } else if (isLuau()) { void movement.advance(movementInput(), 1).finally(syncControls); syncControls(); }
+  else if (isSpine()) { updateSpine(spinePlayback, 1 / TICKS_PER_SECOND); render(); }
   else { tickPlayback(playback); render(); }
 });
 $('reset').addEventListener('click', () => {
   keys.clear(); position = canvas.width / 2; facing = 1;
   if (isCombat()) void resetCombat();
-  else if (isLuau()) void resetMovement(); else chooseAnimation();
+  else if (isLuau()) void resetMovement();
+  else chooseAnimation();
 });
 $('mode').addEventListener('change', () => {
   movement.cancel(true); combat.cancel(true); combatSnapshot = null; combatEvents = []; contactSparks = [];
@@ -582,11 +731,17 @@ async function refreshLibrary(preferredId) {
 }
 
 requestAnimationFrame(loop);
-setupZipUpload((entry) => refreshLibrary(entry.id));
+// ZIP upload UI is hidden — Hitman Spine is the only character.
 try {
-  await refreshLibrary();
+  try {
+    const catalog = await readJson(new URL('/generated/walk-profiles.json', location.href));
+    walkProfiles = catalog.profiles ?? [];
+  } catch {
+    walkProfiles = [];
+  }
+  await refreshLibrary('hitman');
 } catch (error) {
-  $('character').replaceChildren(option('', 'No imported characters'));
-  $('name').textContent = 'Import needed';
-  $('status').textContent = `${error.message}. Run npm run import:chars, then reload this page.`;
+  $('character').replaceChildren(option('', 'Hitman missing'));
+  $('name').textContent = 'Hitman Spine needed';
+  $('status').textContent = `${error.message}. Run npm run sync:hitman, then reload.`;
 }
